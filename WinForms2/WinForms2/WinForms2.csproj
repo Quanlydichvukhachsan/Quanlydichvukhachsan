@@ -84,6 +84,12 @@
     <Compile Include="Thongke.Designer.cs">
       <DependentUpon>Thongke.cs</DependentUpon>
     </Compile>
+    <Compile Include="Unwrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unwrite.Designer.cs">
+      <DependentUpon>Unwrite.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CTDichvu.resx">
       <DependentUpon>CTDichvu.cs</DependentUpon>
     </EmbeddedResource>
