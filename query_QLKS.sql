@@ -141,8 +141,51 @@ set @ma =dbo.SinhMA('PP','Phong')
 	end
 	end
 exec usp_Insert_Phong '301','2 nguoi',12000,null,'Het Phong'  
-delete from Phong
+--update phong
+drop proc usp_update_Phong
+create proc usp_update_Phong
+@maphong nvarchar(100),@tenPhong nvarchar(500),@loaiPhong varchar(100),@gia int ,@chuThich nvarchar(1000)
+, @tinhtrang nvarchar(100)
+as
+  if  exists (select * from Phong where MaPhong =@maphong)
+     begin
+	 if not exists (select * from DatPhong Where MaPhong =@maphong)
+	  begin
+	    update Phong
+		set TenPhong =@tenPhong , LoaiPhong =@loaiPhong,Gia =@gia , ChuTich =@chuThich ,TinhTrang =@tinhtrang 
+		where MaPhong =@maphong
 
+		print N'Update success!'
+		end 
+		else
+		  print N'Phong co nguoi o khong duoc update' 
+	end
+	else
+		  print N'Fail exist :'+ @maphong
+	 
+exec usp_update_Phong 'PP001' ,'302','4 nguoi',150000,'phong 4 nguoi ','con phong'
+
+--delete Phong
+drop proc usp_delete_Phong
+create proc usp_delete_Phong
+@maphong nchar(100)
+as
+  if exists(select * from Phong where MaPhong =@maphong)
+   begin
+   if not exists (select * from DatPhong Where MaPhong =@maphong)
+   begin
+   delete 
+	 from Phong
+	 where MaPhong =@maphong
+      print N'Delete Success'
+	end
+	   else
+		  print N'Phong co nguoi o khong duoc update' 
+	end
+	else
+	  print N'fail not exist :' +@maphong 
+exec usp_delete_Phong 'PP001'
+select * from Phong
 --dat phong
 
 create proc usp_datPhong
@@ -159,9 +202,41 @@ begin
 	 else
 	 print N'Fail not exists: ' + @maKH +' va'+ @maphong
 	 end
-
---exec usp_datPhong 'PP001', 
-
+--update Dat Phong
+    drop proc usp_DatPhong
+  create proc usp_DatPhong
+  @maphong nchar(100),@ngaynhan smalldatetime ,@ngaytra smalldatetime
+  as
+    if exists (select * from DatPhong where MaPhong =@maphong)
+	  begin
+	   if(Day(@ngaynhan) >DAY(@ngaytra))
+	   begin
+	     print N'Ngay nhan phai nho hon ngay tra'
+	   end
+	   else
+	   begin
+	   update DatPhong
+	   set NgayNhan =@ngaynhan,NgayTra =@ngaytra
+	   where MaPhong =@maphong
+	    print N'Update Success'
+	   end
+	   end
+	   else
+       print N'Not Exists ma Phong '+@maphong
+--exec usp_datPhong 
+ --Delete Phong
+   create proc usp_delete_DatPhong
+      @maphong nchar(100)
+	  as
+	    if exists (select * from DatPhong where MaPhong =@maphong)
+           begin
+		   delete
+		    from DatPhong
+			where MaPhong =@maphong
+			print N'Delete Success'
+			end
+			else
+			 print N'Not Exists ma Phong '+@maphong
 
 --Dich Vu
 create proc usp_DichVu
@@ -178,9 +253,9 @@ begin
 	 else
 	 print N'Fail  exists: ' + @maDV
 	 end
-exec usp_DichVu 'NN','Nuoc Ngot'
+exec usp_DichVu 'MS','giat ui'
 
-
+select * from DichVu
 --CT_DichVu
 drop proc usp_CT_DichVu
 create proc usp_CT_DichVu
@@ -191,16 +266,64 @@ begin
   declare @maloaiDV nchar(5)
   set @maloaiDV =dbo.SinhMA('LV','CT_DichVu')
   if exists(select * from DichVu where MaDV =@maDV) 
+   begin
+   if exists(select * from CT_DichVu  where TenLoaiDv =@tenLoaiDV)
      begin
+	  print N'Fail  exists: ' + @tenLoaiDV
+	 end
+	 else
+	 begin
 	insert into CT_DichVu values (@maloaiDV,@tenLoaiDV,@donGia,@donvi,@maDV)
 	 print N'Insert Success'
      end
+	 end
 	 else
 	 print N'Fail not exists: ' + @maDV
 	 
 end
-exec usp_CT_DichVu 'cocacola',7000,lon,'NN'
+exec usp_CT_DichVu 'Giat men',4000,kq,'MS'
 
 select * from CT_DichVu
+delete from CT_DichVu
 
+--Sap Xep giam bang gia dich vu
+drop proc usp_SapXep_giam_Gia
+
+create proc usp_SapXep_giam_Gia
+@loaisapxep nchar(100)
+as
+ if(@loaisapxep ='DonGia')
+  begin
+select * 
+from CT_DichVu A
+order by DonGia desc
+end
+ else
+    begin
+	  select * 
+from CT_DichVu A
+order by TenLoaiDv desc
+end
+exec usp_SapXep_giam_Gia 'TenDV'
+ --Sap Xep tang bang gia dich vu
+ drop proc usp_SapXep_tang_Gia 
+create proc usp_SapXep_tang_Gia
+@loaisapxep nchar (100)
+as
+
+ if(@loaisapxep ='DonGia')
+  begin
+select * 
+from CT_DichVu A
+order by DonGia asc
+end
+ else
+    begin
+	  select * 
+from CT_DichVu A
+order by TenLoaiDv asc
+end
+
+   
+exec usp_SapXep_tang_Gia 'DongGia'
 
