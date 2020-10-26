@@ -1,122 +1,302 @@
-﻿--sinh ma auto
-IF EXISTS (
-    SELECT * FROM sysobjects WHERE id = object_id(N'SinhMA') 
-    AND xtype IN (N'FN', N'IF', N'TF')
-)
-    DROP FUNCTION SinhMA
-GO
+﻿-- xoá function
+if exists(
+           select * from sysobjects where id = OBJECT_ID(N'SinhMA_table')
+		   and xtype in (N'FN', N'IF', N'TF'))
+		   drop function SinhMA_table
+go
 
 
-create function SinhMA(@ma nchar (2),@tableName nvarchar(100)) 
- returns char(5)
+--sinh mã tự động cho khách hàng có truyền tham số
+ create function SinhMA_table(@ma nchar(2), @NameTable nvarchar(1000)) 
+ 
+ returns nchar(5)
 
 As
 Begin
-	declare @MaxMAHD char(5)
-	declare @NewMAHD varchar(5)
+	declare @MaxMA nchar(5)
+	declare @NewMA varchar(5)
 	declare @stt	int
 	declare @i	int	
 	declare @sokytu	int
-	
-	if(@tableName ='Phong')
-	begin
-	if exists(select * from Phong )---Nếu bảng hóa đơn có dữ liệu
-	 begin
-		--Lấy mã giáo viên lớn nhất hiện có
-		select @MaxMAHD = max(MaPhong) 
-		from Phong
-		--Trích phần ký số của mã lớn nhất và chuyển thành số 
-		set @stt=convert(int, right(@MaxMAHD,3)) + 1 --Số thứ tự của giáo viên mới
-	 end
-	  
-	  else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
-	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
-	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
-	set @sokytu = len(convert(varchar(3), @stt))
-	set @NewMAHD= @ma
-	set @i = 0
-	while @i < 3 -@sokytu
-		begin
-			set @NewMAHD = @NewMAHD + '0'
-			set @i = @i + 1
-		end	
-	set @NewMAHD = @NewMAHD + convert(varchar(3), @stt)
-	  end
-	  if(@tableName ='KhachHangThueDichVu')
-	begin
-	if exists(select * from KhachHangThueDichVu )---Nếu bảng hóa đơn có dữ liệu
-	 begin
-		--Lấy mã giáo viên lớn nhất hiện có
-		select @MaxMAHD = max(MaThueDV) 
-		from KhachHangThueDichVu
-		--Trích phần ký số của mã lớn nhất và chuyển thành số 
-		set @stt=convert(int, right(@MaxMAHD,3)) + 1 --Số thứ tự của giáo viên mới
-	 end
-	  
-	  else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
-	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
-	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
-	set @sokytu = len(convert(varchar(3), @stt))
-	set @NewMAHD= @ma
-	set @i = 0
-	while @i < 3 -@sokytu
-		begin
-			set @NewMAHD = @NewMAHD + '0'
-			set @i = @i + 1
-		end	
-	set @NewMAHD = @NewMAHD + convert(varchar(3), @stt)
-	  end
-	  if(@tableName ='KhachHang')
-	begin
-	if exists(select * from KhachHang )---Nếu bảng hóa đơn có dữ liệu
-	 begin
-		--Lấy mã giáo viên lớn nhất hiện có
-		select @MaxMAHD = max(MaKH) 
-		from DatPhong
-		--Trích phần ký số của mã lớn nhất và chuyển thành số 
-		set @stt=convert(int, right(@MaxMAHD,3)) + 1 --Số thứ tự của giáo viên mới
-	 end
-	  	  
-	else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
-	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
-	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
-	set @sokytu = len(convert(varchar(3), @stt))
-	set @NewMAHD= @ma
-	set @i = 0
-	while @i < 3 -@sokytu
-		begin
-			set @NewMAHD = @NewMAHD + '0'
-			set @i = @i + 1
-		end	
-	set @NewMAHD = @NewMAHD + convert(varchar(3), @stt)
-	end
-	 if(@tableName ='CT_DichVu')
+
+	 if(@NameTable ='CT_DichVu')
 	begin
 	if exists(select * from CT_DichVu )---Nếu bảng hóa đơn có dữ liệu
 	 begin
 		--Lấy mã giáo viên lớn nhất hiện có
-		select @MaxMAHD = max(MaLoaiDV) 
+		select @MaxMA = max(MaLoaiDV) 
 		from CT_DichVu
 		--Trích phần ký số của mã lớn nhất và chuyển thành số 
-		set @stt=convert(int, right(@MaxMAHD,3)) + 1 --Số thứ tự của giáo viên mới
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
 	 end
 	  	  
 	else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
 	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
 	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
 	set @sokytu = len(convert(varchar(3), @stt))
-	set @NewMAHD= @ma
+	set @NewMA= @ma
 	set @i = 0
 	while @i < 3 -@sokytu
 		begin
-			set @NewMAHD = @NewMAHD + '0'
+			set @NewMA = @NewMA + '0'
 			set @i = @i + 1
 		end	
-	set @NewMAHD = @NewMAHD + convert(varchar(3), @stt)
+	set @NewMA = @NewMA + convert(varchar(3), @stt)
 	end
 
-return @NewMAHD
+	if(@NameTable ='Phong')
+	begin
+	if exists(select * from Phong )---Nếu bảng hóa đơn có dữ liệu
+	 begin
+		--Lấy mã giáo viên lớn nhất hiện có
+		select @MaxMA = max(MaPhong) 
+		from Phong
+		--Trích phần ký số của mã lớn nhất và chuyển thành số 
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
+	 end
+	  
+	  else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
+	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
+	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
+	set @sokytu = len(convert(varchar(3), @stt))
+	set @NewMA= @ma
+	set @i = 0
+	while @i < 3 -@sokytu
+		begin
+			set @NewMA = @NewMA + '0'
+			set @i = @i + 1
+		end	
+	set @NewMA = @NewMA + convert(varchar(3), @stt)
+	  end
+	  if(@NameTable ='KhachHangThueDichVu')
+	begin
+	if exists(select * from KhachHangThueDichVu )---Nếu bảng hóa đơn có dữ liệu
+	 begin
+		--Lấy mã giáo viên lớn nhất hiện có
+		select @MaxMA = max(MaThueDV) 
+		from KhachHangThueDichVu
+		--Trích phần ký số của mã lớn nhất và chuyển thành số 
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
+	 end
+	  
+	  else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
+	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
+	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
+	set @sokytu = len(convert(varchar(3), @stt))
+	set @NewMA= @ma
+	set @i = 0
+	while @i < 3 -@sokytu
+		begin
+			set @NewMA = @NewMA + '0'
+			set @i = @i + 1
+		end	
+	set @NewMA = @NewMA + convert(varchar(3), @stt)
+	  end
+	if (@NameTable ='KhachHang')
+	begin
+	if exists(select * from KhachHang )---Nếu bảng hóa đơn có dữ liệu
+	 begin
+		--Lấy mã giáo viên lớn nhất hiện có
+		select @MaxMA = max(MaKH) 
+		from KhachHang
+		--Trích phần ký số của mã lớn nhất và chuyển thành số 
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
+	 end
+	else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
+	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
+	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
+	set @sokytu = len(convert(varchar(3), @stt))
+	set @NewMA= @ma
+	set @i = 0
+	while @i < 3 -@sokytu
+		begin
+			set @NewMA = @NewMA + '0'
+			set @i = @i + 1
+		end	
+	set @NewMA = @NewMA + convert(varchar(3), @stt)
+	end
+
+
+	if(@NameTable ='HoaDon')
+	begin
+	if exists(select * from HoaDon )---Nếu bảng hóa đơn có dữ liệu
+	 begin
+		--Lấy mã giáo viên lớn nhất hiện có
+		select @MaxMA = max(MaHD) 
+		from HoaDon
+		--Trích phần ký số của mã lớn nhất và chuyển thành số 
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
+	 end
+	else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
+	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
+	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
+	set @sokytu = len(convert(varchar(3), @stt))
+	set @NewMA= @ma
+	set @i = 0
+	while @i < 3 -@sokytu
+		begin
+			set @NewMA = @NewMA + '0'
+			set @i = @i + 1
+		end	
+	set @NewMA = @NewMA + convert(varchar(3), @stt)
+	end
+	 if(@NameTable ='KhachHangThueDichVu')
+	begin
+	if exists(select * from KhachHangThueDichVu )---Nếu bảng hóa đơn có dữ liệu
+	 begin
+		--Lấy mã giáo viên lớn nhất hiện có
+		select @MaxMA = max(MaThueDV) 
+		from KhachHangThueDichVu
+		--Trích phần ký số của mã lớn nhất và chuyển thành số 
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
+	 end
+	  
+	  else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
+	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
+	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
+	set @sokytu = len(convert(varchar(3), @stt))
+	set @NewMA= @ma
+	set @i = 0
+	while @i < 3 -@sokytu
+		begin
+			set @NewMA = @NewMA + '0'
+			set @i = @i + 1
+		end	
+	set @NewMA = @NewMA + convert(varchar(3), @stt)
+	  end
+return @NewMA
+   
 End
+
+
+--PROC PHÒNG
+
+ drop proc usp_insert_khachhang
+
+create proc usp_insert_khachhang
+
+@TenKH nvarchar(1000),
+@CMND nchar(10),
+@QuocTich nvarchar(100),
+@GioiTinh bit,
+@Tuoi int,
+@SDT int
+as
+ begin
+ declare  @MaKH nchar(5)
+ set @MaKH = dbo.SinhMA_table('KH','KhachHang')
+ if not exists(select * from KhachHang where MaKH = @MaKh)
+ begin
+    
+	insert into KhachHang values(@MaKH ,@TenKH, @CMND,@QuocTich , @GioiTinh, @Tuoi, @SDT)
+	print N'Thêm khách hàng thành công'
+ end
+ else
+ print N'Đã có mã khách' + @MaKH + N' trong cơ sở dữ liệu'
+end
+go
+
+--update khách hàng
+create proc usp_Update_KH
+@makh nchar(100),
+@tenkh nvarchar(1000),
+@cmnd nchar(10),
+@quoctich nvarchar(100),
+@gt bit,
+@tuoi int,
+@sdt int
+as
+	if exists(select * from KhachHang where MaKH = @makh )
+	 begin 
+		Update KhachHang
+		set TenKH =@tenkh, CMND = @cmnd, QuocTich =@quoctich, GioiTinh =@gt, Tuoi = @tuoi, SDT = @sdt
+		where MaKH = @makh
+		print N'Update success'
+	 end
+	else
+	 print N'Not exist '+ @makh + N' trong cơ sở dữ liệu'
+go
+
+exec usp_Update_KH 'KH0010',N'nguyen dinh','000011111', 'trung na',0, 12,123123 
+
+-- delete khách hàng 
+
+create proc usp_Delete_KH
+@makh nchar(100)
+as
+	if not exists(select * from DatPhong where MaKH = @makh) and not exists (select * from HoaDon where MaKH = @makh) 
+		if exists(select * from KhachHang where MaKH = @makh)
+		begin
+			delete from KhachHang where MaKH = @makh
+			print N'Delete success'
+		end
+	else
+	 print N'Not exist '+@makh
+go
+exec usp_Delete_KH 'KH002'
+
+ -- thêm dữ liệu phòng
+exec usp_insert_khachhang N'Tân Ngáo đá ', '09090090', N'Việt Nam', 0, 20, 0909190011
+
+
+--khách hàng
+select * from KhachHang
+delete from KhachHang
+
+drop proc usp_insert_HoaDon
+create proc usp_insert_HoaDon
+@MaKH nchar(100),
+@NgayXuatHD smalldatetime,
+@ThanhTien int
+as
+	declare @MAHD nchar(100)
+	set @MAHD = dbo.SinhMA_table('HD','HoaDon')
+	begin
+	if exists(select * from KhachHang where MaKH = @MaKH)
+		if not exists(select * from dbo.HoaDon where MaHD = @MAHD)
+		begin
+			insert into  dbo.HoaDon values (@MAHD, @MaKH, @NgayXuatHD, @ThanhTien)
+			print N'Thêm hoá đơn thành công'
+		end
+		else
+		 print N'Đã có '+@MAHD+N' trong cơ sỏ dữ liệu'
+	else print N'Không có '+@MaKH+N' trong cơ sỏ dữ liệu'
+end
+
+set dateformat dmy
+exec usp_insert_HoaDon 'KH002','12/2/2020',35000000
+
+select *from HoaDon
+
+create proc usp_Update_HoaDon
+@MAHD nchar(100),
+@MaKH nchar(100),
+@NgayXuatHD smalldatetime,
+@ThanhTien int
+as
+ if exists(select * from HoaDon where MaHD = @MAHD)
+	begin 
+		Update HoaDon
+		set MaKH = @MaKH, NgayXuatHD = @NgayXuatHD, ThanhTien = @ThanhTien
+		where MaHD = @MAHD
+		print N'Update sucess'
+	end
+else print N'Not Exist '+ @MAHD
+go
+--update hoá đơn
+
+create proc usp_Delete_HoaDon
+@MAHD nchar(100)
+as
+	if exists(select * from HoaDon where MaHD = @MAHD)
+		begin
+			Delete from HoaDon where MaHD = @MAHD
+			print N'Delete sucess'
+		end
+	else Print 'Not exist '+ @MAHD
+go
+
+
 --Phong
 select * from Phong
 drop proc usp_Insert_Phong
@@ -128,7 +308,7 @@ as
 begin
   declare @ma nchar(5)
 begin
-set @ma =dbo.SinhMA('PP','Phong')
+set @ma =dbo.SinhMA_table('PP','Phong')
   if exists(select * from Phong where MaPhong =@ma)
         begin    
 	     print N'Exists Ma Phong :' +@ma
@@ -140,52 +320,9 @@ set @ma =dbo.SinhMA('PP','Phong')
 		  end
 	end
 	end
-exec usp_Insert_Phong '301','2 nguoi',12000,null,'Het Phong'  
---update phong
-drop proc usp_update_Phong
-create proc usp_update_Phong
-@maphong nvarchar(100),@tenPhong nvarchar(500),@loaiPhong varchar(100),@gia int ,@chuThich nvarchar(1000)
-, @tinhtrang nvarchar(100)
-as
-  if  exists (select * from Phong where MaPhong =@maphong)
-     begin
-	 if not exists (select * from DatPhong Where MaPhong =@maphong)
-	  begin
-	    update Phong
-		set TenPhong =@tenPhong , LoaiPhong =@loaiPhong,Gia =@gia , ChuTich =@chuThich ,TinhTrang =@tinhtrang 
-		where MaPhong =@maphong
-
-		print N'Update success!'
-		end 
-		else
-		  print N'Phong co nguoi o khong duoc update' 
-	end
-	else
-		  print N'Fail exist :'+ @maphong
-	 
-exec usp_update_Phong 'PP001' ,'302','4 nguoi',150000,'phong 4 nguoi ','con phong'
-
---delete Phong
-drop proc usp_delete_Phong
-create proc usp_delete_Phong
-@maphong nchar(100)
-as
-  if exists(select * from Phong where MaPhong =@maphong)
-   begin
-   if not exists (select * from DatPhong Where MaPhong =@maphong)
-   begin
-   delete 
-	 from Phong
-	 where MaPhong =@maphong
-      print N'Delete Success'
-	end
-	   else
-		  print N'Phong co nguoi o khong duoc update' 
-	end
-	else
-	  print N'fail not exist :' +@maphong 
-exec usp_delete_Phong 'PP001'
+exec usp_Insert_Phong '302','2 nguoi',12000,null,1  
 select * from Phong
+
 --dat phong
 
 create proc usp_datPhong
@@ -202,9 +339,13 @@ begin
 	 else
 	 print N'Fail not exists: ' + @maKH +' va'+ @maphong
 	 end
+set dateformat dmy
+exec usp_datPhong 'PP002','KH002' ,'20/10/2000', '23/10/2020'
+select *from DatPhong
+
 --update Dat Phong
     drop proc usp_DatPhong
-  create proc usp_DatPhong
+  create proc usp_Update_DatPhong
   @maphong nchar(100),@ngaynhan smalldatetime ,@ngaytra smalldatetime
   as
     if exists (select * from DatPhong where MaPhong =@maphong)
@@ -253,38 +394,134 @@ begin
 	 else
 	 print N'Fail  exists: ' + @maDV
 	 end
-exec usp_DichVu 'MS','giat ui'
+exec usp_DichVu 'NN','Nuoc Ngot'
 
-select * from DichVu
+create proc usp_Update_DV
+@maDV nchar(100)
+,@tenDV nvarchar(1000)
+as 
+if exists(select * from DichVu where MaDV = @maDV)
+	begin
+		update DichVu
+		set TenDV = @tenDV
+		where MaDV = @maDV
+		print N'Update sucess'
+	end
+	else
+	print N'Not exist '+ @maDV
+go
+
+--Delete dich vu
+
+create proc usp_Delete_Dv
+@maDV nchar(100)
+as
+	if not exists(select * from CT_DichVu where MaDV = @maDV )
+		if exists(select * from DichVu where MaDV = @maDV)
+	begin
+		delete from DichVu where MaDV = @maDV
+		print N'Delete sucess'
+	end
+	else
+	 print N'Not exist'+ @maDV
+go
+
 --CT_DichVu
-drop proc usp_CT_DichVu
+
 create proc usp_CT_DichVu
  @tenLoaiDV nchar(100)
 ,@donGia int , @donvi nvarchar(50),@maDV nchar(100)
 as
 begin
   declare @maloaiDV nchar(5)
-  set @maloaiDV =dbo.SinhMA('LV','CT_DichVu')
+  set @maloaiDV =dbo.SinhMA_table('LV','CT_DichVu')
   if exists(select * from DichVu where MaDV =@maDV) 
-   begin
-   if exists(select * from CT_DichVu  where TenLoaiDv =@tenLoaiDV)
      begin
-	  print N'Fail  exists: ' + @tenLoaiDV
-	 end
-	 else
-	 begin
 	insert into CT_DichVu values (@maloaiDV,@tenLoaiDV,@donGia,@donvi,@maDV)
 	 print N'Insert Success'
      end
-	 end
 	 else
 	 print N'Fail not exists: ' + @maDV
 	 
 end
-exec usp_CT_DichVu 'Giat men',4000,kq,'MS'
+exec usp_CT_DichVu 'cocacola',7000,lon,'NN'
 
 select * from CT_DichVu
-delete from CT_DichVu
+
+--update dich
+create proc usp_Update_CTDV
+@maLoaiDV nvarchar(100),
+ @tenLoaiDV nchar(100)
+,@donGia int , @donvi nvarchar(50)
+as
+ if exists(select * from CT_DichVu where MaLoaiDV = @maLoaiDV)
+	begin
+	update CT_DichVu
+	set TenLoaiDv =@tenLoaiDV, DonGia = @donGia where MaLoaiDV = @maLoaiDV
+	print N'Update sucess'
+	end
+else print N'Not exist '+@maLoaiDV
+go
+
+exec usp_Update_CTDV 'LV002', 'pepsi', 12000, 'lon'
+
+--delete chi tiết dịch vụ
+create proc usp_Delete_CTDV
+@maLoaiDV nvarchar(100)
+as
+	if exists(select * from CT_DichVu where MaLoaiDV = @maLoaiDV)
+	 begin
+		delete from CT_DichVu where MaLoaiDV = @maLoaiDV
+		print N'Delete Sucess'
+	 end
+	else
+	print N'Not exist '+@maLoaiDV
+go
+
+-- khách hàng thuê dich cụ
+drop  usp_Insert_KHDV
+create proc usp_Insert_KHDV
+@mkh nchar(100),
+@maloaiDV nchar(100),
+@soluongdat int,
+@tendv nvarchar(500)
+as
+
+ if exists(select * from KhachHang where MaKH = @mkh) and exists (select * from CT_DichVu where MaLoaiDV = @maloaiDV)
+	begin
+	declare @mathuedichvu nchar(5)
+
+	set @mathuedichvu = dbo.SinhMA_table('MT','KhachHangThueDichVu')
+	if not exists(select * from KhachHangThueDichVu where MaThueDV = @mathuedichvu)
+		begin
+		insert into dbo.KhachHangThueDichVu values(@mkh, @maloaiDV, @soluongdat, @tendv, @mathuedichvu)
+		print N'Insert Success'
+		end
+	else
+	 print N'Exist '+@mathuedichvu
+	end
+else
+	print 'Not exist '+ @mkh +' '+ @mathuedichvu
+
+	exec usp_Insert_KHDV 'KH001','LV001', 4 , 'cocacola'
+	exec usp_Insert_KHDV 'KH001','LV002', 4 , 'pepsi'
+
+	select * from CT_DichVu
+	select * from KhachHang
+
+
+--liệt kê danh sách phòng/ khách hàng sử dụng dịch một dịch vụ nào đó
+create proc usp_lietkeDSDV
+@tenLoaiDV nvarchar(500)
+
+as
+	begin
+		select A.TenKH,  B.TenDV, C.TenPhong
+		from KhachHang A, KhachHangThueDichVu B, Phong C, DatPhong D
+		where B.TenDV = @tenLoaiDV and  A.MaKH = B.MaKH and C.MaPhong = D.MaPhong and A.MaKH = D.MaKH and B.MaKH =D.MaKH 
+		
+	end
+go
 
 --Sap Xep giam bang gia dich vu
 drop proc usp_SapXep_giam_Gia
@@ -326,4 +563,17 @@ end
 
    
 exec usp_SapXep_tang_Gia 'DongGia'
+
+
+
+select *from CT_DichVu
+select *from Phong
+select * from KhachHangThueDichVu
+select * from DatPhong
+
+
+
+
+	
+
 
