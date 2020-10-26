@@ -340,6 +340,8 @@ as
  select * from Phong where TinhTrang =@tinhtrang
  end
  exec usp_Show_All_Phong_Theo_TinhTrang 0
+
+ drop proc usp_tinh_tien_suDung_dichVu
 -- tinh tien su dung dich vu tai phong nao do
 create proc usp_tinh_tien_suDung_dichVu
  @maPhong nchar(100)
@@ -350,7 +352,7 @@ create proc usp_tinh_tien_suDung_dichVu
 	     select  D.MaKH,B.DonGia,C.SoLuongDat , C.TenDV, (B.DonGia *C.SoLuongDat) as N'Tong thanh tien' 
 		-- (B.DonGia *C.SoLuongDat) as N'Tung Loai'
 		 from Phong A ,CT_DichVu B,KhachHangThueDichVu C,DatPhong D
-		 where A.MaPhong =D.MaPhong  and D.MaPhong='PP001'  and D.MaKH = C.MaKH  and C.MaLoaiDV =B.MaLoaiDV
+		 where A.MaPhong =D.MaPhong  and D.MaPhong=@maPhong  and D.MaKH = C.MaKH  and C.MaLoaiDV =B.MaLoaiDV
 	    --group by A.MaPhong,C.TenDV
 	end
 
