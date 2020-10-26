@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinForms2
 {
-    public partial class Unwrite : Form
+    public partial class FrmDichvu_Khachhang : Form
     {
-        public Unwrite()
+        public FrmDichvu_Khachhang()
         {
             InitializeComponent();
         }

@@ -30,8 +30,14 @@
         {
             this.grbDanhsachDV = new System.Windows.Forms.GroupBox();
             this.dtgDanhsachKH = new System.Windows.Forms.DataGridView();
+            this.colMaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaLoaiDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLoaiDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDonvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbCTDichvu = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbMaLoaiDV = new System.Windows.Forms.ComboBox();
             this.cbbMaDV = new System.Windows.Forms.ComboBox();
             this.txtTenDV = new System.Windows.Forms.TextBox();
             this.msktxtGia = new System.Windows.Forms.MaskedTextBox();
@@ -44,12 +50,6 @@
             this.btnThemLoaiDV = new System.Windows.Forms.Button();
             this.btnCapnhatLoaiDV = new System.Windows.Forms.Button();
             this.grbbtnLoaiDV = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.colMaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaLoaiDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenLoaiDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDonvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDanhsachDV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDanhsachKH)).BeginInit();
             this.grbCTDichvu.SuspendLayout();
@@ -82,11 +82,36 @@
             this.dtgDanhsachKH.Size = new System.Drawing.Size(491, 391);
             this.dtgDanhsachKH.TabIndex = 0;
             // 
+            // colMaDV
+            // 
+            this.colMaDV.HeaderText = "Mã dịch vụ";
+            this.colMaDV.Name = "colMaDV";
+            // 
+            // colMaLoaiDV
+            // 
+            this.colMaLoaiDV.HeaderText = "Mã loại dịch vụ";
+            this.colMaLoaiDV.Name = "colMaLoaiDV";
+            // 
+            // colTenLoaiDV
+            // 
+            this.colTenLoaiDV.HeaderText = "Tên loại dịch vụ";
+            this.colTenLoaiDV.Name = "colTenLoaiDV";
+            // 
+            // colDonvi
+            // 
+            this.colDonvi.HeaderText = "Đơn vị";
+            this.colDonvi.Name = "colDonvi";
+            // 
+            // colGia
+            // 
+            this.colGia.HeaderText = "Giá";
+            this.colGia.Name = "colGia";
+            // 
             // grbCTDichvu
             // 
             this.grbCTDichvu.AutoSize = true;
             this.grbCTDichvu.Controls.Add(this.comboBox2);
-            this.grbCTDichvu.Controls.Add(this.comboBox1);
+            this.grbCTDichvu.Controls.Add(this.cbbMaLoaiDV);
             this.grbCTDichvu.Controls.Add(this.cbbMaDV);
             this.grbCTDichvu.Controls.Add(this.txtTenDV);
             this.grbCTDichvu.Controls.Add(this.msktxtGia);
@@ -102,15 +127,25 @@
             this.grbCTDichvu.TabStop = false;
             this.grbCTDichvu.Text = "Chi tiết dịch vụ";
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 25);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Nhập trước (N.001, N.002: Nước, DA: đồ ăn)";
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(137, 149);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 25);
+            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Text = "Nhập trước (Chai, ly, dĩa,...)";
+            // 
+            // cbbMaLoaiDV
+            // 
+            this.cbbMaLoaiDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.cbbMaLoaiDV.FormattingEnabled = true;
+            this.cbbMaLoaiDV.Location = new System.Drawing.Point(137, 54);
+            this.cbbMaLoaiDV.Name = "cbbMaLoaiDV";
+            this.cbbMaLoaiDV.Size = new System.Drawing.Size(100, 25);
+            this.cbbMaLoaiDV.TabIndex = 1;
+            this.cbbMaLoaiDV.Text = "Nhập trước (N.001, N.002: Nước, DA: đồ ăn)";
             // 
             // cbbMaDV
             // 
@@ -232,41 +267,6 @@
             this.grbbtnLoaiDV.TabIndex = 12;
             this.grbbtnLoaiDV.TabStop = false;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(137, 149);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 25);
-            this.comboBox2.TabIndex = 1;
-            this.comboBox2.Text = "Nhập trước (Chai, ly, dĩa,...)";
-            // 
-            // colMaDV
-            // 
-            this.colMaDV.HeaderText = "Mã dịch vụ";
-            this.colMaDV.Name = "colMaDV";
-            // 
-            // colMaLoaiDV
-            // 
-            this.colMaLoaiDV.HeaderText = "Mã loại dịch vụ";
-            this.colMaLoaiDV.Name = "colMaLoaiDV";
-            // 
-            // colTenLoaiDV
-            // 
-            this.colTenLoaiDV.HeaderText = "Tên loại dịch vụ";
-            this.colTenLoaiDV.Name = "colTenLoaiDV";
-            // 
-            // colDonvi
-            // 
-            this.colDonvi.HeaderText = "Đơn vị";
-            this.colDonvi.Name = "colDonvi";
-            // 
-            // colGia
-            // 
-            this.colGia.HeaderText = "Giá";
-            this.colGia.Name = "colGia";
-            // 
             // FrmCTDichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +299,7 @@
         private System.Windows.Forms.Label lblMaDV;
         private System.Windows.Forms.ComboBox cbbMaDV;
         private System.Windows.Forms.TextBox txtTenDV;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbMaLoaiDV;
         private System.Windows.Forms.Label lblMaLoaiDV;
         private System.Windows.Forms.Button btnXoaLoaiDV;
         private System.Windows.Forms.Button btnThemLoaiDV;

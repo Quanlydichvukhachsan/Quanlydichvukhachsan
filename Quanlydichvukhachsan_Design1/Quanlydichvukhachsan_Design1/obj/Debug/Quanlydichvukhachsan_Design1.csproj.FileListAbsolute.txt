@@ -1,0 +1,14 @@
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\bin\Debug\Quanlydichvukhachsan_Design1.exe.config
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\bin\Debug\Quanlydichvukhachsan_Design1.exe
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\bin\Debug\Quanlydichvukhachsan_Design1.pdb
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\bin\Debug\MetroFramework.Design.dll
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\bin\Debug\MetroFramework.dll
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.csprojAssemblyReference.cache
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.FrmVidu.resources
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.Properties.Resources.resources
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.csproj.GenerateResource.cache
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.csproj.CoreCompileInputs.cache
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.csproj.CopyComplete
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.exe
+C:\Users\fruit\source\repos\Quanlydichvukhachsan_Design1\Quanlydichvukhachsan_Design1\obj\Debug\Quanlydichvukhachsan_Design1.pdb

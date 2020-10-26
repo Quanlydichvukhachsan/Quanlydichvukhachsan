@@ -64,6 +64,7 @@
             this.btnThemPh = new System.Windows.Forms.Button();
             this.btnCapnhatPh = new System.Windows.Forms.Button();
             this.grbbtnPh = new System.Windows.Forms.GroupBox();
+            this.btnThongke = new System.Windows.Forms.Button();
             this.grbTTPh.SuspendLayout();
             this.grbchkTTPh.SuspendLayout();
             this.sttStripPhongDD.SuspendLayout();
@@ -107,8 +108,8 @@
             // 
             // btnTraPh
             // 
-            this.btnTraPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnTraPh.Location = new System.Drawing.Point(268, 288);
+            this.btnTraPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnTraPh.Location = new System.Drawing.Point(268, 279);
             this.btnTraPh.Name = "btnTraPh";
             this.btnTraPh.Size = new System.Drawing.Size(113, 36);
             this.btnTraPh.TabIndex = 10;
@@ -117,10 +118,10 @@
             // 
             // btnThemKH
             // 
-            this.btnThemKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.btnThemKH.Location = new System.Drawing.Point(57, 288);
+            this.btnThemKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnThemKH.Location = new System.Drawing.Point(56, 279);
             this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(132, 36);
+            this.btnThemKH.Size = new System.Drawing.Size(153, 36);
             this.btnThemKH.TabIndex = 9;
             this.btnThemKH.Text = "Thêm khách hàng";
             this.btnThemKH.UseVisualStyleBackColor = true;
@@ -230,50 +231,50 @@
             // lblCTPh
             // 
             this.lblCTPh.AutoSize = true;
-            this.lblCTPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCTPh.Location = new System.Drawing.Point(21, 164);
+            this.lblCTPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.lblCTPh.Location = new System.Drawing.Point(20, 165);
             this.lblCTPh.Name = "lblCTPh";
-            this.lblCTPh.Size = new System.Drawing.Size(70, 18);
+            this.lblCTPh.Size = new System.Drawing.Size(80, 20);
             this.lblCTPh.TabIndex = 0;
             this.lblCTPh.Text = "Chú thích";
             // 
             // lblGiaPh
             // 
             this.lblGiaPh.AutoSize = true;
-            this.lblGiaPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaPh.Location = new System.Drawing.Point(21, 128);
+            this.lblGiaPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.lblGiaPh.Location = new System.Drawing.Point(20, 129);
             this.lblGiaPh.Name = "lblGiaPh";
-            this.lblGiaPh.Size = new System.Drawing.Size(76, 18);
+            this.lblGiaPh.Size = new System.Drawing.Size(85, 20);
             this.lblGiaPh.TabIndex = 0;
             this.lblGiaPh.Text = "Giá phòng";
             // 
             // lblLoaiPh
             // 
             this.lblLoaiPh.AutoSize = true;
-            this.lblLoaiPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoaiPh.Location = new System.Drawing.Point(21, 96);
+            this.lblLoaiPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.lblLoaiPh.Location = new System.Drawing.Point(20, 97);
             this.lblLoaiPh.Name = "lblLoaiPh";
-            this.lblLoaiPh.Size = new System.Drawing.Size(81, 18);
+            this.lblLoaiPh.Size = new System.Drawing.Size(91, 20);
             this.lblLoaiPh.TabIndex = 0;
             this.lblLoaiPh.Text = "Loại phòng";
             // 
             // lblTenPh
             // 
             this.lblTenPh.AutoSize = true;
-            this.lblTenPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenPh.Location = new System.Drawing.Point(21, 62);
+            this.lblTenPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.lblTenPh.Location = new System.Drawing.Point(20, 63);
             this.lblTenPh.Name = "lblTenPh";
-            this.lblTenPh.Size = new System.Drawing.Size(78, 18);
+            this.lblTenPh.Size = new System.Drawing.Size(87, 20);
             this.lblTenPh.TabIndex = 0;
             this.lblTenPh.Text = "Tên phòng";
             // 
             // lblMaPh
             // 
             this.lblMaPh.AutoSize = true;
-            this.lblMaPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaPh.Location = new System.Drawing.Point(21, 26);
+            this.lblMaPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.lblMaPh.Location = new System.Drawing.Point(20, 27);
             this.lblMaPh.Name = "lblMaPh";
-            this.lblMaPh.Size = new System.Drawing.Size(74, 18);
+            this.lblMaPh.Size = new System.Drawing.Size(82, 20);
             this.lblMaPh.TabIndex = 0;
             this.lblMaPh.Text = "Mã phòng";
             // 
@@ -403,7 +404,7 @@
             // 
             // btnXoaPh
             // 
-            this.btnXoaPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.btnXoaPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnXoaPh.Location = new System.Drawing.Point(140, 19);
             this.btnXoaPh.Name = "btnXoaPh";
             this.btnXoaPh.Size = new System.Drawing.Size(113, 29);
@@ -413,7 +414,7 @@
             // 
             // btnThemPh
             // 
-            this.btnThemPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.btnThemPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnThemPh.Location = new System.Drawing.Point(6, 19);
             this.btnThemPh.Name = "btnThemPh";
             this.btnThemPh.Size = new System.Drawing.Size(113, 29);
@@ -423,10 +424,10 @@
             // 
             // btnCapnhatPh
             // 
-            this.btnCapnhatPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.btnCapnhatPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btnCapnhatPh.Location = new System.Drawing.Point(276, 19);
             this.btnCapnhatPh.Name = "btnCapnhatPh";
-            this.btnCapnhatPh.Size = new System.Drawing.Size(126, 29);
+            this.btnCapnhatPh.Size = new System.Drawing.Size(155, 29);
             this.btnCapnhatPh.TabIndex = 13;
             this.btnCapnhatPh.Text = "Cập nhật thông tin";
             this.btnCapnhatPh.UseVisualStyleBackColor = true;
@@ -438,15 +439,26 @@
             this.grbbtnPh.Controls.Add(this.btnXoaPh);
             this.grbbtnPh.Location = new System.Drawing.Point(12, 348);
             this.grbbtnPh.Name = "grbbtnPh";
-            this.grbbtnPh.Size = new System.Drawing.Size(410, 54);
+            this.grbbtnPh.Size = new System.Drawing.Size(492, 54);
             this.grbbtnPh.TabIndex = 1;
             this.grbbtnPh.TabStop = false;
+            // 
+            // btnThongke
+            // 
+            this.btnThongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.btnThongke.Location = new System.Drawing.Point(543, 363);
+            this.btnThongke.Name = "btnThongke";
+            this.btnThongke.Size = new System.Drawing.Size(113, 36);
+            this.btnThongke.TabIndex = 10;
+            this.btnThongke.Text = "Thống kê";
+            this.btnThongke.UseVisualStyleBackColor = true;
             // 
             // FrmPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 442);
+            this.Controls.Add(this.btnThongke);
             this.Controls.Add(this.sttStripPhongDD);
             this.Controls.Add(this.grbbtnPh);
             this.Controls.Add(this.pictureBox12);
@@ -526,6 +538,7 @@
         private System.Windows.Forms.Button btnThemPh;
         private System.Windows.Forms.Button btnCapnhatPh;
         private System.Windows.Forms.GroupBox grbbtnPh;
+        private System.Windows.Forms.Button btnThongke;
     }
 }
 
