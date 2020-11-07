@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="inputInformationKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inputInformationKH.Designer.cs">
+      <DependentUpon>inputInformationKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phongControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="phongControl.Designer.cs">
+      <DependentUpon>phongControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLDVKS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +75,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="inputInformationKH.resx">
+      <DependentUpon>inputInformationKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phongControl.resx">
+      <DependentUpon>phongControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLDVKS.resx">
       <DependentUpon>QLDVKS.cs</DependentUpon>
     </EmbeddedResource>
