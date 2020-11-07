@@ -31,5 +31,10 @@ namespace Quanlydichvukhachsan_Design1
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đặt Phòng Thành Công!");
+        }
     }
 }
