@@ -21,18 +21,18 @@ Begin
 
 	 if(@NameTable ='CT_DichVu')
 	begin
-	if exists(select * from CT_DichVu )---Nếu bảng hóa đơn có dữ liệu
+	if exists(select * from CT_DichVu )---Nếu bảng  có dữ liệu
 	 begin
-		--Lấy mã giáo viên lớn nhất hiện có
+		--Lấy mã  lớn nhất hiện có
 		select @MaxMA = max(MaLoaiDV) 
 		from CT_DichVu
 		--Trích phần ký số của mã lớn nhất và chuyển thành số 
-		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự của giáo viên mới
+		set @stt=convert(int, right(@MaxMA,3)) + 1 --Số thứ tự  mới
 	 end
 	  	  
-	else--Nếu bảng giáo viên đang rỗng (nghĩa là chưa có giáo viên nào được lưu trữ trong CSDL.
-	 set @stt= 1 -- Số thứ tự của giáo viên trong trường hợp chưa có gv nào trong CSDL
-	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã gv.
+	else--Nếu bảng  đang rỗng (nghĩa là chưa có dữ liệu nào được lưu trữ trong CSDL.)
+	 set @stt= 1 -- Số thứ tự của mã  trong trường hợp chưa có dữ liệu  nào trong CSDL
+	--Kiểm tra và bổ sung chữ số 0 để đủ 3 ký số trong mã .
 	set @sokytu = len(convert(varchar(3), @stt))
 	set @NewMA= @ma
 	set @i = 0
@@ -169,9 +169,7 @@ return @NewMA
 End
 
 
---PROC PHÒNG
-
- drop proc usp_insert_khachhang
+---------------Thêm xoá sửa khách hàng---------------------------
 
 create proc usp_insert_khachhang
 
@@ -243,6 +241,9 @@ exec usp_insert_khachhang N'Tân Ngáo đá ', '09090090', N'Việt Nam', 0, 20,
 select * from KhachHang
 delete from KhachHang
 
+
+
+-------------------- vùng hoá đơn---------------------------------
 drop proc usp_insert_HoaDon
 create proc usp_insert_HoaDon
 @MaKH nchar(100),
@@ -297,6 +298,7 @@ as
 go
 
 
+------------------------Vùng Phòng----------------------------
 --Phong
 select * from Phong
 drop proc usp_Insert_Phong
@@ -379,6 +381,8 @@ select *from DatPhong
 			else
 			 print N'Not Exists ma Phong '+@maphong
 
+
+--------------------Vùng Dịch vụ-----------------------------------
 --Dich Vu
 create proc usp_DichVu
 @maDV nchar(100)
@@ -426,7 +430,7 @@ as
 	 print N'Not exist'+ @maDV
 go
 
---CT_DichVu
+--------------------------CT_DichVu---------------------------
 
 create proc usp_CT_DichVu
  @tenLoaiDV nchar(100)
@@ -508,7 +512,7 @@ else
 
 	select * from CT_DichVu
 	select * from KhachHang
------- Update khách hàng thuê dịch vụ
+---------------------------------------------- Update khách hàng thuê dịch vụ--------------------------------
 drop proc usp_Update_KHThueDichVu
 create proc usp_Update_KHThueDichVu
 @makh nchar(100),
@@ -550,13 +554,11 @@ else print 'Existed ' +@mathuedichvu +' in table HoaDon'
 --liệt kê danh sách phòng/ khách hàng sử dụng dịch một dịch vụ nào đó
 create proc usp_lietkeDSDV
 @tenLoaiDV nvarchar(500)
-
 as
 	begin
 		select A.TenKH,  B.TenDV, C.TenPhong
 		from KhachHang A, KhachHangThueDichVu B, Phong C, DatPhong D
-		where B.TenDV = @tenLoaiDV and  A.MaKH = B.MaKH and C.MaPhong = D.MaPhong and A.MaKH = D.MaKH and B.MaKH =D.MaKH 
-		
+		where B.TenDV = @tenLoaiDV and  A.MaKH = B.MaKH and C.MaPhong = D.MaPhong and A.MaKH = D.MaKH and B.MaKH =D.MaKH 		
 	end
 go
 
@@ -568,16 +570,14 @@ create proc usp_SapXep_giam_Gia
 as
  if(@loaisapxep ='DonGia')
   begin
-select * 
-from CT_DichVu A
-order by DonGia desc
+     select * from CT_DichVu A
+     order by DonGia desc
 end
  else
     begin
-	  select * 
-from CT_DichVu A
-order by TenLoaiDv desc
-end
+	  select * from CT_DichVu A
+      order by TenLoaiDv desc
+    end
 exec usp_SapXep_giam_Gia 'TenDV'
  --Sap Xep tang bang gia dich vu
  drop proc usp_SapXep_tang_Gia 
@@ -586,9 +586,7 @@ create proc usp_SapXep_tang_Gia
 as
 
  if(@loaisapxep ='DonGia')
-  begin
-select * 
-from CT_DichVu A
+  begin select * from CT_DichVu A
 order by DonGia asc
 end
  else
@@ -616,7 +614,7 @@ create proc usp_tinh_tien_suDung_dichVu
  --Sum((B.DonGia *C.SoLuongDat)) as N'Tong thanh tien' ,
    if exists (select * from Phong where MaPhong =@maPhong)
 	 begin
-	     select  D.MaKH,B.DonGia,C.SoLuongDat , C.TenDV, (B.DonGia *C.SoLuongDat) as N'Tong thanh tien' 
+	     select  D.MaKH, C.TenDV, B.DonGia,C.SoLuongDat , (B.DonGia *C.SoLuongDat) as N'Tong thanh tien' 
 		-- (B.DonGia *C.SoLuongDat) as N'Tung Loai'
 		 from Phong A ,CT_DichVu B,KhachHangThueDichVu C,DatPhong D
 		 where A.MaPhong =D.MaPhong  and D.MaPhong=@maPhong  and D.MaKH = C.MaKH  and C.MaLoaiDV =B.MaLoaiDV
@@ -624,6 +622,33 @@ create proc usp_tinh_tien_suDung_dichVu
 	end
 exec usp_tinh_tien_suDung_dichVu 'PP001'
 
+
+--- tính tổng tiền phòng và tiền thuê dịch vụ
+drop proc usp_tinh_tong_tien_HoaDon 
+create proc usp_tinh_tong_tien_HoaDon
+@maPhong nchar(100),
+@maKH nchar(100)
+as
+  if exists(select * from dbo.Phong where MaPhong = @maPhong) and exists(select * from dbo.KhachHang where MaKH = @maKH)
+	begin
+		select  E.MaKH, ((day(D.NgayTra) -day(D.NgayNhan) )* A.Gia) + (B.DonGia *C.SoLuongDat) as N'Tong hoa don' 
+		from Phong A ,CT_DichVu B,KhachHangThueDichVu C,DatPhong D, KhachHang E 
+		where A.MaPhong =D.MaPhong  and D.MaPhong=@maPhong  and D.MaKH = C.MaKH  and C.MaLoaiDV =B.MaLoaiDV and E.MaKH = D.MaKH
+			and E.MaKH = C.MaKH  
+		
+	end
+go
+
+exec usp_tinh_tong_tien_HoaDon 'PP001', 'KH001'
+------Thống kê theo ngày 
+
+
 	
+select * from Phong
+select * from KhachHang
+select * from DatPhong
+select * from CT_DichVu
+select * from KhachHangThueDichVu
+
 
 
