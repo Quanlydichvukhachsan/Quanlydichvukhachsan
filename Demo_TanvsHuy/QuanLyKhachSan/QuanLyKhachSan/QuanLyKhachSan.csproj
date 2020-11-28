@@ -192,5 +192,15 @@
   <ItemGroup>
     <None Include="Resources\golf valley.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{18c03cc1-70ad-4901-a1a1-a512a4337852}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{be4de370-080e-4aea-8836-ac4fa8615326}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
