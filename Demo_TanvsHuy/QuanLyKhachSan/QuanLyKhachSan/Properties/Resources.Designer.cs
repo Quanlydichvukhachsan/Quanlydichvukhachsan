@@ -63,6 +63,16 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap golf_valley {
+            get {
+                object obj = ResourceManager.GetObject("golf valley", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_online_payment_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-online-payment-80", resourceCulture);

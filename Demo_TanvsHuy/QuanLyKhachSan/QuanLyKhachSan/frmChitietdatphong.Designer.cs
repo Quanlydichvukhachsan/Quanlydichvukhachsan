@@ -95,6 +95,7 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Controls.Add(this.btnCapnhatthongtinKH);
             this.guna2GroupBox2.Controls.Add(this.label15);
             this.guna2GroupBox2.Controls.Add(this.cbQuoctich);
@@ -112,9 +113,9 @@ namespace QuanLyKhachSan
             this.guna2GroupBox2.Controls.Add(this.label13);
             this.guna2GroupBox2.Controls.Add(this.dtpNgaysinh);
             this.guna2GroupBox2.Controls.Add(this.label12);
-            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox2.Location = new System.Drawing.Point(306, 3);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
@@ -141,6 +142,7 @@ namespace QuanLyKhachSan
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.ForeColor = System.Drawing.Color.DarkGreen;
             this.label15.Location = new System.Drawing.Point(12, 104);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
@@ -157,7 +159,7 @@ namespace QuanLyKhachSan
             this.cbQuoctich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbQuoctich.FocusedState.Parent = this.cbQuoctich;
             this.cbQuoctich.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbQuoctich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbQuoctich.ForeColor = System.Drawing.Color.DarkGreen;
             this.cbQuoctich.HoverState.Parent = this.cbQuoctich;
             this.cbQuoctich.ItemHeight = 30;
             this.cbQuoctich.ItemsAppearance.Parent = this.cbQuoctich;
@@ -176,7 +178,7 @@ namespace QuanLyKhachSan
             this.cbLoaiKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiKH.FocusedState.Parent = this.cbLoaiKH;
             this.cbLoaiKH.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbLoaiKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLoaiKH.ForeColor = System.Drawing.Color.DarkGreen;
             this.cbLoaiKH.HoverState.Parent = this.cbLoaiKH;
             this.cbLoaiKH.ItemHeight = 30;
             this.cbLoaiKH.ItemsAppearance.Parent = this.cbLoaiKH;
@@ -195,7 +197,7 @@ namespace QuanLyKhachSan
             this.cbGioitinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbGioitinh.FocusedState.Parent = this.cbGioitinh;
             this.cbGioitinh.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGioitinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbGioitinh.ForeColor = System.Drawing.Color.DarkGreen;
             this.cbGioitinh.HoverState.Parent = this.cbGioitinh;
             this.cbGioitinh.ItemHeight = 30;
             this.cbGioitinh.ItemsAppearance.Parent = this.cbGioitinh;
@@ -209,6 +211,7 @@ namespace QuanLyKhachSan
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.ForeColor = System.Drawing.Color.DarkGreen;
             this.label16.Location = new System.Drawing.Point(270, 166);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
@@ -220,6 +223,7 @@ namespace QuanLyKhachSan
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.ForeColor = System.Drawing.Color.DarkGreen;
             this.label18.Location = new System.Drawing.Point(270, 228);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
@@ -231,6 +235,7 @@ namespace QuanLyKhachSan
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.ForeColor = System.Drawing.Color.DarkGreen;
             this.label17.Location = new System.Drawing.Point(12, 228);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
@@ -242,6 +247,7 @@ namespace QuanLyKhachSan
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.DarkGreen;
             this.label11.Location = new System.Drawing.Point(12, 166);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -284,6 +290,7 @@ namespace QuanLyKhachSan
             this.txtDiachi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.FocusedState.Parent = this.txtDiachi;
             this.txtDiachi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDiachi.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiachi.HoverState.Parent = this.txtDiachi;
             this.txtDiachi.Location = new System.Drawing.Point(274, 127);
@@ -307,6 +314,7 @@ namespace QuanLyKhachSan
             this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.FocusedState.Parent = this.txtSDT;
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSDT.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSDT.HoverState.Parent = this.txtSDT;
             this.txtSDT.Location = new System.Drawing.Point(16, 251);
@@ -330,6 +338,7 @@ namespace QuanLyKhachSan
             this.txtCMND.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.FocusedState.Parent = this.txtCMND;
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCMND.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.HoverState.Parent = this.txtCMND;
             this.txtCMND.Location = new System.Drawing.Point(16, 127);
@@ -345,6 +354,7 @@ namespace QuanLyKhachSan
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.ForeColor = System.Drawing.Color.DarkGreen;
             this.label14.Location = new System.Drawing.Point(270, 104);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
@@ -384,6 +394,7 @@ namespace QuanLyKhachSan
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.Color.DarkGreen;
             this.label12.Location = new System.Drawing.Point(12, 39);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
@@ -393,6 +404,7 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Controls.Add(this.btnLuuthaydoi);
             this.guna2GroupBox1.Controls.Add(this.dtpNgaytra);
             this.guna2GroupBox1.Controls.Add(this.dtpNgaynhan);
@@ -404,9 +416,9 @@ namespace QuanLyKhachSan
             this.guna2GroupBox1.Controls.Add(this.label5);
             this.guna2GroupBox1.Controls.Add(this.label3);
             this.guna2GroupBox1.Controls.Add(this.label2);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(12, 3);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
@@ -472,7 +484,7 @@ namespace QuanLyKhachSan
             this.cbTenloaiphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbTenloaiphong.FocusedState.Parent = this.cbTenloaiphong;
             this.cbTenloaiphong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbTenloaiphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTenloaiphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.cbTenloaiphong.HoverState.Parent = this.cbTenloaiphong;
             this.cbTenloaiphong.ItemHeight = 30;
             this.cbTenloaiphong.ItemsAppearance.Parent = this.cbTenloaiphong;
@@ -494,6 +506,7 @@ namespace QuanLyKhachSan
             this.txtSodem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSodem.FocusedState.Parent = this.txtSodem;
             this.txtSodem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSodem.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtSodem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSodem.HoverState.Parent = this.txtSodem;
             this.txtSodem.Location = new System.Drawing.Point(11, 323);
@@ -517,6 +530,7 @@ namespace QuanLyKhachSan
             this.txtMadatphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMadatphong.FocusedState.Parent = this.txtMadatphong;
             this.txtMadatphong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMadatphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtMadatphong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMadatphong.HoverState.Parent = this.txtMadatphong;
             this.txtMadatphong.Location = new System.Drawing.Point(11, 62);
@@ -532,6 +546,7 @@ namespace QuanLyKhachSan
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.DarkGreen;
             this.label4.Location = new System.Drawing.Point(7, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 20);
@@ -542,6 +557,7 @@ namespace QuanLyKhachSan
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.DarkGreen;
             this.label6.Location = new System.Drawing.Point(7, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
@@ -552,6 +568,7 @@ namespace QuanLyKhachSan
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
             this.label5.Location = new System.Drawing.Point(7, 232);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
@@ -562,6 +579,7 @@ namespace QuanLyKhachSan
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(7, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
@@ -572,6 +590,7 @@ namespace QuanLyKhachSan
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
             this.label2.Location = new System.Drawing.Point(7, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 20);

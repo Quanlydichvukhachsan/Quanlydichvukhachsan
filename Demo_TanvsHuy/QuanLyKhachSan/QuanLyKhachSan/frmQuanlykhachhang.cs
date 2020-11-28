@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class frmPhong : Form
+    public partial class frmQuanlykhachhang : Form
     {
-        public frmPhong()
+        public frmQuanlykhachhang()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

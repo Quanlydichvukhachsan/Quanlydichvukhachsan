@@ -68,6 +68,8 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Controls.Add(this.label16);
             this.guna2GroupBox2.Controls.Add(this.label18);
             this.guna2GroupBox2.Controls.Add(this.label17);
@@ -76,9 +78,9 @@ namespace QuanLyKhachSan
             this.guna2GroupBox2.Controls.Add(this.txtSonguoitoida);
             this.guna2GroupBox2.Controls.Add(this.txtTenloaiphong);
             this.guna2GroupBox2.Controls.Add(this.txtTenphong);
-            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox2.Location = new System.Drawing.Point(399, 51);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
@@ -90,6 +92,7 @@ namespace QuanLyKhachSan
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.ForeColor = System.Drawing.Color.DarkGreen;
             this.label16.Location = new System.Drawing.Point(14, 207);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
@@ -101,6 +104,7 @@ namespace QuanLyKhachSan
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.ForeColor = System.Drawing.Color.DarkGreen;
             this.label18.Location = new System.Drawing.Point(14, 288);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
@@ -112,6 +116,7 @@ namespace QuanLyKhachSan
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.ForeColor = System.Drawing.Color.DarkGreen;
             this.label17.Location = new System.Drawing.Point(14, 119);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
@@ -123,6 +128,7 @@ namespace QuanLyKhachSan
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.DarkGreen;
             this.label11.Location = new System.Drawing.Point(14, 41);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -142,6 +148,7 @@ namespace QuanLyKhachSan
             this.txtGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.FocusedState.Parent = this.txtGia;
             this.txtGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGia.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.HoverState.Parent = this.txtGia;
             this.txtGia.Location = new System.Drawing.Point(18, 323);
@@ -165,6 +172,7 @@ namespace QuanLyKhachSan
             this.txtSonguoitoida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSonguoitoida.FocusedState.Parent = this.txtSonguoitoida;
             this.txtSonguoitoida.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSonguoitoida.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtSonguoitoida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSonguoitoida.HoverState.Parent = this.txtSonguoitoida;
             this.txtSonguoitoida.Location = new System.Drawing.Point(18, 239);
@@ -188,6 +196,7 @@ namespace QuanLyKhachSan
             this.txtTenloaiphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenloaiphong.FocusedState.Parent = this.txtTenloaiphong;
             this.txtTenloaiphong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenloaiphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtTenloaiphong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenloaiphong.HoverState.Parent = this.txtTenloaiphong;
             this.txtTenloaiphong.Location = new System.Drawing.Point(18, 154);
@@ -211,6 +220,7 @@ namespace QuanLyKhachSan
             this.txtTenphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenphong.FocusedState.Parent = this.txtTenphong;
             this.txtTenphong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtTenphong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenphong.HoverState.Parent = this.txtTenphong;
             this.txtTenphong.Location = new System.Drawing.Point(18, 65);
@@ -224,11 +234,12 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox3
             // 
+            this.guna2GroupBox3.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox3.Controls.Add(this.btndong);
             this.guna2GroupBox3.Controls.Add(this.btnluuthaydoi);
-            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox3.Location = new System.Drawing.Point(15, 281);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
             this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
@@ -268,13 +279,14 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Controls.Add(this.cbphong);
             this.guna2GroupBox1.Controls.Add(this.cbloaiphong);
             this.guna2GroupBox1.Controls.Add(this.label4);
             this.guna2GroupBox1.Controls.Add(this.label3);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(12, 51);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
@@ -291,7 +303,7 @@ namespace QuanLyKhachSan
             this.cbphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbphong.FocusedState.Parent = this.cbphong;
             this.cbphong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.cbphong.HoverState.Parent = this.cbphong;
             this.cbphong.ItemHeight = 30;
             this.cbphong.ItemsAppearance.Parent = this.cbphong;
@@ -310,7 +322,7 @@ namespace QuanLyKhachSan
             this.cbloaiphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbloaiphong.FocusedState.Parent = this.cbloaiphong;
             this.cbloaiphong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbloaiphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbloaiphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.cbloaiphong.HoverState.Parent = this.cbloaiphong;
             this.cbloaiphong.ItemHeight = 30;
             this.cbloaiphong.ItemsAppearance.Parent = this.cbloaiphong;
@@ -324,6 +336,7 @@ namespace QuanLyKhachSan
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.DarkGreen;
             this.label4.Location = new System.Drawing.Point(18, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
@@ -334,6 +347,7 @@ namespace QuanLyKhachSan
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(18, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);

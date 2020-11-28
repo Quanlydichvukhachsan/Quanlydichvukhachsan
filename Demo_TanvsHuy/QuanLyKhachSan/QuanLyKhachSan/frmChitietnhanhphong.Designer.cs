@@ -49,13 +49,13 @@ namespace QuanLyKhachSan
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtManhanphong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNgaytra = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNgaynhan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenphong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
@@ -80,15 +80,16 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Controls.Add(this.btnDong);
             this.guna2GroupBox2.Controls.Add(this.btnDoiphong);
-            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox2.Location = new System.Drawing.Point(12, 402);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(375, 135);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(375, 143);
             this.guna2GroupBox2.TabIndex = 2;
             this.guna2GroupBox2.Text = "Chức Năng";
             // 
@@ -100,7 +101,7 @@ namespace QuanLyKhachSan
             this.btnDong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDong.ForeColor = System.Drawing.Color.White;
             this.btnDong.HoverState.Parent = this.btnDong;
-            this.btnDong.Location = new System.Drawing.Point(88, 82);
+            this.btnDong.Location = new System.Drawing.Point(88, 94);
             this.btnDong.Name = "btnDong";
             this.btnDong.ShadowDecoration.Parent = this.btnDong;
             this.btnDong.Size = new System.Drawing.Size(187, 38);
@@ -115,7 +116,7 @@ namespace QuanLyKhachSan
             this.btnDoiphong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDoiphong.ForeColor = System.Drawing.Color.White;
             this.btnDoiphong.HoverState.Parent = this.btnDoiphong;
-            this.btnDoiphong.Location = new System.Drawing.Point(88, 35);
+            this.btnDoiphong.Location = new System.Drawing.Point(88, 50);
             this.btnDoiphong.Name = "btnDoiphong";
             this.btnDoiphong.ShadowDecoration.Parent = this.btnDoiphong;
             this.btnDoiphong.Size = new System.Drawing.Size(187, 38);
@@ -169,10 +170,11 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox3
             // 
+            this.guna2GroupBox3.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox3.Controls.Add(this.dtfvDanhsachkhachhang);
-            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox3.Location = new System.Drawing.Point(411, 51);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
             this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
@@ -207,7 +209,7 @@ namespace QuanLyKhachSan
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -215,13 +217,13 @@ namespace QuanLyKhachSan
             this.dtfvDanhsachkhachhang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtfvDanhsachkhachhang.EnableHeadersVisualStyles = false;
             this.dtfvDanhsachkhachhang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtfvDanhsachkhachhang.Location = new System.Drawing.Point(0, 41);
+            this.dtfvDanhsachkhachhang.Location = new System.Drawing.Point(0, 60);
             this.dtfvDanhsachkhachhang.Name = "dtfvDanhsachkhachhang";
             this.dtfvDanhsachkhachhang.RowHeadersVisible = false;
             this.dtfvDanhsachkhachhang.RowHeadersWidth = 51;
             this.dtfvDanhsachkhachhang.RowTemplate.Height = 24;
             this.dtfvDanhsachkhachhang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtfvDanhsachkhachhang.Size = new System.Drawing.Size(622, 445);
+            this.dtfvDanhsachkhachhang.Size = new System.Drawing.Size(622, 426);
             this.dtfvDanhsachkhachhang.TabIndex = 0;
             this.dtfvDanhsachkhachhang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtfvDanhsachkhachhang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -241,7 +243,7 @@ namespace QuanLyKhachSan
             this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DarkGreen;
+            this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.Height = 24;
             this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtfvDanhsachkhachhang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -278,17 +280,18 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Controls.Add(this.label16);
             this.guna2GroupBox1.Controls.Add(this.label18);
-            this.guna2GroupBox1.Controls.Add(this.txtManhanphong);
             this.guna2GroupBox1.Controls.Add(this.txtNgaytra);
             this.guna2GroupBox1.Controls.Add(this.txtNgaynhan);
+            this.guna2GroupBox1.Controls.Add(this.guna2TextBox1);
             this.guna2GroupBox1.Controls.Add(this.txtTenphong);
             this.guna2GroupBox1.Controls.Add(this.label14);
             this.guna2GroupBox1.Controls.Add(this.label13);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(12, 51);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
@@ -300,6 +303,7 @@ namespace QuanLyKhachSan
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.ForeColor = System.Drawing.Color.DarkGreen;
             this.label16.Location = new System.Drawing.Point(14, 168);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
@@ -311,35 +315,13 @@ namespace QuanLyKhachSan
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.ForeColor = System.Drawing.Color.DarkGreen;
             this.label18.Location = new System.Drawing.Point(14, 230);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 20);
             this.label18.TabIndex = 17;
             this.label18.Text = "Ngày Trả";
-            // 
-            // txtManhanphong
-            // 
-            this.txtManhanphong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtManhanphong.DefaultText = "";
-            this.txtManhanphong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtManhanphong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtManhanphong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtManhanphong.DisabledState.Parent = this.txtManhanphong;
-            this.txtManhanphong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtManhanphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManhanphong.FocusedState.Parent = this.txtManhanphong;
-            this.txtManhanphong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtManhanphong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManhanphong.HoverState.Parent = this.txtManhanphong;
-            this.txtManhanphong.Location = new System.Drawing.Point(18, 67);
-            this.txtManhanphong.Name = "txtManhanphong";
-            this.txtManhanphong.PasswordChar = '\0';
-            this.txtManhanphong.PlaceholderText = "";
-            this.txtManhanphong.SelectedText = "";
-            this.txtManhanphong.ShadowDecoration.Parent = this.txtManhanphong;
-            this.txtManhanphong.Size = new System.Drawing.Size(307, 36);
-            this.txtManhanphong.TabIndex = 20;
             // 
             // txtNgaytra
             // 
@@ -353,6 +335,7 @@ namespace QuanLyKhachSan
             this.txtNgaytra.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNgaytra.FocusedState.Parent = this.txtNgaytra;
             this.txtNgaytra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNgaytra.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtNgaytra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNgaytra.HoverState.Parent = this.txtNgaytra;
             this.txtNgaytra.Location = new System.Drawing.Point(18, 253);
@@ -376,6 +359,7 @@ namespace QuanLyKhachSan
             this.txtNgaynhan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNgaynhan.FocusedState.Parent = this.txtNgaynhan;
             this.txtNgaynhan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNgaynhan.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtNgaynhan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNgaynhan.HoverState.Parent = this.txtNgaynhan;
             this.txtNgaynhan.Location = new System.Drawing.Point(18, 191);
@@ -399,6 +383,7 @@ namespace QuanLyKhachSan
             this.txtTenphong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenphong.FocusedState.Parent = this.txtTenphong;
             this.txtTenphong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenphong.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtTenphong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenphong.HoverState.Parent = this.txtTenphong;
             this.txtTenphong.Location = new System.Drawing.Point(18, 129);
@@ -414,6 +399,7 @@ namespace QuanLyKhachSan
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.ForeColor = System.Drawing.Color.DarkGreen;
             this.label14.Location = new System.Drawing.Point(14, 106);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
@@ -425,6 +411,7 @@ namespace QuanLyKhachSan
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.Color.DarkGreen;
             this.label13.Location = new System.Drawing.Point(14, 41);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
@@ -442,6 +429,30 @@ namespace QuanLyKhachSan
             this.label1.Size = new System.Drawing.Size(319, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chi Tiết Nhận Phòng";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(18, 67);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(307, 36);
+            this.guna2TextBox1.TabIndex = 23;
             // 
             // frmChitietnhanhphong
             // 
@@ -470,7 +481,6 @@ namespace QuanLyKhachSan
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
-        private Guna.UI2.WinForms.Guna2TextBox txtManhanphong;
         private Guna.UI2.WinForms.Guna2TextBox txtNgaytra;
         private Guna.UI2.WinForms.Guna2TextBox txtNgaynhan;
         private Guna.UI2.WinForms.Guna2TextBox txtTenphong;
@@ -488,5 +498,6 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

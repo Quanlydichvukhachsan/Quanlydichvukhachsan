@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmDatphong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmDatphong.Designer.cs">
+      <DependentUpon>frmDatphong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChitietdatphong.cs">
       <SubType>Form</SubType>
@@ -70,12 +71,6 @@
     <Compile Include="frmChitietnhanhphong.Designer.cs">
       <DependentUpon>frmChitietnhanhphong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDichvu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDichvu.Designer.cs">
-      <DependentUpon>frmDichvu.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDoanhthu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,23 +83,23 @@
     <Compile Include="frmdoiphong.Designer.cs">
       <DependentUpon>frmdoiphong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKhachhang.cs">
+    <Compile Include="frmQuanlykhachhang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhachhang.Designer.cs">
-      <DependentUpon>frmKhachhang.cs</DependentUpon>
+    <Compile Include="frmQuanlykhachhang.Designer.cs">
+      <DependentUpon>frmQuanlykhachhang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKhachHang_Dichvu.cs">
+    <Compile Include="frmSudungvathanhtoandichvu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhachHang_Dichvu.Designer.cs">
-      <DependentUpon>frmKhachHang_Dichvu.cs</DependentUpon>
+    <Compile Include="frmSudungvathanhtoandichvu.Designer.cs">
+      <DependentUpon>frmSudungvathanhtoandichvu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoaiDichvu.cs">
+    <Compile Include="frmQuanlyDV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoaiDichvu.Designer.cs">
-      <DependentUpon>frmLoaiDichvu.cs</DependentUpon>
+    <Compile Include="frmQuanlyDV.Designer.cs">
+      <DependentUpon>frmQuanlyDV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhanphong.cs">
       <SubType>Form</SubType>
@@ -112,11 +107,11 @@
     <Compile Include="frmNhanphong.Designer.cs">
       <DependentUpon>frmNhanphong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhong.cs">
+    <Compile Include="frmQLPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPhong.Designer.cs">
-      <DependentUpon>frmPhong.cs</DependentUpon>
+    <Compile Include="frmQLPhong.Designer.cs">
+      <DependentUpon>frmQLPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLKS.cs">
       <SubType>Form</SubType>
@@ -132,8 +127,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmDatphong.resx">
+      <DependentUpon>frmDatphong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChitietdatphong.resx">
       <DependentUpon>frmChitietdatphong.cs</DependentUpon>
@@ -141,29 +136,26 @@
     <EmbeddedResource Include="frmChitietnhanhphong.resx">
       <DependentUpon>frmChitietnhanhphong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDichvu.resx">
-      <DependentUpon>frmDichvu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDoanhthu.resx">
       <DependentUpon>frmDoanhthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmdoiphong.resx">
       <DependentUpon>frmdoiphong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKhachhang.resx">
-      <DependentUpon>frmKhachhang.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanlykhachhang.resx">
+      <DependentUpon>frmQuanlykhachhang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKhachHang_Dichvu.resx">
-      <DependentUpon>frmKhachHang_Dichvu.cs</DependentUpon>
+    <EmbeddedResource Include="frmSudungvathanhtoandichvu.resx">
+      <DependentUpon>frmSudungvathanhtoandichvu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoaiDichvu.resx">
-      <DependentUpon>frmLoaiDichvu.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuanlyDV.resx">
+      <DependentUpon>frmQuanlyDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanphong.resx">
       <DependentUpon>frmNhanphong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhong.resx">
-      <DependentUpon>frmPhong.cs</DependentUpon>
+    <EmbeddedResource Include="frmQLPhong.resx">
+      <DependentUpon>frmQLPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLKS.resx">
       <DependentUpon>frmQLKS.cs</DependentUpon>
@@ -196,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-online-payment-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\golf valley.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

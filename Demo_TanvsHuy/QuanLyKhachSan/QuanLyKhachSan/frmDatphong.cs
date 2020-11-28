@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class frmKhachhang : Form
+    public partial class frmDatphong : Form
     {
-        public frmKhachhang()
+        public frmDatphong()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox9_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

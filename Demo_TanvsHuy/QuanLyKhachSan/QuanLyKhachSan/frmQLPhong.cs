@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class frmKhachHang_Dichvu : Form
+    public partial class frmQLPhong : Form
     {
-        public frmKhachHang_Dichvu()
+        public frmQLPhong()
         {
             InitializeComponent();
         }

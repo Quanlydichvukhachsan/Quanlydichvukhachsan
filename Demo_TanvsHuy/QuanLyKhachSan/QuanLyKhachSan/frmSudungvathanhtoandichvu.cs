@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class frmLoaiDichvu : Form
+    public partial class frmSudungvathanhtoandichvu : Form
     {
-        public frmLoaiDichvu()
+        public frmSudungvathanhtoandichvu()
         {
             InitializeComponent();
         }
+
+     
     }
 }
