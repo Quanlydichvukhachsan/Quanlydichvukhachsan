@@ -36,7 +36,7 @@ namespace DTO
 
         private List<string> listName = null;  
         public RoomDTO() { }
-
+       
         public RoomDTO(DataRow row,DataTable data)
         {
 

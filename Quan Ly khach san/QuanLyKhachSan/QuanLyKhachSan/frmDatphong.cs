@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BLL;
+
 
 namespace QuanLyKhachSan
 {
@@ -25,6 +28,20 @@ namespace QuanLyKhachSan
         private void guna2TextBox9_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void LoadBookRoomByDate()
+        {
+           dtgvBookRoom.DataSource= BookRoomBLL.Instance.ReadBookRoomByDate(DateTime.Parse("2018-06-24"));
+        }
+
+        private void frmDatphong_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnNhanphong_Click(object sender, EventArgs e)
+        {
+            LoadBookRoomByDate();
         }
     }
 }

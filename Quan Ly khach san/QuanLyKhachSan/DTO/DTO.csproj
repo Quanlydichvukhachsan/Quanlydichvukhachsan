@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookRoomDTO.cs" />
     <Compile Include="InitNameColumn.cs" />
     <Compile Include="RoomDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

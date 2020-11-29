@@ -16,7 +16,7 @@ namespace DAL
         bool DeleteById( T obj);
 
         IEnumerable<T> readAll();
-
+        
     }
     
 }

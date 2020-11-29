@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookRoomDAL.cs" />
     <Compile Include="RoomDAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="IReposityDAL.cs" />
