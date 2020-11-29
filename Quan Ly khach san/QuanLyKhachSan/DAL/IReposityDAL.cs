@@ -9,13 +9,13 @@ namespace DAL
   
      internal interface IReposityDAL<T>
     {
-        bool Insert(string query, T obj);
+        bool Insert(T obj);
 
-        bool UpdateById(string query, T obj);
+        bool UpdateById(T obj);
 
-        bool DeleteById(string query, T obj);
+        bool DeleteById( T obj);
 
-        IEnumerable<T> readAll(string query);
+        IEnumerable<T> readAll();
 
     }
     

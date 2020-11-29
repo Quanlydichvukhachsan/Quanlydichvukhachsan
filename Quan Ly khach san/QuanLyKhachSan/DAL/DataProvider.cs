@@ -22,7 +22,7 @@ namespace DAL
         {
         }
 
-        private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database=QLBH;User Id = test; pwd=0949238337";
+        private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database=HotelManagement;User Id=test;password=nguyenmautuan123";
         private void hasParameter(SqlCommand cmd, string query, object[] para = null)
         {
             int i = 0;
