@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 using System.Data;
 namespace DTO
 {
@@ -16,9 +17,10 @@ namespace DTO
         private readonly int _limitPerson;
         private readonly string _nameStatusRoom;
         private readonly string _nameRoomType; 
+        
         public int Id => _id; 
 
-        public string NameRoom => _nameRoom;
+        public string  NameRoom => _nameRoom;
 
         public string NameRoomType => _nameRoomType;
 
@@ -32,19 +34,22 @@ namespace DTO
 
         public string NameStatusRoom => _nameStatusRoom;
 
-
+        private List<string> listName = null;  
         public RoomDTO() { }
 
-        public RoomDTO(DataRow row)
+        public RoomDTO(DataRow row,DataTable data)
         {
-              _id = int.Parse(row["ID"].ToString());
-            _nameRoom = row["Name"].ToString();
-            _nameRoomType = row["nameRoomType"].ToString();
-            _price = int.Parse(row["Price"].ToString());
-            _limitPerson = int.Parse(row["LimitPerson"].ToString());
-            _nameStatusRoom =  row["nameStatusRoom"].ToString();
-            _idStatusRoom = int.Parse(row["IDRoomType"].ToString());
-            _idRoomType =  int.Parse(row["IDStatusRoom"].ToString());
+
+             listName = InitNameColumn.init(data);   
+
+              _id = int.Parse(row[listName[0]].ToString());
+            _nameRoom = row[listName[1]].ToString();
+            _nameRoomType = row[listName[2]].ToString();
+            _price = int.Parse(row[listName[3]].ToString());
+            _limitPerson = int.Parse(row[listName[4]].ToString());
+            _nameStatusRoom =  row[listName[5]].ToString();
+            _idStatusRoom = int.Parse(row[listName[6]].ToString());
+            _idRoomType =  int.Parse(row[listName[7]].ToString());
         }
 
         public RoomDTO(int id, string nameRoom,string nameRoomType ,int idStatusRoom, int idRoomType, int price, int limitPerson, string nameStatusRoom)
@@ -58,5 +63,6 @@ namespace DTO
             _limitPerson = limitPerson;
             _nameStatusRoom = nameStatusRoom;
         }
-    }
+
+          }
 }

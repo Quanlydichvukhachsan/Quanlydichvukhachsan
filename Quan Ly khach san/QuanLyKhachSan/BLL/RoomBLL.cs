@@ -26,6 +26,15 @@ namespace BLL
         {
            return RoomDAL.Instance.readAll();
         }
+        public IEnumerable<StatusRoom> LoadStatusRoom()
+        {
+            return RoomDAL.Instance.LoadFullSatusRoom();
+        }
+         public IEnumerable<RoomType> LoadRoomType()
+        {
+            return RoomDAL.Instance.LoadFullRoomType();
+        }
+
 
         public bool UpdateById(string id, RoomDTO obj)
         {

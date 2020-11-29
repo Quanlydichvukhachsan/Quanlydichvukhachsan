@@ -36,6 +36,13 @@ namespace QuanLyKhachSan
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dtgvDanhsachPhongQLP = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameStatusRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnDongQLP = new Guna.UI2.WinForms.Guna2Button();
@@ -44,12 +51,12 @@ namespace QuanLyKhachSan
             this.btnThemPhongQLP = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cbbLoaiPhongQLP = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbStatusRoom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbbMaPhongQLP = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtChuthichQLP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSoNguoiToiDa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGiaPhongQLP = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenPhongQLP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -60,21 +67,14 @@ namespace QuanLyKhachSan
             this.txtMaPhongQLP = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaPhongQLP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtgvDanhsachPhongQLP = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameStatusRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachPhongQLP)).BeginInit();
             this.panel2.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachPhongQLP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,6 +112,128 @@ namespace QuanLyKhachSan
             this.guna2GroupBox2.Size = new System.Drawing.Size(593, 489);
             this.guna2GroupBox2.TabIndex = 12;
             this.guna2GroupBox2.Text = "Danh sách phòng";
+            // 
+            // dtgvDanhsachPhongQLP
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhsachPhongQLP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvDanhsachPhongQLP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvDanhsachPhongQLP.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvDanhsachPhongQLP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvDanhsachPhongQLP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvDanhsachPhongQLP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dtgvDanhsachPhongQLP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvDanhsachPhongQLP.ColumnHeadersHeight = 22;
+            this.dtgvDanhsachPhongQLP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NameRoom,
+            this.NameRoomType,
+            this.Price,
+            this.LimitPerson,
+            this.nameStatusRoom});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvDanhsachPhongQLP.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvDanhsachPhongQLP.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvDanhsachPhongQLP.EnableHeadersVisualStyles = false;
+            this.dtgvDanhsachPhongQLP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.dtgvDanhsachPhongQLP.Location = new System.Drawing.Point(0, 40);
+            this.dtgvDanhsachPhongQLP.Name = "dtgvDanhsachPhongQLP";
+            this.dtgvDanhsachPhongQLP.RowHeadersVisible = false;
+            this.dtgvDanhsachPhongQLP.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(136)))), ((int)(((byte)(86)))));
+            this.dtgvDanhsachPhongQLP.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvDanhsachPhongQLP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgvDanhsachPhongQLP.RowTemplate.DividerHeight = 5;
+            this.dtgvDanhsachPhongQLP.RowTemplate.Height = 60;
+            this.dtgvDanhsachPhongQLP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvDanhsachPhongQLP.Size = new System.Drawing.Size(593, 449);
+            this.dtgvDanhsachPhongQLP.TabIndex = 4;
+            this.dtgvDanhsachPhongQLP.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.Height = 22;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.ReadOnly = false;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.Height = 60;
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvDanhsachPhongQLP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhsachPhongQLP_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 1.573463F;
+            this.ID.HeaderText = "Mã";
+            this.ID.Name = "ID";
+            this.ID.Width = 47;
+            // 
+            // NameRoom
+            // 
+            this.NameRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NameRoom.DataPropertyName = "NameRoom";
+            this.NameRoom.FillWeight = 16.8327F;
+            this.NameRoom.HeaderText = "Tên Phòng";
+            this.NameRoom.Name = "NameRoom";
+            this.NameRoom.Width = 150;
+            // 
+            // NameRoomType
+            // 
+            this.NameRoomType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NameRoomType.DataPropertyName = "NameRoomType";
+            this.NameRoomType.FillWeight = 67.60133F;
+            this.NameRoomType.HeaderText = "Loại Phòng ";
+            this.NameRoomType.Name = "NameRoomType";
+            this.NameRoomType.Width = 150;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 90.57513F;
+            this.Price.HeaderText = "Giá";
+            this.Price.Name = "Price";
+            // 
+            // LimitPerson
+            // 
+            this.LimitPerson.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.LimitPerson.FillWeight = 149.3056F;
+            this.LimitPerson.HeaderText = "Số người tối đa";
+            this.LimitPerson.Name = "LimitPerson";
+            this.LimitPerson.Width = 40;
+            // 
+            // nameStatusRoom
+            // 
+            this.nameStatusRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameStatusRoom.FillWeight = 274.1117F;
+            this.nameStatusRoom.HeaderText = "Trạng thái";
+            this.nameStatusRoom.Name = "nameStatusRoom";
+            this.nameStatusRoom.Width = 90;
             // 
             // panel2
             // 
@@ -209,12 +331,12 @@ namespace QuanLyKhachSan
             // 
             this.guna2GroupBox3.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox3.Controls.Add(this.cbbLoaiPhongQLP);
-            this.guna2GroupBox3.Controls.Add(this.guna2ComboBox1);
+            this.guna2GroupBox3.Controls.Add(this.cbStatusRoom);
             this.guna2GroupBox3.Controls.Add(this.cbbMaPhongQLP);
             this.guna2GroupBox3.Controls.Add(this.label15);
-            this.guna2GroupBox3.Controls.Add(this.label16);
+            this.guna2GroupBox3.Controls.Add(this.name);
             this.guna2GroupBox3.Controls.Add(this.label11);
-            this.guna2GroupBox3.Controls.Add(this.txtChuthichQLP);
+            this.guna2GroupBox3.Controls.Add(this.txtSoNguoiToiDa);
             this.guna2GroupBox3.Controls.Add(this.txtGiaPhongQLP);
             this.guna2GroupBox3.Controls.Add(this.txtTenPhongQLP);
             this.guna2GroupBox3.Controls.Add(this.label14);
@@ -251,25 +373,25 @@ namespace QuanLyKhachSan
             this.cbbLoaiPhongQLP.Size = new System.Drawing.Size(200, 36);
             this.cbbLoaiPhongQLP.TabIndex = 19;
             // 
-            // guna2ComboBox1
+            // cbStatusRoom
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(23, 160);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2ComboBox1.TabIndex = 19;
+            this.cbStatusRoom.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatusRoom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatusRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatusRoom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatusRoom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatusRoom.FocusedState.Parent = this.cbStatusRoom;
+            this.cbStatusRoom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStatusRoom.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cbStatusRoom.HoverState.Parent = this.cbStatusRoom;
+            this.cbStatusRoom.ItemHeight = 30;
+            this.cbStatusRoom.ItemsAppearance.Parent = this.cbStatusRoom;
+            this.cbStatusRoom.Location = new System.Drawing.Point(23, 160);
+            this.cbStatusRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStatusRoom.Name = "cbStatusRoom";
+            this.cbStatusRoom.ShadowDecoration.Parent = this.cbStatusRoom;
+            this.cbStatusRoom.Size = new System.Drawing.Size(200, 36);
+            this.cbStatusRoom.TabIndex = 19;
             // 
             // cbbMaPhongQLP
             // 
@@ -302,16 +424,16 @@ namespace QuanLyKhachSan
             this.label15.TabIndex = 6;
             this.label15.Text = "Tên phòng";
             // 
-            // label16
+            // name
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label16.Location = new System.Drawing.Point(265, 143);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 15);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "Chú thích";
+            this.name.AutoSize = true;
+            this.name.BackColor = System.Drawing.Color.White;
+            this.name.ForeColor = System.Drawing.Color.DarkGreen;
+            this.name.Location = new System.Drawing.Point(265, 143);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(87, 15);
+            this.name.TabIndex = 7;
+            this.name.Text = "Số người tối đa";
             // 
             // label11
             // 
@@ -324,30 +446,30 @@ namespace QuanLyKhachSan
             this.label11.TabIndex = 10;
             this.label11.Text = "Tình trạng phòng";
             // 
-            // txtChuthichQLP
+            // txtSoNguoiToiDa
             // 
-            this.txtChuthichQLP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtChuthichQLP.DefaultText = "";
-            this.txtChuthichQLP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtChuthichQLP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtChuthichQLP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtChuthichQLP.DisabledState.Parent = this.txtChuthichQLP;
-            this.txtChuthichQLP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtChuthichQLP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtChuthichQLP.FocusedState.Parent = this.txtChuthichQLP;
-            this.txtChuthichQLP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtChuthichQLP.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtChuthichQLP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtChuthichQLP.HoverState.Parent = this.txtChuthichQLP;
-            this.txtChuthichQLP.Location = new System.Drawing.Point(268, 165);
-            this.txtChuthichQLP.Margin = new System.Windows.Forms.Padding(2);
-            this.txtChuthichQLP.Name = "txtChuthichQLP";
-            this.txtChuthichQLP.PasswordChar = '\0';
-            this.txtChuthichQLP.PlaceholderText = "";
-            this.txtChuthichQLP.SelectedText = "";
-            this.txtChuthichQLP.ShadowDecoration.Parent = this.txtChuthichQLP;
-            this.txtChuthichQLP.Size = new System.Drawing.Size(200, 29);
-            this.txtChuthichQLP.TabIndex = 15;
+            this.txtSoNguoiToiDa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSoNguoiToiDa.DefaultText = "";
+            this.txtSoNguoiToiDa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSoNguoiToiDa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSoNguoiToiDa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoNguoiToiDa.DisabledState.Parent = this.txtSoNguoiToiDa;
+            this.txtSoNguoiToiDa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoNguoiToiDa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoNguoiToiDa.FocusedState.Parent = this.txtSoNguoiToiDa;
+            this.txtSoNguoiToiDa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoNguoiToiDa.ForeColor = System.Drawing.Color.DarkGreen;
+            this.txtSoNguoiToiDa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoNguoiToiDa.HoverState.Parent = this.txtSoNguoiToiDa;
+            this.txtSoNguoiToiDa.Location = new System.Drawing.Point(268, 165);
+            this.txtSoNguoiToiDa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSoNguoiToiDa.Name = "txtSoNguoiToiDa";
+            this.txtSoNguoiToiDa.PasswordChar = '\0';
+            this.txtSoNguoiToiDa.PlaceholderText = "";
+            this.txtSoNguoiToiDa.SelectedText = "";
+            this.txtSoNguoiToiDa.ShadowDecoration.Parent = this.txtSoNguoiToiDa;
+            this.txtSoNguoiToiDa.Size = new System.Drawing.Size(200, 29);
+            this.txtSoNguoiToiDa.TabIndex = 15;
             // 
             // txtGiaPhongQLP
             // 
@@ -513,127 +635,6 @@ namespace QuanLyKhachSan
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ PHÒNG";
             // 
-            // dtgvDanhsachPhongQLP
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvDanhsachPhongQLP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvDanhsachPhongQLP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvDanhsachPhongQLP.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvDanhsachPhongQLP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvDanhsachPhongQLP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvDanhsachPhongQLP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dtgvDanhsachPhongQLP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvDanhsachPhongQLP.ColumnHeadersHeight = 22;
-            this.dtgvDanhsachPhongQLP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NameRoom,
-            this.NameRoomType,
-            this.Price,
-            this.LimitPerson,
-            this.nameStatusRoom});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvDanhsachPhongQLP.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvDanhsachPhongQLP.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvDanhsachPhongQLP.EnableHeadersVisualStyles = false;
-            this.dtgvDanhsachPhongQLP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvDanhsachPhongQLP.Location = new System.Drawing.Point(0, 40);
-            this.dtgvDanhsachPhongQLP.Name = "dtgvDanhsachPhongQLP";
-            this.dtgvDanhsachPhongQLP.RowHeadersVisible = false;
-            this.dtgvDanhsachPhongQLP.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(136)))), ((int)(((byte)(86)))));
-            this.dtgvDanhsachPhongQLP.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvDanhsachPhongQLP.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgvDanhsachPhongQLP.RowTemplate.DividerHeight = 5;
-            this.dtgvDanhsachPhongQLP.RowTemplate.Height = 60;
-            this.dtgvDanhsachPhongQLP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDanhsachPhongQLP.Size = new System.Drawing.Size(593, 449);
-            this.dtgvDanhsachPhongQLP.TabIndex = 4;
-            this.dtgvDanhsachPhongQLP.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.HeaderStyle.Height = 22;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.ReadOnly = false;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.Height = 60;
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 1.573463F;
-            this.ID.HeaderText = "Mã";
-            this.ID.Name = "ID";
-            this.ID.Width = 47;
-            // 
-            // NameRoom
-            // 
-            this.NameRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameRoom.DataPropertyName = "NameRoom";
-            this.NameRoom.FillWeight = 16.8327F;
-            this.NameRoom.HeaderText = "Tên Phòng";
-            this.NameRoom.Name = "NameRoom";
-            this.NameRoom.Width = 150;
-            // 
-            // NameRoomType
-            // 
-            this.NameRoomType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameRoomType.DataPropertyName = "NameRoomType";
-            this.NameRoomType.FillWeight = 67.60133F;
-            this.NameRoomType.HeaderText = "Loại Phòng ";
-            this.NameRoomType.Name = "NameRoomType";
-            this.NameRoomType.Width = 150;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 90.57513F;
-            this.Price.HeaderText = "Giá";
-            this.Price.Name = "Price";
-            // 
-            // LimitPerson
-            // 
-            this.LimitPerson.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.LimitPerson.FillWeight = 149.3056F;
-            this.LimitPerson.HeaderText = "Số người tối đa";
-            this.LimitPerson.Name = "LimitPerson";
-            this.LimitPerson.Width = 40;
-            // 
-            // nameStatusRoom
-            // 
-            this.nameStatusRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameStatusRoom.FillWeight = 274.1117F;
-            this.nameStatusRoom.HeaderText = "Trạng thái";
-            this.nameStatusRoom.Name = "nameStatusRoom";
-            this.nameStatusRoom.Width = 90;
-            // 
             // frmQLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,13 +648,13 @@ namespace QuanLyKhachSan
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachPhongQLP)).EndInit();
             this.panel2.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox3.ResumeLayout(false);
             this.guna2GroupBox3.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachPhongQLP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,7 +669,7 @@ namespace QuanLyKhachSan
         private Guna.UI2.WinForms.Guna2TextBox txtMaPhongQLP;
         private System.Windows.Forms.Label lblMaPhongQLP;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -676,8 +677,8 @@ namespace QuanLyKhachSan
         private Guna.UI2.WinForms.Guna2ComboBox cbbLoaiPhongQLP;
         private Guna.UI2.WinForms.Guna2ComboBox cbbMaPhongQLP;
         private Guna.UI2.WinForms.Guna2TextBox txtGiaPhongQLP;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtChuthichQLP;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatusRoom;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoNguoiToiDa;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
         private Guna.UI2.WinForms.Guna2Button btnDongQLP;
         private Guna.UI2.WinForms.Guna2Button btnCapnhatPhongQLP;

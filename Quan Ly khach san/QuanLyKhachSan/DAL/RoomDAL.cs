@@ -11,10 +11,17 @@ namespace DAL
     public class RoomDAL : IReposityDAL<RoomDTO>
     {
         private readonly static RoomDAL instance ;
-        public  List<RoomDTO> ListRoom =null;
-        public static RoomDAL Instance { get { if (instance == null) return new RoomDAL(); return RoomDAL.instance; } } 
 
-        public RoomDAL() { ListRoom = new List<RoomDTO>(); }
+        public  List<RoomDTO> ListRoom =null;
+        public List<StatusRoom> ListStatusRoom = null;
+        public List<RoomType> ListRoomType = null;
+        public static RoomDAL Instance { get { if (instance == null) return new RoomDAL(); return instance; } } 
+
+        public RoomDAL() {
+            ListRoom = new List<RoomDTO>();
+            ListStatusRoom = new List<StatusRoom>();
+            ListRoomType = new List<RoomType>();
+        }
         public bool DeleteById(RoomDTO obj)
         {
             throw new NotImplementedException();
@@ -30,12 +37,36 @@ namespace DAL
             DataTable dataTable =  DataProvider.Instance.ExcuteDataReader("dbo.USP_LoadFullRoom");
             foreach(DataRow row in dataTable.Rows)
             {
-               RoomDTO room = new RoomDTO(row);
+               RoomDTO room = new RoomDTO(row,dataTable);
                 ListRoom.Add(room);
             }
                 return ListRoom;
 
         }
+           public IEnumerable<StatusRoom> LoadFullSatusRoom()
+        {
+            DataTable dataTable =  DataProvider.Instance.ExcuteDataReader("dbo.USP_LoadFullStatusRoom");
+            foreach(DataRow row in dataTable.Rows)
+            {
+               StatusRoom room = new StatusRoom(row,dataTable);
+                ListStatusRoom.Add(room);
+            }
+                return ListStatusRoom;
+
+        }
+             public IEnumerable<RoomType> LoadFullRoomType()
+         {
+            DataTable dataTable =  DataProvider.Instance.ExcuteDataReader("dbo.USP_LoadFullRoomType");
+            foreach(DataRow row in dataTable.Rows)
+            {
+               RoomType room = new RoomType(row,dataTable);
+                ListRoomType.Add(room);
+            }
+                return ListRoomType;
+
+        }
+
+
 
         public bool UpdateById(RoomDTO obj)
         {
