@@ -33,7 +33,7 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public bool UpdateById(string id, BookRoomBLL obj)
+        public bool UpdateById(int id, BookRoomBLL obj)
         {
             throw new NotImplementedException();
         }

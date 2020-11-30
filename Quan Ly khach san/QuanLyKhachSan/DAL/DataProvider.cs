@@ -22,7 +22,7 @@ namespace DAL
         {
         }
 
-        private readonly string strCon = @"SERVER= DESKTOP-UPDAPIH\SQLEXPRESS01;Database =HotelManagement; Integrated security = true";
+        private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password =nguyenmautuan123";
         private void hasParameter(SqlCommand cmd, string query, object[] para = null)
         {
             int i = 0;
@@ -41,10 +41,10 @@ namespace DAL
         {
             try
             {
-
+                DataTable data = new DataTable();
                 using (SqlConnection conn = new SqlConnection(strCon))
                 {
-                    DataTable data = new DataTable();
+                 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     if (para != null)
                     {
@@ -56,9 +56,10 @@ namespace DAL
                     }
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(data);
-                    return data;
+
 
                 }
+                return data;
             }
             catch (Exception err)
             {
@@ -70,17 +71,19 @@ namespace DAL
         {
             try
             {
+                int kq = 0;
                 using (SqlConnection conn = new SqlConnection(strCon))
                 {
-                    int kq = 0;
+                   if(conn.State ==ConnectionState.Closed ) conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
                     if (para != null)
                     {
                         hasParameter(cmd, query, para);
                     }
                     kq = cmd.ExecuteNonQuery();
-                    return kq > 0;
+                   
                 }
+                return kq > 0;
             }
             catch (Exception err)
             {

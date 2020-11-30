@@ -10,29 +10,28 @@ namespace DTO
     public class RoomDTO
     {
         private readonly int _id;
-        private readonly string _nameRoom;
-        private readonly int _idStatusRoom;
-        private readonly int _idRoomType;
+        private  string _nameRoom;
+        private  int _idStatusRoom;
+        private  int _idRoomType;
         private readonly int _price;
         private readonly int _limitPerson;
         private readonly string _nameStatusRoom;
         private readonly string _nameRoomType; 
         
-        public int Id => _id; 
+        public int Id => _id;
 
-        public string  NameRoom => _nameRoom;
+        public string NameRoom  => _nameRoom; 
 
         public string NameRoomType => _nameRoomType;
 
-        public int IdStatusRoom => _idStatusRoom;
+        public int IdStatusRoom  => _idStatusRoom; 
 
-        public int IdRoomType => _idRoomType;
+         public int IdRoomType   => _idRoomType;
 
         public int Price => _price;
+        public string NameStatusRoom => _nameStatusRoom;
 
         public int LimitPerson => _limitPerson;
-
-        public string NameStatusRoom => _nameStatusRoom;
 
         private List<string> listName = null;  
         public RoomDTO() { }
@@ -48,8 +47,8 @@ namespace DTO
             _price = int.Parse(row[listName[3]].ToString());
             _limitPerson = int.Parse(row[listName[4]].ToString());
             _nameStatusRoom =  row[listName[5]].ToString();
-            _idStatusRoom = int.Parse(row[listName[6]].ToString());
-            _idRoomType =  int.Parse(row[listName[7]].ToString());
+           // _idStatusRoom = int.Parse(row[listName[6]].ToString());
+          //  _idRoomType =  int.Parse(row[listName[7]].ToString());
         }
 
         public RoomDTO(int id, string nameRoom,string nameRoomType ,int idStatusRoom, int idRoomType, int price, int limitPerson, string nameStatusRoom)
@@ -64,5 +63,12 @@ namespace DTO
             _nameStatusRoom = nameStatusRoom;
         }
 
-          }
+        public RoomDTO(string nameRoom, int idStatusRoom, int idRoomType,int id )
+        {
+            _nameRoom = nameRoom;
+            _idStatusRoom = idStatusRoom;
+            _idRoomType = idRoomType;
+            _id = id;
+        }
+    }
 }

@@ -10,7 +10,7 @@ namespace BLL
     {
         bool Insert(T obj);
 
-        bool UpdateById(string id, T obj);
+        bool UpdateById(int id, T obj);
 
         bool DeleteById(string id);
 

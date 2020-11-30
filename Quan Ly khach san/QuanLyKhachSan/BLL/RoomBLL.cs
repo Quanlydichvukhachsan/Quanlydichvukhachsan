@@ -19,7 +19,7 @@ namespace BLL
 
         public bool Insert(RoomDTO obj)
         {
-            throw new NotImplementedException();
+          return  RoomDAL.Instance.Insert(obj);
         }
 
         public IEnumerable<RoomDTO> readAll()
@@ -36,9 +36,9 @@ namespace BLL
         }
 
 
-        public bool UpdateById(string id, RoomDTO obj)
+        public bool UpdateById(int id, RoomDTO obj)
         {
-            throw new NotImplementedException();
+            return RoomDAL.Instance.UpdateById(obj);
         }
     }
 }

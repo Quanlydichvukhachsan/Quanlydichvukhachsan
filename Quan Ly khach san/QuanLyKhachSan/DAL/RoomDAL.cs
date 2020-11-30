@@ -29,7 +29,15 @@ namespace DAL
 
         public bool Insert(RoomDTO obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("dbo.USP_InsertRoom @nameRoom , @idRoomType , @idStatusRoom", new object[] {obj.NameRoom,obj.IdRoomType,obj.IdStatusRoom });
+                return true;
+            }catch(Exception err)
+            {
+                throw err;
+            }
+
         }
 
         public IEnumerable<RoomDTO> readAll()
@@ -70,7 +78,17 @@ namespace DAL
 
         public bool UpdateById(RoomDTO obj)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("dbo.USP_UpdateRoom @id , @nameRoom , @idRoomType , @idStatusRoom",
+                                                      new object[] { obj.Id, obj.NameRoom, obj.IdRoomType,obj.IdStatusRoom });
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
     }
 }
