@@ -14,6 +14,8 @@ namespace QuanLyKhachSan
         private IEnumerable<RoomType> ListRoomType = null;
         private List<RoomDTO> ListRoom = null;
         private BindingSource dataSource = new BindingSource();
+        private BindingSource dataSourceTypeRoom = new BindingSource();
+
         private string nameRoom, nameTypeRoom;
         private string IsnameRoom = "";
         private int iD, idRoom = 0, idTypeRoom = 0;
@@ -26,7 +28,6 @@ namespace QuanLyKhachSan
 
             ListRoom = new List<RoomDTO>();
 
-            ListIdRoom = new List<int>();
             ListRoomType = new List<RoomType>();
         }
 
@@ -40,7 +41,10 @@ namespace QuanLyKhachSan
         private void LoadRoom()
         {
             ListRoom = (List<RoomDTO>)RoomBLL.Instance.readAll();
+            textBox1.Text = ListRoom.Count.ToString();
+            dtgvDanhsachPhongQLP.Rows.Clear();
             dtgvDanhsachPhongQLP.AutoGenerateColumns = false;
+
             dataSource.DataSource = ListRoom;
             LoadStatusRoom();
             LoadRoomType();
@@ -56,10 +60,12 @@ namespace QuanLyKhachSan
 
         private void LoadIdRoom()
         {
+            ListIdRoom = new List<int>();
             foreach (var items in ListRoom)
             {
                 ListIdRoom.Add(items.Id);
             }
+
             cbbMaPhongQLP.DataSource = ListIdRoom;
         }
 
@@ -67,7 +73,7 @@ namespace QuanLyKhachSan
         {
             cbStatusRoom.DataSource = RoomBLL.Instance.LoadStatusRoom();
             cbStatusRoom.DisplayMember = "NameStatusRoom";
-            cbStatusRoom.ValueMember = "IdStatusRoom";
+            cbStatusRoom.ValueMember = "NameStatusRoom";
         }
 
         private void LoadRoomType()
@@ -76,7 +82,7 @@ namespace QuanLyKhachSan
             cbbLoaiPhongQLP.DataSource = ListRoomType;
 
             cbbLoaiPhongQLP.DisplayMember = "NameRoomType";
-            cbbLoaiPhongQLP.ValueMember = "IdRoomType";
+            cbbLoaiPhongQLP.ValueMember = "NameRoomType";
         }
 
         private void AddBinding()
@@ -180,26 +186,45 @@ namespace QuanLyKhachSan
             }
         }
 
-        private void cbbLoaiPhongQLP_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbLoaiPhongQLP_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cbbLoaiPhongQLP.SelectedItem != null)
             {
-                string NameTypeRoom = cbbLoaiPhongQLP.GetItemText(this.cbbLoaiPhongQLP.SelectedItem.ToString());
+                string NameTypeRoom = cbbLoaiPhongQLP.GetItemText(cbbLoaiPhongQLP.SelectedValue.ToString());
+
                 var filterd = from RoomDTO p in ListRoom
                               where p.NameRoomType == NameTypeRoom
                               select p;
+                List<int> fillId = new List<int>();
+                List<RoomDTO> FillRoom = new List<RoomDTO>();
                 foreach (RoomDTO room in filterd)
                 {
-                    txtGiaPhongQLP.Text =Convert. (room.Price);
+                    txtGiaPhongQLP.Text = room.Price.ToString();
                     txtTenPhong.Text = room.NameRoom;
                     cbStatusRoom.Text = room.NameStatusRoom;
                     txtSoNguoiToiDa.Text = room.LimitPerson.ToString();
-                    foreach (RoomType roomtype in ListRoomType.ToList().FindAll(p => p.NameRoomType == room.NameRoomType))
-                    {
-                        cbbLoaiPhongQLP.Text = roomtype.NameRoomType;
-                    }
+                    fillId.Add(room.Id);
+                    FillRoom = ListRoom.FindAll(p => p.NameRoomType.CompareTo(room.NameRoomType) == 0);
                 }
+
+                dataSource.DataSource = FillRoom;
+                cbbMaPhongQLP.DataSource = fillId;
             }
+        }
+
+        private void cbStatusRoom_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbStatusRoom.SelectedItem != null)
+            {
+                string StatusRoom = cbStatusRoom.GetItemText(cbStatusRoom.SelectedValue.ToString());
+                List<RoomDTO> rooms = ListRoom.FindAll(p => p.NameStatusRoom.CompareTo(StatusRoom) == 0);
+                dataSource.DataSource = rooms;
+            }
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            LoadRoom();
         }
 
         private void updateRoomToolStripMenuItem_Click(object sender, EventArgs e)
@@ -254,26 +279,27 @@ namespace QuanLyKhachSan
                 if (RoomBLL.Instance.UpdateById(idRoom, room))
                 {
                     MessageBox.Show("Update Successfully");
-                    toolStripComboBoxTypeRoom.Text = "";
-                    toolStripComboBoxStatusRoom.Text = "";
-                    toolStripTextBoxNameRoom.Text = "";
                     LoadRoom();
+                    Reset();
                 }
             }
             else if (IsstatusRoom.CompareTo("Trống") != 0)
             {
                 MessageBox.Show("Phòng đã có người");
-                toolStripComboBoxTypeRoom.Text = "";
-                toolStripComboBoxStatusRoom.Text = "";
-                toolStripTextBoxNameRoom.Text = "";
+                Reset();
             }
             else
             {
                 MessageBox.Show("Name Room Exist");
-                toolStripComboBoxTypeRoom.Text = "";
-                toolStripComboBoxStatusRoom.Text = "";
-                toolStripTextBoxNameRoom.Text = "";
+                Reset();
             }
+        }
+
+        private void Reset()
+        {
+            toolStripComboBoxTypeRoom.Text = "";
+            toolStripComboBoxStatusRoom.Text = "";
+            toolStripTextBoxNameRoom.Text = "";
         }
     }
 }
