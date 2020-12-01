@@ -20,9 +20,10 @@ namespace DAL
 
         private DataProvider()
         {
+
         }
 
-        private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password =nguyenmautuan123";
+        private readonly string strCon = @"SERVER=RIN;Database =HotelManagement;Integrated Security =true";
         private void hasParameter(SqlCommand cmd, string query, object[] para = null)
         {
             int i = 0;
