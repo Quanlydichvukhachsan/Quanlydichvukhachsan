@@ -14,11 +14,13 @@ namespace QuanLyKhachSan
     public partial class frmQLPhong : Form
     {
         private List<int> ListIdRoom = null;
+        private IEnumerable<RoomType> ListRoomType = null;  
         private List<RoomDTO> ListRoom = null;
         private BindingSource dataSource = new BindingSource();
-        private string nameRoom;
-        private int iD, idRoom;
-        private string IsstatusRoom;
+        private string nameRoom ,nameTypeRoom;
+        private string IsnameRoom;
+        private int iD, idRoom =0,idTypeRoom=0;
+        private string IsstatusRoom ="";
         int statusRoom = 1;
       
         public frmQLPhong()
@@ -27,6 +29,7 @@ namespace QuanLyKhachSan
          
             ListRoom = new List<RoomDTO>();
             ListIdRoom = new List<int>();
+            ListRoomType = new List<RoomType>();
 
         }
 
@@ -36,9 +39,7 @@ namespace QuanLyKhachSan
             dtgvDanhsachPhongQLP.DataSource = dataSource;
             LoadRoom();
             AddBinding();
-            LoadStatusRoom();
-            LoadRoomType();
-            LoadIdRoom();
+          
 
 
         }
@@ -50,7 +51,9 @@ namespace QuanLyKhachSan
             ListRoom = (List<RoomDTO>)RoomBLL.Instance.readAll();
             dtgvDanhsachPhongQLP.AutoGenerateColumns = false;
             dataSource.DataSource = ListRoom;
-            
+            LoadStatusRoom();
+            LoadRoomType();
+            LoadIdRoom();
 
 
         }
@@ -80,7 +83,10 @@ namespace QuanLyKhachSan
         }
         private void LoadRoomType()
         {
-            cbbLoaiPhongQLP.DataSource = RoomBLL.Instance.LoadRoomType();
+          
+            ListRoomType = RoomBLL.Instance.LoadRoomType();
+            cbbLoaiPhongQLP.DataSource = ListRoomType;
+            
             cbbLoaiPhongQLP.DisplayMember = "NameRoomType";
             cbbLoaiPhongQLP.ValueMember = "IdRoomType";
         }
@@ -132,19 +138,19 @@ namespace QuanLyKhachSan
         private IEnumerable<RoomDTO> IsNameInvalid()
         {
             IEnumerable<RoomDTO> filtered = from RoomDTO i in ListRoom
-                                            where i.NameRoom.CompareTo(txtTenPhong.Text) == 0
+                                            where i.NameRoom.CompareTo(IsnameRoom) == 0
                                             select i;
             return filtered;
         }
         private void btnThemPhongQLP_Click(object sender, EventArgs e)
         {
 
-            InitPropertiesRoom();
             int count = IsNameInvalid().Count();
             if (count == 0)
             {
                 RoomDTO room = new RoomDTO(nameRoom: txtTenPhong.Text, idStatusRoom: statusRoom, idRoomType: iD, id: 0);
                 RoomBLL.Instance.Insert(room);
+                LoadRoom();
                 MessageBox.Show("Insert Successfully");
             }
             else
@@ -154,30 +160,89 @@ namespace QuanLyKhachSan
 
         }
 
-        private void dtgvDanhsachPhongQLP_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+       
 
-            nameRoom = dtgvDanhsachPhongQLP[1, e.RowIndex].Value.ToString();
-            IsstatusRoom = dtgvDanhsachPhongQLP[5, e.RowIndex].Value.ToString();
+     
+        private void dtgvDanhsachPhongQLP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idRoom = Convert.ToInt32(dtgvDanhsachPhongQLP[0, e.RowIndex].FormattedValue.ToString());
+            nameRoom = dtgvDanhsachPhongQLP[1, e.RowIndex].FormattedValue.ToString();
+            IsstatusRoom = dtgvDanhsachPhongQLP[5, e.RowIndex].FormattedValue.ToString();
+            nameTypeRoom = dtgvDanhsachPhongQLP[2, e.RowIndex].FormattedValue.ToString();
+            ListRoomType.ToList().FindAll(p => p.NameRoomType.CompareTo(nameTypeRoom) == 0).ForEach(p => idTypeRoom = p.IdRoomType);
+
+        }
+        //load cbTypeRoom
+        private void typeRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             foreach(RoomType roomType in ListRoomType)
+            {
+                toolStripComboBoxTypeRoom.Items.Add(roomType.NameRoomType);
+             
+            }
+          
         }
 
-        private void btnCapnhatPhongQLP_Click(object sender, EventArgs e)
+        private void updateRoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (IsstatusRoom.CompareTo("Trống") != 0)
+            {
+
+                MessageBox.Show("Phòng đã có người", "Thông báo", MessageBoxButtons.OK);
+                gunaContextMenuStrip1.Close();
+            }
+        }
+
+        //Update
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            UpdateRoom();
+
+        }
+     
+
+    
+
+        private void UpdateRoom()
+        {
+            int n;
           
-            InitPropertiesRoom();
+            string name = toolStripComboBoxTypeRoom.Text;     
+            string nameStatus = toolStripComboBoxStatusRoom.SelectedItem.ToString();
+            if (!string.IsNullOrEmpty(toolStripTextBoxNameRoom.Text))
+            {
+                bool IsnumberRoom = int.TryParse(toolStripTextBoxNameRoom.Text, out n);
+                if (IsnumberRoom)
+                {
+                    IsnameRoom = "Phòng " + n;
+                }
+            }
+            else
+            {
+                IsnameRoom = nameRoom;
+            }
+           
+            int idStatusRoom = 1;
+            if (nameStatus.CompareTo("Trống") != 0) { idStatusRoom = 2; }
+            ListRoomType.ToList().FindAll(p => p.NameRoomType.CompareTo(name) == 0).ForEach(p => idTypeRoom = p.IdRoomType);
+
+           // InitPropertiesRoom();
             int count = 0;
             count = IsNameInvalid().Count();
-            if (txtTenPhong.Text.CompareTo(nameRoom) == 0  && IsstatusRoom.CompareTo("Trống")==0 || count == 0 && IsstatusRoom.CompareTo("Trống") == 0)
+
+            if (IsnameRoom.CompareTo(nameRoom) == 0|| count == 0  )
             {
-                int idStatusRoom = Convert.ToInt32(cbStatusRoom.GetItemText(this.cbStatusRoom.SelectedValue.ToString()));
-                RoomDTO room = new RoomDTO(nameRoom: txtTenPhong.Text, idStatusRoom: idStatusRoom, idRoomType: iD, id: idRoom);
+              
+                RoomDTO room = new RoomDTO(nameRoom: IsnameRoom, idStatusRoom: idStatusRoom, idRoomType: idTypeRoom, id: idRoom);
                 if (RoomBLL.Instance.UpdateById(idRoom, room))
                 {
                     MessageBox.Show("Update Successfully");
                     LoadIdRoom();
                 }
 
-            }else if (IsstatusRoom.CompareTo("Trống") != 0)
+            }
+            else if (IsstatusRoom.CompareTo("Trống") != 0)
             {
                 MessageBox.Show("Phòng đã có người");
             }

@@ -128,6 +128,12 @@
     <Compile Include="frmHoadon.Designer.cs">
       <DependentUpon>frmHoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateRoom.Designer.cs">
+      <DependentUpon>frmUpdateRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDatphong.resx">
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateRoom.resx">
+      <DependentUpon>frmUpdateRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

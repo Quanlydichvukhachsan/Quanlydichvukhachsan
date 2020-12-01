@@ -43,11 +43,19 @@ namespace QuanLyKhachSan
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LimitPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameStatusRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaContextMenuStrip1 = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.updateRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nameRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBoxNameRoom = new System.Windows.Forms.ToolStripTextBox();
+            this.typeRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBoxTypeRoom = new System.Windows.Forms.ToolStripComboBox();
+            this.statusRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBoxStatusRoom = new System.Windows.Forms.ToolStripComboBox();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnDongQLP = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCapnhatPhongQLP = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoaPhongQLP = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemPhongQLP = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cbbLoaiPhongQLP = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -57,6 +65,7 @@ namespace QuanLyKhachSan
             this.name = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSoNguoiToiDa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenPhong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGiaPhongQLP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -67,11 +76,11 @@ namespace QuanLyKhachSan
             this.txtTimKiemRoom = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaPhongQLP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTenPhong = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachPhongQLP)).BeginInit();
+            this.gunaContextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
@@ -86,7 +95,7 @@ namespace QuanLyKhachSan
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1104, 583);
+            this.panel1.Size = new System.Drawing.Size(1104, 478);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -95,7 +104,7 @@ namespace QuanLyKhachSan
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(512, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(592, 583);
+            this.panel3.Size = new System.Drawing.Size(592, 478);
             this.panel3.TabIndex = 11;
             // 
             // guna2GroupBox2
@@ -110,7 +119,7 @@ namespace QuanLyKhachSan
             this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(592, 583);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(592, 478);
             this.guna2GroupBox2.TabIndex = 12;
             this.guna2GroupBox2.Text = "Danh sách phòng";
             // 
@@ -138,6 +147,7 @@ namespace QuanLyKhachSan
             this.Price,
             this.LimitPerson,
             this.nameStatusRoom});
+            this.dtgvDanhsachPhongQLP.ContextMenuStrip = this.gunaContextMenuStrip1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -149,7 +159,7 @@ namespace QuanLyKhachSan
             this.dtgvDanhsachPhongQLP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgvDanhsachPhongQLP.EnableHeadersVisualStyles = false;
             this.dtgvDanhsachPhongQLP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvDanhsachPhongQLP.Location = new System.Drawing.Point(0, 41);
+            this.dtgvDanhsachPhongQLP.Location = new System.Drawing.Point(0, -64);
             this.dtgvDanhsachPhongQLP.Name = "dtgvDanhsachPhongQLP";
             this.dtgvDanhsachPhongQLP.RowHeadersVisible = false;
             this.dtgvDanhsachPhongQLP.RowHeadersWidth = 51;
@@ -183,7 +193,7 @@ namespace QuanLyKhachSan
             this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.Height = 60;
             this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvDanhsachPhongQLP.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvDanhsachPhongQLP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhsachPhongQLP_CellContentClick);
+            this.dtgvDanhsachPhongQLP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhsachPhongQLP_CellClick);
             // 
             // ID
             // 
@@ -238,6 +248,94 @@ namespace QuanLyKhachSan
             this.nameStatusRoom.Name = "nameStatusRoom";
             this.nameStatusRoom.Width = 90;
             // 
+            // gunaContextMenuStrip1
+            // 
+            this.gunaContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateRoomToolStripMenuItem,
+            this.toolStripMenuItem1});
+            this.gunaContextMenuStrip1.Name = "gunaContextMenuStrip1";
+            this.gunaContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.gunaContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.gunaContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.gunaContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.gunaContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.gunaContextMenuStrip1.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.gunaContextMenuStrip1.Size = new System.Drawing.Size(170, 48);
+            // 
+            // updateRoomToolStripMenuItem
+            // 
+            this.updateRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nameRoomToolStripMenuItem,
+            this.typeRoomToolStripMenuItem,
+            this.statusRoomToolStripMenuItem,
+            this.updateToolStripMenuItem});
+            this.updateRoomToolStripMenuItem.Name = "updateRoomToolStripMenuItem";
+            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.updateRoomToolStripMenuItem.Text = "UpdateRoom";
+            this.updateRoomToolStripMenuItem.Click += new System.EventHandler(this.updateRoomToolStripMenuItem_Click);
+            // 
+            // nameRoomToolStripMenuItem
+            // 
+            this.nameRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBoxNameRoom});
+            this.nameRoomToolStripMenuItem.Name = "nameRoomToolStripMenuItem";
+            this.nameRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nameRoomToolStripMenuItem.Text = "NameRoom";
+            // 
+            // toolStripTextBoxNameRoom
+            // 
+            this.toolStripTextBoxNameRoom.Name = "toolStripTextBoxNameRoom";
+            this.toolStripTextBoxNameRoom.Size = new System.Drawing.Size(100, 23);
+            // 
+            // typeRoomToolStripMenuItem
+            // 
+            this.typeRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBoxTypeRoom});
+            this.typeRoomToolStripMenuItem.Name = "typeRoomToolStripMenuItem";
+            this.typeRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.typeRoomToolStripMenuItem.Text = "TypeRoom";
+            this.typeRoomToolStripMenuItem.Click += new System.EventHandler(this.typeRoomToolStripMenuItem_Click);
+            // 
+            // toolStripComboBoxTypeRoom
+            // 
+            this.toolStripComboBoxTypeRoom.MaxDropDownItems = 4;
+            this.toolStripComboBoxTypeRoom.MaxLength = 4;
+            this.toolStripComboBoxTypeRoom.Name = "toolStripComboBoxTypeRoom";
+            this.toolStripComboBoxTypeRoom.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBoxTypeRoom.Text = "  ";
+            // 
+            // statusRoomToolStripMenuItem
+            // 
+            this.statusRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBoxStatusRoom});
+            this.statusRoomToolStripMenuItem.Name = "statusRoomToolStripMenuItem";
+            this.statusRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statusRoomToolStripMenuItem.Text = "StatusRoom";
+            // 
+            // toolStripComboBoxStatusRoom
+            // 
+            this.toolStripComboBoxStatusRoom.Items.AddRange(new object[] {
+            "Trống",
+            "Có Người"});
+            this.toolStripComboBoxStatusRoom.Name = "toolStripComboBoxStatusRoom";
+            this.toolStripComboBoxStatusRoom.Size = new System.Drawing.Size(121, 23);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
+            this.toolStripMenuItem1.Text = "UpdateTypeRoom";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.guna2GroupBox4);
@@ -247,24 +345,22 @@ namespace QuanLyKhachSan
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(507, 583);
+            this.panel2.Size = new System.Drawing.Size(507, 478);
             this.panel2.TabIndex = 3;
             // 
             // guna2GroupBox4
             // 
             this.guna2GroupBox4.Controls.Add(this.btnDongQLP);
-            this.guna2GroupBox4.Controls.Add(this.btnCapnhatPhongQLP);
-            this.guna2GroupBox4.Controls.Add(this.btnXoaPhongQLP);
             this.guna2GroupBox4.Controls.Add(this.btnThemPhongQLP);
             this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox4.Location = new System.Drawing.Point(0, 369);
+            this.guna2GroupBox4.Location = new System.Drawing.Point(0, 358);
             this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
             this.guna2GroupBox4.ShadowDecoration.Parent = this.guna2GroupBox4;
-            this.guna2GroupBox4.Size = new System.Drawing.Size(507, 214);
+            this.guna2GroupBox4.Size = new System.Drawing.Size(507, 120);
             this.guna2GroupBox4.TabIndex = 10;
             this.guna2GroupBox4.Text = "Chức Năng";
             // 
@@ -276,46 +372,13 @@ namespace QuanLyKhachSan
             this.btnDongQLP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDongQLP.ForeColor = System.Drawing.Color.White;
             this.btnDongQLP.HoverState.Parent = this.btnDongQLP;
-            this.btnDongQLP.Location = new System.Drawing.Point(255, 116);
+            this.btnDongQLP.Location = new System.Drawing.Point(256, 64);
             this.btnDongQLP.Margin = new System.Windows.Forms.Padding(2);
             this.btnDongQLP.Name = "btnDongQLP";
             this.btnDongQLP.ShadowDecoration.Parent = this.btnDongQLP;
             this.btnDongQLP.Size = new System.Drawing.Size(188, 32);
             this.btnDongQLP.TabIndex = 3;
             this.btnDongQLP.Text = "Đóng";
-            // 
-            // btnCapnhatPhongQLP
-            // 
-            this.btnCapnhatPhongQLP.CheckedState.Parent = this.btnCapnhatPhongQLP;
-            this.btnCapnhatPhongQLP.CustomImages.Parent = this.btnCapnhatPhongQLP;
-            this.btnCapnhatPhongQLP.FillColor = System.Drawing.Color.DarkGreen;
-            this.btnCapnhatPhongQLP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCapnhatPhongQLP.ForeColor = System.Drawing.Color.White;
-            this.btnCapnhatPhongQLP.HoverState.Parent = this.btnCapnhatPhongQLP;
-            this.btnCapnhatPhongQLP.Location = new System.Drawing.Point(25, 116);
-            this.btnCapnhatPhongQLP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCapnhatPhongQLP.Name = "btnCapnhatPhongQLP";
-            this.btnCapnhatPhongQLP.ShadowDecoration.Parent = this.btnCapnhatPhongQLP;
-            this.btnCapnhatPhongQLP.Size = new System.Drawing.Size(188, 32);
-            this.btnCapnhatPhongQLP.TabIndex = 3;
-            this.btnCapnhatPhongQLP.Text = "Cập nhật phòng";
-            this.btnCapnhatPhongQLP.Click += new System.EventHandler(this.btnCapnhatPhongQLP_Click);
-            // 
-            // btnXoaPhongQLP
-            // 
-            this.btnXoaPhongQLP.CheckedState.Parent = this.btnXoaPhongQLP;
-            this.btnXoaPhongQLP.CustomImages.Parent = this.btnXoaPhongQLP;
-            this.btnXoaPhongQLP.FillColor = System.Drawing.Color.DarkGreen;
-            this.btnXoaPhongQLP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXoaPhongQLP.ForeColor = System.Drawing.Color.White;
-            this.btnXoaPhongQLP.HoverState.Parent = this.btnXoaPhongQLP;
-            this.btnXoaPhongQLP.Location = new System.Drawing.Point(255, 64);
-            this.btnXoaPhongQLP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaPhongQLP.Name = "btnXoaPhongQLP";
-            this.btnXoaPhongQLP.ShadowDecoration.Parent = this.btnXoaPhongQLP;
-            this.btnXoaPhongQLP.Size = new System.Drawing.Size(188, 32);
-            this.btnXoaPhongQLP.TabIndex = 3;
-            this.btnXoaPhongQLP.Text = "Sửa phòng";
             // 
             // btnThemPhongQLP
             // 
@@ -480,6 +543,31 @@ namespace QuanLyKhachSan
             this.txtSoNguoiToiDa.Size = new System.Drawing.Size(200, 29);
             this.txtSoNguoiToiDa.TabIndex = 15;
             // 
+            // txtTenPhong
+            // 
+            this.txtTenPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenPhong.DefaultText = "";
+            this.txtTenPhong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenPhong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenPhong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenPhong.DisabledState.Parent = this.txtTenPhong;
+            this.txtTenPhong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenPhong.FocusedState.Parent = this.txtTenPhong;
+            this.txtTenPhong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenPhong.ForeColor = System.Drawing.Color.DarkGreen;
+            this.txtTenPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenPhong.HoverState.Parent = this.txtTenPhong;
+            this.txtTenPhong.Location = new System.Drawing.Point(25, 142);
+            this.txtTenPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenPhong.Name = "txtTenPhong";
+            this.txtTenPhong.PasswordChar = '\0';
+            this.txtTenPhong.PlaceholderText = "";
+            this.txtTenPhong.SelectedText = "";
+            this.txtTenPhong.ShadowDecoration.Parent = this.txtTenPhong;
+            this.txtTenPhong.Size = new System.Drawing.Size(200, 29);
+            this.txtTenPhong.TabIndex = 17;
+            // 
             // txtGiaPhongQLP
             // 
             this.txtGiaPhongQLP.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -632,36 +720,11 @@ namespace QuanLyKhachSan
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ PHÒNG";
             // 
-            // txtTenPhong
-            // 
-            this.txtTenPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenPhong.DefaultText = "";
-            this.txtTenPhong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenPhong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenPhong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenPhong.DisabledState.Parent = this.txtTenPhong;
-            this.txtTenPhong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenPhong.FocusedState.Parent = this.txtTenPhong;
-            this.txtTenPhong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenPhong.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtTenPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenPhong.HoverState.Parent = this.txtTenPhong;
-            this.txtTenPhong.Location = new System.Drawing.Point(25, 142);
-            this.txtTenPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.PasswordChar = '\0';
-            this.txtTenPhong.PlaceholderText = "";
-            this.txtTenPhong.SelectedText = "";
-            this.txtTenPhong.ShadowDecoration.Parent = this.txtTenPhong;
-            this.txtTenPhong.Size = new System.Drawing.Size(200, 29);
-            this.txtTenPhong.TabIndex = 17;
-            // 
             // frmQLPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 583);
+            this.ClientSize = new System.Drawing.Size(1104, 478);
             this.Controls.Add(this.panel1);
             this.Name = "frmQLPhong";
             this.Text = "frmPhong";
@@ -671,6 +734,7 @@ namespace QuanLyKhachSan
             this.panel3.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachPhongQLP)).EndInit();
+            this.gunaContextMenuStrip1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox3.ResumeLayout(false);
@@ -703,8 +767,6 @@ namespace QuanLyKhachSan
         private Guna.UI2.WinForms.Guna2TextBox txtSoNguoiToiDa;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
         private Guna.UI2.WinForms.Guna2Button btnDongQLP;
-        private Guna.UI2.WinForms.Guna2Button btnCapnhatPhongQLP;
-        private Guna.UI2.WinForms.Guna2Button btnXoaPhongQLP;
         private Guna.UI2.WinForms.Guna2Button btnThemPhongQLP;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
@@ -718,5 +780,15 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.DataGridViewTextBoxColumn nameStatusRoom;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtTenPhong;
+        private Guna.UI.WinForms.GunaContextMenuStrip gunaContextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem updateRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nameRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxNameRoom;
+        private System.Windows.Forms.ToolStripMenuItem typeRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxTypeRoom;
+        private System.Windows.Forms.ToolStripMenuItem statusRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxStatusRoom;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }
