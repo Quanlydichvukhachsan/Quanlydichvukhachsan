@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dtgvBookRoom = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameStatusRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgvDanhsachdatphong = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -92,15 +99,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtgvBookRoom = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameStatusRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.guna2GroupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookRoom)).BeginInit();
             this.panel3.SuspendLayout();
             this.guna2GroupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachdatphong)).BeginInit();
@@ -111,7 +112,6 @@
             this.guna2GroupBox3.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookRoom)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,6 +138,127 @@
             this.guna2GroupBox7.Size = new System.Drawing.Size(355, 538);
             this.guna2GroupBox7.TabIndex = 9;
             this.guna2GroupBox7.Text = "Danh sách đặt phòng trong ngày";
+            // 
+            // dtgvBookRoom
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvBookRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvBookRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvBookRoom.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvBookRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvBookRoom.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvBookRoom.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dtgvBookRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvBookRoom.ColumnHeadersHeight = 22;
+            this.dtgvBookRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NameRoom,
+            this.NameRoomType,
+            this.Price,
+            this.LimitPerson,
+            this.nameStatusRoom});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBookRoom.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvBookRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgvBookRoom.EnableHeadersVisualStyles = false;
+            this.dtgvBookRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.dtgvBookRoom.Location = new System.Drawing.Point(0, 89);
+            this.dtgvBookRoom.Name = "dtgvBookRoom";
+            this.dtgvBookRoom.RowHeadersVisible = false;
+            this.dtgvBookRoom.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(136)))), ((int)(((byte)(86)))));
+            this.dtgvBookRoom.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvBookRoom.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgvBookRoom.RowTemplate.DividerHeight = 5;
+            this.dtgvBookRoom.RowTemplate.Height = 60;
+            this.dtgvBookRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvBookRoom.Size = new System.Drawing.Size(355, 449);
+            this.dtgvBookRoom.TabIndex = 5;
+            this.dtgvBookRoom.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgvBookRoom.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvBookRoom.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.dtgvBookRoom.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.dtgvBookRoom.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvBookRoom.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtgvBookRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
+            this.dtgvBookRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvBookRoom.ThemeStyle.HeaderStyle.Height = 22;
+            this.dtgvBookRoom.ThemeStyle.ReadOnly = false;
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.Height = 60;
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgvBookRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 1.573463F;
+            this.ID.HeaderText = "Mã";
+            this.ID.Name = "ID";
+            this.ID.Width = 47;
+            // 
+            // NameRoom
+            // 
+            this.NameRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NameRoom.DataPropertyName = "NameRoom";
+            this.NameRoom.FillWeight = 16.8327F;
+            this.NameRoom.HeaderText = "Tên Phòng";
+            this.NameRoom.Name = "NameRoom";
+            this.NameRoom.Width = 150;
+            // 
+            // NameRoomType
+            // 
+            this.NameRoomType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NameRoomType.DataPropertyName = "NameRoomType";
+            this.NameRoomType.FillWeight = 67.60133F;
+            this.NameRoomType.HeaderText = "Loại Phòng ";
+            this.NameRoomType.Name = "NameRoomType";
+            this.NameRoomType.Width = 150;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Price.DataPropertyName = "Price";
+            this.Price.FillWeight = 90.57513F;
+            this.Price.HeaderText = "Giá";
+            this.Price.Name = "Price";
+            // 
+            // LimitPerson
+            // 
+            this.LimitPerson.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.LimitPerson.FillWeight = 149.3056F;
+            this.LimitPerson.HeaderText = "Số người tối đa";
+            this.LimitPerson.Name = "LimitPerson";
+            this.LimitPerson.Width = 40;
+            // 
+            // nameStatusRoom
+            // 
+            this.nameStatusRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameStatusRoom.FillWeight = 274.1117F;
+            this.nameStatusRoom.HeaderText = "Trạng thái";
+            this.nameStatusRoom.Name = "nameStatusRoom";
+            this.nameStatusRoom.Width = 90;
             // 
             // panel3
             // 
@@ -339,7 +460,6 @@
             this.btnNhanphong.Size = new System.Drawing.Size(213, 29);
             this.btnNhanphong.TabIndex = 2;
             this.btnNhanphong.Text = "Đặt Phòng";
-            this.btnNhanphong.Click += new System.EventHandler(this.btnNhanphong_Click);
             // 
             // btnChuyendennhanphong
             // 
@@ -1008,6 +1128,7 @@
             this.dtpNgaynhan.Size = new System.Drawing.Size(177, 29);
             this.dtpNgaynhan.TabIndex = 4;
             this.dtpNgaynhan.Value = new System.DateTime(2020, 11, 26, 13, 32, 40, 661);
+            this.dtpNgaynhan.ValueChanged += new System.EventHandler(this.dtpNgaynhan_ValueChanged);
             // 
             // label2
             // 
@@ -1019,7 +1140,6 @@
             this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số đêm";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label10
             // 
@@ -1054,127 +1174,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại phòng";
             // 
-            // dtgvBookRoom
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvBookRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvBookRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvBookRoom.BackgroundColor = System.Drawing.Color.White;
-            this.dtgvBookRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvBookRoom.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvBookRoom.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dtgvBookRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvBookRoom.ColumnHeadersHeight = 22;
-            this.dtgvBookRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NameRoom,
-            this.NameRoomType,
-            this.Price,
-            this.LimitPerson,
-            this.nameStatusRoom});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBookRoom.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvBookRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgvBookRoom.EnableHeadersVisualStyles = false;
-            this.dtgvBookRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvBookRoom.Location = new System.Drawing.Point(0, 89);
-            this.dtgvBookRoom.Name = "dtgvBookRoom";
-            this.dtgvBookRoom.RowHeadersVisible = false;
-            this.dtgvBookRoom.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(136)))), ((int)(((byte)(86)))));
-            this.dtgvBookRoom.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvBookRoom.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgvBookRoom.RowTemplate.DividerHeight = 5;
-            this.dtgvBookRoom.RowTemplate.Height = 60;
-            this.dtgvBookRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvBookRoom.Size = new System.Drawing.Size(355, 449);
-            this.dtgvBookRoom.TabIndex = 5;
-            this.dtgvBookRoom.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgvBookRoom.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvBookRoom.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvBookRoom.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.dtgvBookRoom.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvBookRoom.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtgvBookRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gray;
-            this.dtgvBookRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvBookRoom.ThemeStyle.HeaderStyle.Height = 22;
-            this.dtgvBookRoom.ThemeStyle.ReadOnly = false;
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.Height = 60;
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvBookRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 1.573463F;
-            this.ID.HeaderText = "Mã";
-            this.ID.Name = "ID";
-            this.ID.Width = 47;
-            // 
-            // NameRoom
-            // 
-            this.NameRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameRoom.DataPropertyName = "NameRoom";
-            this.NameRoom.FillWeight = 16.8327F;
-            this.NameRoom.HeaderText = "Tên Phòng";
-            this.NameRoom.Name = "NameRoom";
-            this.NameRoom.Width = 150;
-            // 
-            // NameRoomType
-            // 
-            this.NameRoomType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameRoomType.DataPropertyName = "NameRoomType";
-            this.NameRoomType.FillWeight = 67.60133F;
-            this.NameRoomType.HeaderText = "Loại Phòng ";
-            this.NameRoomType.Name = "NameRoomType";
-            this.NameRoomType.Width = 150;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 90.57513F;
-            this.Price.HeaderText = "Giá";
-            this.Price.Name = "Price";
-            // 
-            // LimitPerson
-            // 
-            this.LimitPerson.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.LimitPerson.FillWeight = 149.3056F;
-            this.LimitPerson.HeaderText = "Số người tối đa";
-            this.LimitPerson.Name = "LimitPerson";
-            this.LimitPerson.Width = 40;
-            // 
-            // nameStatusRoom
-            // 
-            this.nameStatusRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameStatusRoom.FillWeight = 274.1117F;
-            this.nameStatusRoom.HeaderText = "Trạng thái";
-            this.nameStatusRoom.Name = "nameStatusRoom";
-            this.nameStatusRoom.Width = 90;
-            // 
             // frmDatphong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1186,6 +1185,7 @@
             this.Load += new System.EventHandler(this.frmDatphong_Load);
             this.panel1.ResumeLayout(false);
             this.guna2GroupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookRoom)).EndInit();
             this.panel3.ResumeLayout(false);
             this.guna2GroupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhsachdatphong)).EndInit();
@@ -1200,7 +1200,6 @@
             this.guna2GroupBox2.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookRoom)).EndInit();
             this.ResumeLayout(false);
 
         }
