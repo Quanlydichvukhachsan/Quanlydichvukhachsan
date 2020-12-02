@@ -12,6 +12,7 @@ namespace QuanLyKhachSan
     {
         private List<int> ListIdRoom = null;
         private IEnumerable<RoomType> ListRoomType = null;
+        private IEnumerable<StatusRoom> ListStatusRoom = null;
         private List<RoomDTO> ListRoom = null;
         private BindingSource dataSource = new BindingSource();
         private BindingSource dataSourceTypeRoom = new BindingSource();
@@ -27,28 +28,51 @@ namespace QuanLyKhachSan
             InitializeComponent();
 
             ListRoom = new List<RoomDTO>();
-
             ListRoomType = new List<RoomType>();
+            ListStatusRoom = new List<StatusRoom>();
         }
 
         private void frmQLPhong_Load(object sender, EventArgs e)
         {
             dtgvDanhsachPhongQLP.DataSource = dataSource;
+            InitComboBox();
             LoadRoom();
+         
             AddBinding();
         }
 
-        private void LoadRoom()
+        private void InitComboBox()
         {
             ListRoom = (List<RoomDTO>)RoomBLL.Instance.readAll();
+            ListStatusRoom = RoomBLL.Instance.LoadStatusRoom();
+            ListRoomType = RoomBLL.Instance.LoadRoomType();
+            ListIdRoom = new List<int>();
+            foreach (var items in ListRoom)
+            {
+                ListIdRoom.Add(items.Id);
+            }
+        }
+        private void LoadRoom()
+        {
+           
             textBox1.Text = ListRoom.Count.ToString();
             dtgvDanhsachPhongQLP.Rows.Clear();
             dtgvDanhsachPhongQLP.AutoGenerateColumns = false;
-
             dataSource.DataSource = ListRoom;
-            LoadStatusRoom();
-            LoadRoomType();
+            SetComboxDeFaultNull();
+        }
+        private void SetComboxDeFaultNull()
+        {
+            cbStatusRoom.DataSource = null;
+            cbbMaPhongQLP.DataSource = null;
+            cbbLoaiPhongQLP.DataSource = null;
+        }
+
+        private void SetComboxClick()
+        {
             LoadIdRoom();
+            LoadRoomType();
+            LoadStatusRoom();
         }
 
         private void InitPropertiesRoom()
@@ -60,25 +84,22 @@ namespace QuanLyKhachSan
 
         private void LoadIdRoom()
         {
-            ListIdRoom = new List<int>();
-            foreach (var items in ListRoom)
-            {
-                ListIdRoom.Add(items.Id);
-            }
+           
 
             cbbMaPhongQLP.DataSource = ListIdRoom;
         }
 
         private void LoadStatusRoom()
         {
-            cbStatusRoom.DataSource = RoomBLL.Instance.LoadStatusRoom();
+        
+            cbStatusRoom.DataSource = ListStatusRoom;
             cbStatusRoom.DisplayMember = "NameStatusRoom";
             cbStatusRoom.ValueMember = "NameStatusRoom";
         }
 
         private void LoadRoomType()
         {
-            ListRoomType = RoomBLL.Instance.LoadRoomType();
+        
             cbbLoaiPhongQLP.DataSource = ListRoomType;
 
             cbbLoaiPhongQLP.DisplayMember = "NameRoomType";
@@ -169,9 +190,11 @@ namespace QuanLyKhachSan
             if (cbbMaPhongQLP.SelectedItem != null)
             {
                 string idRoom = cbbMaPhongQLP.GetItemText(this.cbbMaPhongQLP.SelectedItem.ToString());
+
                 var filterd = from RoomDTO p in ListRoom
                               where p.Id == Convert.ToInt32(idRoom)
                               select p;
+
                 foreach (RoomDTO room in filterd)
                 {
                     txtGiaPhongQLP.Text = room.Price.ToString();
@@ -188,7 +211,8 @@ namespace QuanLyKhachSan
 
         private void cbbLoaiPhongQLP_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cbbLoaiPhongQLP.SelectedItem != null)
+           
+            if (cbbLoaiPhongQLP.SelectedItem != null )
             {
                 string NameTypeRoom = cbbLoaiPhongQLP.GetItemText(cbbLoaiPhongQLP.SelectedValue.ToString());
 
@@ -225,6 +249,9 @@ namespace QuanLyKhachSan
         private void gunaButton1_Click(object sender, EventArgs e)
         {
             LoadRoom();
+            txtGiaPhongQLP.Text = "";
+            txtTenPhong.Text = "";
+            txtTimKiemRoom.Text = "";
         }
 
         private void updateRoomToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,6 +262,32 @@ namespace QuanLyKhachSan
                 gunaContextMenuStrip1.Close();
             }
         }
+
+        private void cbbLoaiPhongQLP_Click(object sender, EventArgs e)
+        {
+            //LoadRoomType();
+            SetComboxClick();
+        }
+
+        private void cbbMaPhongQLP_Click(object sender, EventArgs e)
+        {
+            //   LoadIdRoom();
+            SetComboxClick();
+        }
+
+        private void cbStatusRoom_Click(object sender, EventArgs e)
+        {
+            //  LoadStatusRoom();
+            SetComboxClick();
+        }
+
+        private void UpdateRoomType_Click(object sender, EventArgs e)
+        {
+            frmUpdateRoom frm = new frmUpdateRoom((List<RoomType>)ListRoomType);
+            frm.Show();
+        }
+
+
 
         //Update
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)

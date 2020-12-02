@@ -36,6 +36,8 @@ namespace QuanLyKhachSan
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.dtgvDanhsachPhongQLP = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +54,6 @@ namespace QuanLyKhachSan
             this.statusRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxStatusRoom = new System.Windows.Forms.ToolStripComboBox();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnDongQLP = new Guna.UI2.WinForms.Guna2Button();
@@ -72,13 +73,12 @@ namespace QuanLyKhachSan
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnTimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimKiemRoom = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaPhongQLP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UpdateRoomType = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -128,10 +128,37 @@ namespace QuanLyKhachSan
             this.guna2GroupBox2.TabIndex = 12;
             this.guna2GroupBox2.Text = "Danh sách phòng";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.DarkGreen;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(525, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(55, 16);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "0";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel1.Location = new System.Drawing.Point(411, 7);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(95, 15);
+            this.gunaLabel1.TabIndex = 5;
+            this.gunaLabel1.Text = "Số lượng phòng:";
+            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // dtgvDanhsachPhongQLP
             // 
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             this.dtgvDanhsachPhongQLP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgvDanhsachPhongQLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvDanhsachPhongQLP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDanhsachPhongQLP.BackgroundColor = System.Drawing.Color.White;
             this.dtgvDanhsachPhongQLP.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -161,7 +188,6 @@ namespace QuanLyKhachSan
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvDanhsachPhongQLP.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dtgvDanhsachPhongQLP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgvDanhsachPhongQLP.EnableHeadersVisualStyles = false;
             this.dtgvDanhsachPhongQLP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.dtgvDanhsachPhongQLP.Location = new System.Drawing.Point(0, 41);
@@ -264,8 +290,7 @@ namespace QuanLyKhachSan
             // 
             this.gunaContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.gunaContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateRoomToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.updateRoomToolStripMenuItem});
             this.gunaContextMenuStrip1.Name = "gunaContextMenuStrip1";
             this.gunaContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -276,7 +301,7 @@ namespace QuanLyKhachSan
             this.gunaContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.gunaContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.gunaContextMenuStrip1.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
-            this.gunaContextMenuStrip1.Size = new System.Drawing.Size(170, 48);
+            this.gunaContextMenuStrip1.Size = new System.Drawing.Size(145, 26);
             // 
             // updateRoomToolStripMenuItem
             // 
@@ -286,7 +311,7 @@ namespace QuanLyKhachSan
             this.statusRoomToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.updateRoomToolStripMenuItem.Name = "updateRoomToolStripMenuItem";
-            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.updateRoomToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.updateRoomToolStripMenuItem.Text = "UpdateRoom";
             this.updateRoomToolStripMenuItem.Click += new System.EventHandler(this.updateRoomToolStripMenuItem_Click);
             // 
@@ -295,7 +320,7 @@ namespace QuanLyKhachSan
             this.nameRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBoxNameRoom});
             this.nameRoomToolStripMenuItem.Name = "nameRoomToolStripMenuItem";
-            this.nameRoomToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.nameRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nameRoomToolStripMenuItem.Text = "NameRoom";
             // 
             // toolStripTextBoxNameRoom
@@ -308,7 +333,7 @@ namespace QuanLyKhachSan
             this.typeRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBoxTypeRoom});
             this.typeRoomToolStripMenuItem.Name = "typeRoomToolStripMenuItem";
-            this.typeRoomToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.typeRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.typeRoomToolStripMenuItem.Text = "TypeRoom";
             this.typeRoomToolStripMenuItem.Click += new System.EventHandler(this.typeRoomToolStripMenuItem_Click);
             // 
@@ -325,7 +350,7 @@ namespace QuanLyKhachSan
             this.statusRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBoxStatusRoom});
             this.statusRoomToolStripMenuItem.Name = "statusRoomToolStripMenuItem";
-            this.statusRoomToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.statusRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statusRoomToolStripMenuItem.Text = "StatusRoom";
             // 
             // toolStripComboBoxStatusRoom
@@ -339,15 +364,9 @@ namespace QuanLyKhachSan
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem1.Text = "UpdateTypeRoom";
             // 
             // panel2
             // 
@@ -363,17 +382,18 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox4
             // 
+            this.guna2GroupBox4.Controls.Add(this.UpdateRoomType);
             this.guna2GroupBox4.Controls.Add(this.btnDongQLP);
             this.guna2GroupBox4.Controls.Add(this.btnThemPhongQLP);
             this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox4.Location = new System.Drawing.Point(0, 417);
+            this.guna2GroupBox4.Location = new System.Drawing.Point(0, 358);
             this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
             this.guna2GroupBox4.ShadowDecoration.Parent = this.guna2GroupBox4;
-            this.guna2GroupBox4.Size = new System.Drawing.Size(507, 120);
+            this.guna2GroupBox4.Size = new System.Drawing.Size(507, 179);
             this.guna2GroupBox4.TabIndex = 10;
             this.guna2GroupBox4.Text = "Chức Năng";
             // 
@@ -385,7 +405,7 @@ namespace QuanLyKhachSan
             this.btnDongQLP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDongQLP.ForeColor = System.Drawing.Color.White;
             this.btnDongQLP.HoverState.Parent = this.btnDongQLP;
-            this.btnDongQLP.Location = new System.Drawing.Point(256, 64);
+            this.btnDongQLP.Location = new System.Drawing.Point(25, 136);
             this.btnDongQLP.Margin = new System.Windows.Forms.Padding(2);
             this.btnDongQLP.Name = "btnDongQLP";
             this.btnDongQLP.ShadowDecoration.Parent = this.btnDongQLP;
@@ -412,6 +432,9 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox3
             // 
+            this.guna2GroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GroupBox3.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox3.Controls.Add(this.cbbLoaiPhongQLP);
             this.guna2GroupBox3.Controls.Add(this.cbStatusRoom);
@@ -427,7 +450,6 @@ namespace QuanLyKhachSan
             this.guna2GroupBox3.Controls.Add(this.label2);
             this.guna2GroupBox3.Controls.Add(this.label12);
             this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.DarkGreen;
-            this.guna2GroupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox3.Location = new System.Drawing.Point(0, 114);
@@ -458,6 +480,7 @@ namespace QuanLyKhachSan
             this.cbbLoaiPhongQLP.Size = new System.Drawing.Size(202, 36);
             this.cbbLoaiPhongQLP.TabIndex = 19;
             this.cbbLoaiPhongQLP.SelectedValueChanged += new System.EventHandler(this.cbbLoaiPhongQLP_SelectedValueChanged);
+            this.cbbLoaiPhongQLP.Click += new System.EventHandler(this.cbbLoaiPhongQLP_Click);
             // 
             // cbStatusRoom
             // 
@@ -479,6 +502,7 @@ namespace QuanLyKhachSan
             this.cbStatusRoom.Size = new System.Drawing.Size(200, 36);
             this.cbStatusRoom.TabIndex = 19;
             this.cbStatusRoom.SelectedValueChanged += new System.EventHandler(this.cbStatusRoom_SelectedValueChanged);
+            this.cbStatusRoom.Click += new System.EventHandler(this.cbStatusRoom_Click);
             // 
             // cbbMaPhongQLP
             // 
@@ -493,13 +517,14 @@ namespace QuanLyKhachSan
             this.cbbMaPhongQLP.HoverState.Parent = this.cbbMaPhongQLP;
             this.cbbMaPhongQLP.ItemHeight = 30;
             this.cbbMaPhongQLP.ItemsAppearance.Parent = this.cbbMaPhongQLP;
-            this.cbbMaPhongQLP.Location = new System.Drawing.Point(25, 69);
+            this.cbbMaPhongQLP.Location = new System.Drawing.Point(25, 68);
             this.cbbMaPhongQLP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMaPhongQLP.Name = "cbbMaPhongQLP";
             this.cbbMaPhongQLP.ShadowDecoration.Parent = this.cbbMaPhongQLP;
             this.cbbMaPhongQLP.Size = new System.Drawing.Size(200, 36);
             this.cbbMaPhongQLP.TabIndex = 19;
             this.cbbMaPhongQLP.SelectedValueChanged += new System.EventHandler(this.cbbMaPhongQLP_SelectedValueChanged);
+            this.cbbMaPhongQLP.Click += new System.EventHandler(this.cbbMaPhongQLP_Click);
             // 
             // label15
             // 
@@ -655,13 +680,15 @@ namespace QuanLyKhachSan
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Controls.Add(this.gunaButton1);
             this.guna2GroupBox1.Controls.Add(this.btnTimkiem);
             this.guna2GroupBox1.Controls.Add(this.txtTimKiemRoom);
             this.guna2GroupBox1.Controls.Add(this.lblMaPhongQLP);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.DarkGreen;
-            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
@@ -671,6 +698,34 @@ namespace QuanLyKhachSan
             this.guna2GroupBox1.Size = new System.Drawing.Size(507, 114);
             this.guna2GroupBox1.TabIndex = 8;
             this.guna2GroupBox1.Text = "Tìm kiếm";
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.White;
+            this.gunaButton1.BorderColor = System.Drawing.Color.DarkGreen;
+            this.gunaButton1.BorderSize = 1;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.gunaButton1.Image = null;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(382, 58);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 15;
+            this.gunaButton1.Size = new System.Drawing.Size(88, 32);
+            this.gunaButton1.TabIndex = 4;
+            this.gunaButton1.Text = "Xóa bộ lọc";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btnTimkiem
             // 
@@ -737,57 +792,33 @@ namespace QuanLyKhachSan
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ PHÒNG";
             // 
-            // gunaButton1
+            // UpdateRoomType
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaButton1.BorderColor = System.Drawing.Color.DarkGreen;
-            this.gunaButton1.BorderSize = 1;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(382, 58);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 15;
-            this.gunaButton1.Size = new System.Drawing.Size(88, 32);
-            this.gunaButton1.TabIndex = 4;
-            this.gunaButton1.Text = "Xóa bộ lọc";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(411, 7);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(95, 15);
-            this.gunaLabel1.TabIndex = 5;
-            this.gunaLabel1.Text = "Số lượng phòng:";
-            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.DarkGreen;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(525, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(55, 16);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "0";
+            this.UpdateRoomType.AnimationHoverSpeed = 0.07F;
+            this.UpdateRoomType.AnimationSpeed = 0.03F;
+            this.UpdateRoomType.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateRoomType.BaseColor = System.Drawing.Color.White;
+            this.UpdateRoomType.BorderColor = System.Drawing.Color.DarkGreen;
+            this.UpdateRoomType.BorderSize = 1;
+            this.UpdateRoomType.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.UpdateRoomType.FocusedColor = System.Drawing.Color.Empty;
+            this.UpdateRoomType.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UpdateRoomType.ForeColor = System.Drawing.Color.DarkGreen;
+            this.UpdateRoomType.Image = null;
+            this.UpdateRoomType.ImageSize = new System.Drawing.Size(20, 20);
+            this.UpdateRoomType.Location = new System.Drawing.Point(256, 64);
+            this.UpdateRoomType.Name = "UpdateRoomType";
+            this.UpdateRoomType.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.UpdateRoomType.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.UpdateRoomType.OnHoverForeColor = System.Drawing.Color.White;
+            this.UpdateRoomType.OnHoverImage = null;
+            this.UpdateRoomType.OnPressedColor = System.Drawing.Color.Black;
+            this.UpdateRoomType.Radius = 15;
+            this.UpdateRoomType.Size = new System.Drawing.Size(182, 32);
+            this.UpdateRoomType.TabIndex = 7;
+            this.UpdateRoomType.Text = "Sửa loại phòng";
+            this.UpdateRoomType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UpdateRoomType.Click += new System.EventHandler(this.UpdateRoomType_Click);
             // 
             // frmQLPhong
             // 
@@ -857,11 +888,11 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.ToolStripMenuItem typeRoomToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxTypeRoom;
         private System.Windows.Forms.ToolStripMenuItem statusRoomToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxStatusRoom;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.TextBox textBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaButton UpdateRoomType;
     }
 }
