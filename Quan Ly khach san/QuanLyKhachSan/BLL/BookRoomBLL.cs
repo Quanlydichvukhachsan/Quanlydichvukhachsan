@@ -37,9 +37,9 @@ namespace BLL
         {
             throw new NotImplementedException();
         }
-        public List<BookRoomDTO> ReadBookRoomByDate(DateTime date)
+        public List<BookRoomByDateDTO> ReadBookRoomByDate(DateTime date)
         {
-            return BookRoomDAL.Instance.ReadBookRoomByDate(date);
+            return BookRoomByDateDAL.Instance.ReadBookRoomByDate(date);
         }
 
     }
