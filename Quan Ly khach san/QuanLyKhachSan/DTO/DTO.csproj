@@ -46,10 +46,16 @@
     <Compile Include="CustomerDTO.cs" />
     <Compile Include="CustomerTypeDTO.cs" />
     <Compile Include="InitNameColumn.cs" />
-    <Compile Include="RoomDTO.cs" />
+    <Compile Include="Room\RoomDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoomType.cs" />
-    <Compile Include="StatusRoom.cs" />
+    <Compile Include="Room\RoomType.cs" />
+    <Compile Include="Room\StatusRoom.cs" />
+    <Compile Include="Service\ServiceDTO.cs" />
+    <Compile Include="Service\ServiceTypeDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BookRoom\" />
+    <Folder Include="Customer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

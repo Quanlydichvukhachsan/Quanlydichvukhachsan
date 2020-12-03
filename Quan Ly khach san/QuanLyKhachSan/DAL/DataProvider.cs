@@ -23,11 +23,10 @@ namespace DAL
 
         }
 
-<<<<<<< HEAD
-        private readonly string strCon = @"SERVER=Rin;Database =HotelManagement;Integrated security =true";
-=======
-        private readonly string strCon = @"SERVER=DESKTOP-UPDAPIH\SQLEXPRESS01;Database = HotelManagement ; integrated security =true ";
->>>>>>> 149dde4f82d8843d0b690e6ca802e2e6a463320e
+        //  private readonly string strCon = @"SERVER=Rin;Database =HotelManagement;Integrated security =true";
+        private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password=nguyenmautuan123";
+
+        // private readonly string strCon = @"SERVER=DESKTOP-UPDAPIH\SQLEXPRESS01;Database = HotelManagement ; integrated security =true ";
         private void hasParameter(SqlCommand cmd, string query, object[] para = null)
         {
             int i = 0;

@@ -244,6 +244,7 @@ namespace QuanLyKhachSan
             txtGiaPhongQLP.Text = "";
             txtTenPhong.Text = "";
             txtTimKiemRoom.Text = "";
+            txtSoNguoiToiDa.Text = "";
         }
 
         private void updateRoomToolStripMenuItem_Click(object sender, EventArgs e)
@@ -276,13 +277,17 @@ namespace QuanLyKhachSan
         private void UpdateRoomType_Click(object sender, EventArgs e)
         {
             frmUpdateRoom frm = new frmUpdateRoom((List<RoomType>)ListRoomType);
+            frm.EventUpdateHandler += Frm_EventUpdateHandler1;
             frm.Show();
         }
 
-     
+        private void Frm_EventUpdateHandler1(object sender, frmUpdateRoom.UpdateEventArgs args)
+        {
+            ListRoom = (List<RoomDTO>)RoomBLL.Instance.readAll();
+            dataSource.DataSource = ListRoom;
+        }
 
-
-
+    
         //Update
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

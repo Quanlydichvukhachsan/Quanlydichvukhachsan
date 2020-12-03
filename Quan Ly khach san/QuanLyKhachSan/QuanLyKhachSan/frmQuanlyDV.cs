@@ -12,9 +12,32 @@ namespace QuanLyKhachSan
 {
     public partial class frmQuanlyDV : Form
     {
+        BindingSource dataSource = new BindingSource();
         public frmQuanlyDV()
         {
             InitializeComponent();
         }
+
+        private void frmQuanlyDV_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadService()
+        {
+
+        }
+        private void LoadServiceType()
+        {
+
+        }
+
+        private void FindService()
+        {
+
+        }
+
+
+
     }
 }
