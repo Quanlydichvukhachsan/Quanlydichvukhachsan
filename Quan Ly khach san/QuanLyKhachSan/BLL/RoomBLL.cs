@@ -21,11 +21,20 @@ namespace BLL
         {
           return  RoomDAL.Instance.Insert(obj);
         }
+        public bool UpdateRoomType(RoomType obj)
+        {
+            return RoomDAL.Instance.UpdateRoomType(obj);
+        }
+        public bool InsertRoomTypeUpdateDay(RoomType obj)
+        {
+            return RoomDAL.Instance.InsertUpdateRoomTypeDay(obj);
+        }
 
         public IEnumerable<RoomDTO> readAll()
         {
            return RoomDAL.Instance.readAll();
         }
+      
         public IEnumerable<StatusRoom> LoadStatusRoom()
         {
             return RoomDAL.Instance.LoadFullSatusRoom();

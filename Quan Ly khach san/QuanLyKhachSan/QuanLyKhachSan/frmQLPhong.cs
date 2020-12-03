@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-
+using System.Collections;
 namespace QuanLyKhachSan
 {
     public partial class frmQLPhong : Form
@@ -15,7 +15,6 @@ namespace QuanLyKhachSan
         private IEnumerable<StatusRoom> ListStatusRoom = null;
         private List<RoomDTO> ListRoom = null;
         private BindingSource dataSource = new BindingSource();
-        private BindingSource dataSourceTypeRoom = new BindingSource();
 
         private string nameRoom, nameTypeRoom;
         private string IsnameRoom = "";
@@ -26,18 +25,16 @@ namespace QuanLyKhachSan
         public frmQLPhong()
         {
             InitializeComponent();
-
             ListRoom = new List<RoomDTO>();
             ListRoomType = new List<RoomType>();
             ListStatusRoom = new List<StatusRoom>();
+         
         }
-
         private void frmQLPhong_Load(object sender, EventArgs e)
         {
             dtgvDanhsachPhongQLP.DataSource = dataSource;
             InitComboBox();
             LoadRoom();
-         
             AddBinding();
         }
 
@@ -54,7 +51,7 @@ namespace QuanLyKhachSan
         }
         private void LoadRoom()
         {
-           
+          
             textBox1.Text = ListRoom.Count.ToString();
             dtgvDanhsachPhongQLP.Rows.Clear();
             dtgvDanhsachPhongQLP.AutoGenerateColumns = false;
@@ -75,13 +72,7 @@ namespace QuanLyKhachSan
             LoadStatusRoom();
         }
 
-        private void InitPropertiesRoom()
-        {
-            string getIdByName = cbbLoaiPhongQLP.GetItemText(this.cbbLoaiPhongQLP.SelectedValue.ToString());
-            iD = int.Parse(getIdByName);
-            idRoom = Convert.ToInt32(cbbMaPhongQLP.GetItemText(this.cbbMaPhongQLP.SelectedItem.ToString()));
-        }
-
+    
         private void LoadIdRoom()
         {
            
@@ -241,7 +232,8 @@ namespace QuanLyKhachSan
             if (cbStatusRoom.SelectedItem != null)
             {
                 string StatusRoom = cbStatusRoom.GetItemText(cbStatusRoom.SelectedValue.ToString());
-                List<RoomDTO> rooms = ListRoom.FindAll(p => p.NameStatusRoom.CompareTo(StatusRoom) == 0);
+                List<RoomDTO> rooms = ListRoom.FindAll(p => p.NameStatusRoom.CompareTo(StatusRoom) == 0
+                                                     && p.NameRoomType.CompareTo(cbbLoaiPhongQLP.Text)==0);
                 dataSource.DataSource = rooms;
             }
         }
@@ -286,6 +278,8 @@ namespace QuanLyKhachSan
             frmUpdateRoom frm = new frmUpdateRoom((List<RoomType>)ListRoomType);
             frm.Show();
         }
+
+     
 
 
 
