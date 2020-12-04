@@ -76,7 +76,6 @@ namespace QuanLyKhachSan
         private void LoadIdRoom()
         {
            
-
             cbbMaPhongQLP.DataSource = ListIdRoom;
         }
 
@@ -154,6 +153,7 @@ namespace QuanLyKhachSan
             }
             else
             {
+                
                 MessageBox.Show("Name Room Exist");
             }
         }

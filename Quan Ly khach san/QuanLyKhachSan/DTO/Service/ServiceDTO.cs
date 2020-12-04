@@ -36,7 +36,6 @@ namespace DTO.Service
             NameServiceType = row[listName[3]].ToString();
             IdService = int.Parse(row[listName[4]].ToString());
          
-
         }
     }
 }
