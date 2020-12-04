@@ -18,9 +18,17 @@ namespace DAL.Service
             ListService = new List<ServiceDTO>();
             ListServiceType = new List<ServiceTypeDTO>();
         }
-        public bool DeleteById(ServiceDTO obj)
+        public bool DeleteById( string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("delete from Service where ID ="+ id);
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public bool Insert(ServiceDTO obj)

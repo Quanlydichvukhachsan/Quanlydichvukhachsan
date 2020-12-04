@@ -23,11 +23,7 @@ namespace DAL
             listRoomType = new List<RoomType>();
         }
 
-        public bool DeleteById(BookRoomDTO obj)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public bool Insert(BookRoomDTO obj)
         {
             throw new NotImplementedException();
@@ -39,6 +35,11 @@ namespace DAL
         }
 
         public bool UpdateById(BookRoomDTO obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteById(string id)
         {
             throw new NotImplementedException();
         }

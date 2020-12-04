@@ -20,7 +20,7 @@ namespace DAL
             listCustomer = new List<CustomerDTO>();
             listCustomerType = new List<CustomerTypeDTO>();
         }
-        public bool DeleteById(CustomerDTO obj)
+        public bool DeleteById(string id)
         {
             throw new NotImplementedException();
         }

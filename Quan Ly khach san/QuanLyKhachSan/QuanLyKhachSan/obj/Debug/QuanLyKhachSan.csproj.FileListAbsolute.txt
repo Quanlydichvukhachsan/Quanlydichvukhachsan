@@ -174,3 +174,4 @@ D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\Qua
 D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
 D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmThemDV.resources

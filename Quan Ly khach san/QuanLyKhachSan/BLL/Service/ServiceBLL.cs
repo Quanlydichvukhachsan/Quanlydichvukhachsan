@@ -13,7 +13,7 @@ namespace BLL.Service
         public static ServiceBLL Instance { get { if (instance == null) return new ServiceBLL(); return instance; } }
         public bool DeleteById(string id)
         {
-            throw new NotImplementedException();
+            return ServiceDAL.Instance.DeleteById(id);
         }
 
         public bool Insert(ServiceDTO obj)

@@ -23,7 +23,7 @@ namespace DAL
             ListStatusRoom = new List<StatusRoom>();
             ListRoomType = new List<RoomType>();
         }
-        public bool DeleteById(RoomDTO obj)
+        public bool DeleteById(string id)
         {
             throw new NotImplementedException();
         }

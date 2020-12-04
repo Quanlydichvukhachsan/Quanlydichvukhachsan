@@ -13,7 +13,7 @@ namespace DAL
 
         bool UpdateById(T obj);
 
-        bool DeleteById( T obj);
+        bool DeleteById( string id);
 
         IEnumerable<T> readAll();
         
