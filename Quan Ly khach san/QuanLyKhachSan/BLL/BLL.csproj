@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookRoomBLL.cs" />
+    <Compile Include="CustomersBLL.cs" />
+    <Compile Include="Receive\ReceiveBLL.cs" />
     <Compile Include="RoomBLL.cs" />
     <Compile Include="IReposityBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data;
 namespace DAL
 {
-    class CustomerDAL : IReposityDAL<CustomerDTO>
+   public class CustomerDAL : IReposityDAL<CustomerDTO>
     {
         private readonly static CustomerDAL instance;
         List<CustomerDTO> listCustomer = null;
@@ -33,7 +34,13 @@ namespace DAL
 
         public IEnumerable<CustomerDTO> readAll()
         {
-            throw new NotImplementedException();
+            DataTable dataTable = DataProvider.Instance.ExcuteDataReader("USP_LoadFullCustomer");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                CustomerDTO room = new CustomerDTO(row, dataTable);
+                listCustomer.Add(room);
+            }
+            return listCustomer;
         }
 
         public bool UpdateById(CustomerDTO obj)

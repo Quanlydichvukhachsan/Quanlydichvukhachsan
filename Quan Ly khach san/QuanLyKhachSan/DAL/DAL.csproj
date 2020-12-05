@@ -43,7 +43,8 @@
   <ItemGroup>
     <Compile Include="BookRoomByDateDAL.cs" />
     <Compile Include="BookRoomDAL.cs" />
-    <Compile Include="CustomerDAL .cs" />
+    <Compile Include="CustomerDAL.cs" />
+    <Compile Include="Receive\ReceiveDAL.cs" />
     <Compile Include="RoomDAL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="IReposityDAL.cs" />

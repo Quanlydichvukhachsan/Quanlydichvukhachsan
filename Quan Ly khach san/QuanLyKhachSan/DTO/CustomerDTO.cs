@@ -18,7 +18,7 @@ namespace DTO
         private readonly int phoneNumber_;
         private readonly string Sex;
         private readonly string nationality_;
-
+        private readonly string nameCustomer;
         List<string> listName = null;
 
         public CustomerDTO() { }
@@ -26,14 +26,15 @@ namespace DTO
         {
             listName = InitNameColumn.init(data);
             this.iD_ = int.Parse(row[listName[0]].ToString());
-            this.iDCard_ = row[listName[1]].ToString();
-            this.iDCustomerType_ = int.Parse(row[listName[2]].ToString());
-            this.name_ = row[listName[3]].ToString();
-            this.dateOfBirth_ = DateTime.Parse(row[listName[4]].ToString());
-            this.address_ = row[listName[5]].ToString();
+            this.name_ = row[listName[1]].ToString();
+            this.iDCard_ = row[listName[2]].ToString();
+            this.nameCustomer = row[listName[3]].ToString();
+            Sex = row[listName[4]].ToString();
+            this.dateOfBirth_ = DateTime.Parse(row[listName[5]].ToString());
             this.phoneNumber_ = int.Parse(row[listName[6]].ToString());
-            Sex = row[listName[7]].ToString();
+            this.address_ = row[listName[7]].ToString();
             this.nationality_ = row[listName[8]].ToString();
+            this.iDCustomerType_ = int.Parse(row[listName[9]].ToString());
         }
 
         public CustomerDTO(int iD_, string iDCard_, int iDCustomerType_, string name_, DateTime dateOfBirth_, string address_, int phoneNumber_, string sex, string nationality_)

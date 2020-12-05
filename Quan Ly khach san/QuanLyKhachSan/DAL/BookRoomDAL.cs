@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
-
+using System.Data;
 namespace DAL
 {
     public class BookRoomDAL : IReposityDAL<BookRoomDTO>
@@ -31,7 +31,13 @@ namespace DAL
 
         public IEnumerable<BookRoomDTO> readAll()
         {
-            throw new NotImplementedException();
+            DataTable dataTable = DataProvider.Instance.ExcuteDataReader("select * from BookRoom");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BookRoomDTO bookRoom = new BookRoomDTO(row, dataTable);
+                listBookRoom.Add(bookRoom);
+            }
+            return listBookRoom;
         }
 
         public bool UpdateById(BookRoomDTO obj)

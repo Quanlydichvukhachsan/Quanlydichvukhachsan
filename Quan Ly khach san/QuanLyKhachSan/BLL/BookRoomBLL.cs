@@ -8,7 +8,7 @@ using DAL;
 
 namespace BLL
 {
-   public class BookRoomBLL : IReposityBLL<BookRoomBLL>
+   public class BookRoomBLL : IReposityBLL<BookRoomDTO>
     {
         private static readonly BookRoomBLL instance;
 
@@ -23,17 +23,17 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public bool Insert(BookRoomBLL obj)
+        public bool Insert(BookRoomDTO obj)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<BookRoomBLL> readAll()
+        public IEnumerable<BookRoomDTO> readAll()
         {
-            throw new NotImplementedException();
+            return (List<BookRoomDTO>)BookRoomDAL.Instance.readAll();
         }
 
-        public bool UpdateById(int id, BookRoomBLL obj)
+        public bool UpdateById(int id, BookRoomDTO obj)
         {
             throw new NotImplementedException();
         }

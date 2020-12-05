@@ -46,6 +46,8 @@
     <Compile Include="CustomerDTO.cs" />
     <Compile Include="CustomerTypeDTO.cs" />
     <Compile Include="InitNameColumn.cs" />
+    <Compile Include="Receive\ReceiveDTO.cs" />
+    <Compile Include="Receive\ReceiveRoomDTO.cs" />
     <Compile Include="Room\RoomDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room\RoomType.cs" />
