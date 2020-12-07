@@ -460,7 +460,6 @@
             this.btnNhanphong.Size = new System.Drawing.Size(213, 29);
             this.btnNhanphong.TabIndex = 2;
             this.btnNhanphong.Text = "Đặt Phòng";
-            this.btnNhanphong.Click += new System.EventHandler(this.btnNhanphong_Click);
             // 
             // btnChuyendennhanphong
             // 
@@ -1129,6 +1128,7 @@
             this.dtpNgaynhan.Size = new System.Drawing.Size(177, 29);
             this.dtpNgaynhan.TabIndex = 4;
             this.dtpNgaynhan.Value = new System.DateTime(2020, 11, 26, 13, 32, 40, 661);
+            this.dtpNgaynhan.ValueChanged += new System.EventHandler(this.dtpNgaynhan_ValueChanged);
             // 
             // label2
             // 
@@ -1140,7 +1140,6 @@
             this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số đêm";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label10
             // 

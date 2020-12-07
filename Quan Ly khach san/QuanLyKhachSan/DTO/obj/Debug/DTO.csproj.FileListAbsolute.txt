@@ -1,6 +1,5 @@
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.dll
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.pdb
-D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb
@@ -10,9 +9,24 @@ D:\CSDL\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.
 D:\CSDL\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\CSDL\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
 D:\CSDL\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb
+<<<<<<< HEAD
 C:\Users\fruit\source\repos\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.dll
 C:\Users\fruit\source\repos\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.pdb
 C:\Users\fruit\source\repos\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\Users\fruit\source\repos\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\fruit\source\repos\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
 C:\Users\fruit\source\repos\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb
+=======
+D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.dll
+D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.pdb
+D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
+D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb
+D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.dll
+D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.pdb
+D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
+D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb
+D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+>>>>>>> 1b6d0ceae27c0b7e79f33d46a091285fe7b9ded4

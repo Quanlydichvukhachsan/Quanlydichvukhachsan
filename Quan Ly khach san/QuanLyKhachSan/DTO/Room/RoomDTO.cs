@@ -47,8 +47,8 @@ namespace DTO
             _price = int.Parse(row[listName[3]].ToString());
             _limitPerson = int.Parse(row[listName[4]].ToString());
             _nameStatusRoom =  row[listName[5]].ToString();
-           // _idStatusRoom = int.Parse(row[listName[6]].ToString());
-          //  _idRoomType =  int.Parse(row[listName[7]].ToString());
+            _idRoomType =  int.Parse(row[listName[6]].ToString());
+            _idStatusRoom = int.Parse(row[listName[7]].ToString());
         }
 
         public RoomDTO(int id, string nameRoom,string nameRoomType ,int idStatusRoom, int idRoomType, int price, int limitPerson, string nameStatusRoom)

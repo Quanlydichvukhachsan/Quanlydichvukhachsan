@@ -11,18 +11,19 @@ namespace DAL
     public class RoomDAL : IReposityDAL<RoomDTO>
     {
         private readonly static RoomDAL instance ;
-
+        public List<RoomDTO> ListRoomPerson = null;
         public  List<RoomDTO> ListRoom =null;
         public List<StatusRoom> ListStatusRoom = null;
         public List<RoomType> ListRoomType = null;
         public static RoomDAL Instance { get { if (instance == null) return new RoomDAL(); return instance; } } 
 
         public RoomDAL() {
+            ListRoomPerson = new List<RoomDTO>();
             ListRoom = new List<RoomDTO>();
             ListStatusRoom = new List<StatusRoom>();
             ListRoomType = new List<RoomType>();
         }
-        public bool DeleteById(RoomDTO obj)
+        public bool DeleteById(string id)
         {
             throw new NotImplementedException();
         }
@@ -39,6 +40,37 @@ namespace DAL
             }
 
         }
+        
+        public bool InsertUpdateRoomTypeDay(RoomType obj)
+        {
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("USP_UpdateRoomTypeByDate @name , @price , @limitPerson , @dayUpdate , @note , @idRoomType",
+                                                    new object[] { obj.NameRoomType, obj.Price, obj.LimitPerson,obj.DayUpdate,obj.Notes, obj.IdRoomType });
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+
+        }
+        public bool UpdateRoomType(RoomType obj)
+        {
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("USP_UpdateRoomType @id , @name , @price , @limitPerson",
+                                                    new object[] { obj.IdRoomType, obj.NameRoomType, obj.Price, obj.LimitPerson});
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+
+        }
+        
+
 
         public IEnumerable<RoomDTO> readAll()
         {
@@ -51,7 +83,8 @@ namespace DAL
                 return ListRoom;
 
         }
-           public IEnumerable<StatusRoom> LoadFullSatusRoom()
+       
+        public IEnumerable<StatusRoom> LoadFullSatusRoom()
         {
             DataTable dataTable =  DataProvider.Instance.ExcuteDataReader("dbo.USP_LoadFullStatusRoom");
             foreach(DataRow row in dataTable.Rows)
