@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill\BillRoomPriceDAL.cs" />
+    <Compile Include="Bill\BillServiceDAL.cs" />
     <Compile Include="BookRoomByDateDAL.cs" />
     <Compile Include="BookRoomDAL.cs" />
     <Compile Include="CustomerDAL.cs" />
