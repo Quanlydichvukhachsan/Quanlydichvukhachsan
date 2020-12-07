@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill\BillRoomPriceBLL.cs" />
+    <Compile Include="Bill\BillServiceBLL.cs" />
     <Compile Include="BookRoomBLL.cs" />
     <Compile Include="CustomersBLL.cs" />
     <Compile Include="Receive\ReceiveBLL.cs" />
@@ -59,5 +61,6 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

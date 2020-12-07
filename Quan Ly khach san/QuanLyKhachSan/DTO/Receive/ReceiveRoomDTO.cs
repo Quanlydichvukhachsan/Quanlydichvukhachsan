@@ -15,8 +15,16 @@ namespace DTO.Receive
         }
         public ReceiveRoomDTO() { }
 
+        public ReceiveRoomDTO(int idRoom, int idBookRoom, int id)
+        {
+            IdRoom = idRoom;
+            IdBookRoom = idBookRoom;
+            Id = id;
+        }
+
         public int IdRoom { get; set; }
         public int IdBookRoom { get; set; }
+        public int Id { get; set; }
 
     }
 }
