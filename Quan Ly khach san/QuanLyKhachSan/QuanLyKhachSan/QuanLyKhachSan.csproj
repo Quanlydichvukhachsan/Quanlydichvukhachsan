@@ -86,6 +86,12 @@
     <Compile Include="frmdoiphong.Designer.cs">
       <DependentUpon>frmdoiphong.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLNV.Designer.cs">
+      <DependentUpon>frmQLNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanlykhachhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmdoiphong.resx">
       <DependentUpon>frmdoiphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLNV.resx">
+      <DependentUpon>frmQLNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanlykhachhang.resx">
       <DependentUpon>frmQuanlykhachhang.cs</DependentUpon>
