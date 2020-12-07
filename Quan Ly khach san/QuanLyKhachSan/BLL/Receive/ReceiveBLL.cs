@@ -20,7 +20,7 @@ namespace BLL.Receive
         }
         public bool DeleteById(string id)
         {
-            throw new NotImplementedException();
+            return ReceiveDAL.Instance.DeleteById(id);
         }
 
         public bool Insert(ReceiveRoomDTO obj)
@@ -39,7 +39,7 @@ namespace BLL.Receive
 
         public bool UpdateById(int id, ReceiveRoomDTO obj)
         {
-            throw new NotImplementedException();
+            return ReceiveDAL.Instance.UpdateReceive(obj);
         }
      
     }

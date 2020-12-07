@@ -134,6 +134,12 @@
     <Compile Include="frmThemDV.Designer.cs">
       <DependentUpon>frmThemDV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.Designer.cs">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemDV.resx">
       <DependentUpon>frmThemDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCustomer.resx">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateRoom.resx">
       <DependentUpon>frmUpdateRoom.cs</DependentUpon>

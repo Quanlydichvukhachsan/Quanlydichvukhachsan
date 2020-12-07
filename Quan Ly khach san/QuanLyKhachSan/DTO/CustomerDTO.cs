@@ -49,7 +49,7 @@ namespace DTO
             Sex = sex;
             this.nationality_ = nationality_;
         }
-
+        
         public int ID_ => iD_;
 
         public string IDCard_ => iDCard_;

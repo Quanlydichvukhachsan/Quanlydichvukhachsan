@@ -26,7 +26,15 @@ namespace DAL.Receive
 
         public bool DeleteById(string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("delete from ReceiveRoom where ID ="+id);
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public bool Insert(ReceiveDTO obj)
@@ -64,9 +72,24 @@ namespace DAL.Receive
             return ListReceiveRoom;
         }
 
-        public bool UpdateById(ReceiveDTO obj)
+        public  bool UpdateById(ReceiveDTO obj)
         {
             throw new NotImplementedException();
         }
+
+        public bool UpdateReceive(ReceiveRoomDTO obj)
+        {
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("dbo.USP_UpdateReceiveRoom @idBookRoom , @idRoom", new object[] { obj.IdBookRoom, obj.IdRoom });
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+         
+        }
+
     }
 }

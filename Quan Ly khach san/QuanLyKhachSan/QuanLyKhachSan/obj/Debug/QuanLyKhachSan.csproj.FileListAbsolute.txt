@@ -176,3 +176,4 @@ D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\Qua
 D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmThemDV.resources
 D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmThemDV.resources
+D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmUpdateCustomer.resources
