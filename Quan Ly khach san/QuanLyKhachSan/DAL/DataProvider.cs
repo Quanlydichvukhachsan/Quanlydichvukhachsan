@@ -23,8 +23,8 @@ namespace DAL
 
         }
 
-        private readonly string strCon = @"SERVER=Rin;Database =HotelManagement;Integrated security =true";
-    //   private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password=nguyenmautuan123";
+     //   private readonly string strCon = @"SERVER=Rin;Database =HotelManagement;Integrated security =true";
+    private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password=nguyenmautuan123";
 
         // private readonly string strCon = @"SERVER=DESKTOP-UPDAPIH\SQLEXPRESS01;Database = HotelManagement ; integrated security =true ";
         private void hasParameter(SqlCommand cmd, string query, object[] para = null)
@@ -99,19 +99,33 @@ namespace DAL
         {
             try
             {
+                int count;
                 using (SqlConnection conn = new SqlConnection(strCon))
                 {
-                    int count;
+                    if (conn.State == ConnectionState.Closed) conn.Open();
+                  
                     SqlCommand cmd = new SqlCommand(query, conn);
                     if (para != null)
                     {
 
                         hasParameter(cmd, query, para);
+                        
+
+
                     }
-                    count = (int)cmd.ExecuteScalar();
-                    return count;
+                    if(cmd.ExecuteScalar() == null)
+                    {
+                        count = 0;
+                    }
+                    else
+                    {
+                        count = (int)cmd.ExecuteScalar();
+                    }
+                   
+                 
 
                 }
+                return count;
             }
 
             catch (Exception err)
@@ -119,5 +133,7 @@ namespace DAL
                 throw err;
             }
         }
+
+    
     }
 }

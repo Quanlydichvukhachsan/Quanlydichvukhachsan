@@ -12,13 +12,17 @@ namespace BLL.Bill
         private readonly static BillServiceBLL instance;
         public static BillServiceBLL Instance { get { if (instance == null) return new BillServiceBLL(); return instance; } }
 
-        public bool InsertBillService(int idBill, int id, int idService, int count)
+        public bool InsertBillService(int idBill, int idService, int count)
         {
-            return BillServiceDAL.Instance.InsertBillService(idBill, id, idService, count);
+            return BillServiceDAL.Instance.InsertBillService(idBill, idService, count);
         }
-        public bool UpdateBillService(int idBill, int id, int idService, int count)
+        public bool UpdateBillService(int idBill,  int idService, int count)
         {
-            return BillServiceDAL.Instance.UpdateBillService(idBill, id, idService, count);
+            return BillServiceDAL.Instance.UpdateBillService(idBill, idService, count);
+        }
+        public bool UpdateBillService_Price(int idBill)
+        {
+            return BillServiceDAL.Instance.UpdateBillService_Price(idBill);
         }
         public IEnumerable<BillServiceDTO> readServiceByIdRoom(int id)
         {

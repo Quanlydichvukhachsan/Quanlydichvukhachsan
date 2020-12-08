@@ -25,29 +25,41 @@ namespace DAL.Bill
             return ListBillRoomPrice;
         }
 
-        public int InsertBillRoomPrice(int idReceiveRoom ,string staffSetUp)
+        public bool UpdateBillRoomPrice(int idBill)
         {
             try
             {
-               return DataProvider.Instance.ExcuteScalar("dbo.USP_InsertBill @idReceiveRoom , @staffSetUp", new object[] { idReceiveRoom ,staffSetUp });
-               
+             
+               return DataProvider.Instance.ExcuteNonQuery("dbo.USP_UpdateBill_RoomPrice @idBill", new object[] { idBill });
             }
             catch (Exception err)
             {
                 throw err;
             }
         }
-        public bool CheckExistBillRoom(int idRoom)
+        public int InsertBillRoomPrice(int idReceiveRoom, string staffSetUp)
         {
             try
             {
-                DataProvider.Instance.ExcuteNonQuery("dbo.USP_IsExistBillOfRoom @idRoom", new object[] { idRoom });
-                return true;
+
+                return DataProvider.Instance.ExcuteScalar("dbo.USP_InsertBill @idReceiveRoom , @staffSetUp", new object[] { idReceiveRoom, staffSetUp });
             }
             catch (Exception err)
             {
                 throw err;
             }
+        }
+        public int CheckExistBillRoom(int idRoom)
+        {
+            //bool check = false;
+           return  DataProvider.Instance.ExcuteScalar("dbo.USP_IsExistBillOfRoom @idRoom", new object[] { idRoom });
+           /* if( dataTable.Rows.Count > 0)
+            {
+                check = true; 
+            }
+
+            return check;*/
+         
         }
 
     }

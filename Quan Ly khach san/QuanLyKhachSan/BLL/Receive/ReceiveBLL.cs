@@ -41,6 +41,9 @@ namespace BLL.Receive
         {
             return ReceiveDAL.Instance.UpdateReceive(obj);
         }
-     
+      public List<ReceiveRoomDTO> ReadAllReceive()
+        {
+            return ReceiveDAL.Instance.ReadAllReceiveRoom();
+        }
     }
 }

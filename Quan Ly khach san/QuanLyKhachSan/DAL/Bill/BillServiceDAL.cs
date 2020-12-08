@@ -24,11 +24,11 @@ namespace DAL.Bill
         {
             throw new NotImplementedException();
         }
-        public bool InsertBillService(int idBill, int id,int idService , int count)
+        public bool InsertBillService(int idBill, int idService , int count)
         {
             try
             {
-                DataProvider.Instance.ExcuteNonQuery("dbo.USP_InsertBillDetails @idBill , @idService , @count", new object[] { idBill, id, idService ,count });
+                DataProvider.Instance.ExcuteNonQuery("dbo.USP_InsertBillDetails @idBill , @idService , @count", new object[] { idBill, idService ,count });
                 return true;
             }
             catch (Exception err)
@@ -37,11 +37,11 @@ namespace DAL.Bill
             }
         }
 
-        public bool UpdateBillService(int idBill, int id, int idService, int count)
+        public bool UpdateBillService(int idBill, int idService, int count)
         {
             try
             {
-                DataProvider.Instance.ExcuteNonQuery("dbo.USP_UpdateBillDetails @idBill , @idService , @_count", new object[] { idBill, id, idService, count });
+                DataProvider.Instance.ExcuteNonQuery("dbo.USP_UpdateBillDetails @idBill , @idService , @_count", new object[] { idBill, idService, count });
                 return true;
             }
             catch (Exception err)
@@ -49,7 +49,18 @@ namespace DAL.Bill
                 throw err;
             }
         }
-
+        public bool UpdateBillService_Price(int idBill)
+        {
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("dbo.USP_UpdateBill_ServicePrice @idBill", new object[] { idBill });
+                return true;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
         public IEnumerable<BillServiceDTO> readAll()
         {
 

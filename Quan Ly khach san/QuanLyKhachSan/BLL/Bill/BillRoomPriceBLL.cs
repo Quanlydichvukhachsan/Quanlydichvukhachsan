@@ -12,7 +12,7 @@ namespace BLL.Bill
         private readonly static BillRoomPriceBLL instance;
         public static BillRoomPriceBLL Instance { get { if (instance == null) return new BillRoomPriceBLL(); return instance; } }
 
-        public bool CheckExistBillRoom(int idRoom)
+        public int CheckExistBillRoom(int idRoom)
         {
             return BillRoomPriceDAL.Instance.CheckExistBillRoom(idRoom);
         }
@@ -23,6 +23,11 @@ namespace BLL.Bill
         public IEnumerable<BillRoomPrice> readServiceByIdRoom(DateTime dateCheckIn, int idRoom)
         {
             return BillRoomPriceDAL.Instance.readServiceByIdRoom(dateCheckIn, idRoom);
+        }
+
+        public bool UpdateBillRoomPrice(int idBill)
+        {
+            return BillRoomPriceDAL.Instance.UpdateBillRoomPrice(idBill);
         }
     }
 }

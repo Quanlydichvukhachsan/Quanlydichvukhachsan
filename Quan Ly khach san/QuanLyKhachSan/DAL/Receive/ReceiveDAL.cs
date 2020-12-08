@@ -18,9 +18,11 @@ namespace DAL.Receive
             }
         }
         private List<ReceiveDTO> ListReceiveRoom;
+        private List<ReceiveRoomDTO> ListReceive;
         public ReceiveDAL()
         {
             ListReceiveRoom = new List<ReceiveDTO>();
+            ListReceive = new List<ReceiveRoomDTO>();
         }
 
 
@@ -89,6 +91,16 @@ namespace DAL.Receive
                 throw err;
             }
          
+        }
+        public List<ReceiveRoomDTO> ReadAllReceiveRoom()
+        {
+            DataTable dataTable = DataProvider.Instance.ExcuteDataReader("select * from ReceiveRoom");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ReceiveRoomDTO roomReceive = new ReceiveRoomDTO(row, dataTable);
+                ListReceive.Add(roomReceive);
+            }
+            return ListReceive;
         }
 
     }
