@@ -28,8 +28,12 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+<<<<<<< HEAD
 
         public IEnumerable<BookRoomDTO> readAll()
+=======
+        public bool Insert(BookRoomDTO obj)
+>>>>>>> developInsertCustomerAndBookRoom
         {
             DataTable dataTable = DataProvider.Instance.ExcuteDataReader("select * from BookRoom");
             foreach (DataRow row in dataTable.Rows)
@@ -39,10 +43,29 @@ namespace DAL
             }
             return listBookRoom;
         }
+        public bool InsertBookRoom(BookRoomDTO obj, DateTime time)
+        {
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("USP_InsertBookRoom @idCustomer , @idRoomType , @datecheckin , @datecheckout , @datebookroom",
+                                             new object[] { obj.IDCustomer_, obj.IDRoomType_, obj.DateCheckIn_, obj.DateCheckOut_, time });
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }        
+        }
 
         public bool UpdateById(BookRoomDTO obj)
         {
-            throw new NotImplementedException();
+            DataTable dataTable = DataProvider.Instance.ExcuteDataReader("USP_LoadFullCustomer");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BookRoomDTO Room = new BookRoomDTO(row, dataTable);
+                bookRoom.Add(Room);
+            }
+            return bookRoom;
         }
 
         public bool DeleteById(string id)

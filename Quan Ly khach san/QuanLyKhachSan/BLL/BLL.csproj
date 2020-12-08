@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,12 +45,18 @@
     <Compile Include="Bill\BillRoomPriceBLL.cs" />
     <Compile Include="Bill\BillServiceBLL.cs" />
     <Compile Include="BookRoomBLL.cs" />
+<<<<<<< HEAD
     <Compile Include="CustomersBLL.cs" />
     <Compile Include="Receive\ReceiveBLL.cs" />
+=======
+    <Compile Include="CustomerBLL.cs" />
+    <Compile Include="HandlerError.cs" />
+>>>>>>> developInsertCustomerAndBookRoom
     <Compile Include="RoomBLL.cs" />
     <Compile Include="IReposityBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ServiceBLL.cs" />
+    <Compile Include="StaffBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

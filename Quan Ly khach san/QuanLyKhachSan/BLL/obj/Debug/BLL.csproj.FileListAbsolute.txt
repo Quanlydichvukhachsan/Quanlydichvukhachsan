@@ -55,3 +55,14 @@ D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL
 D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.dll
 D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.pdb
 >>>>>>> 1b6d0ceae27c0b7e79f33d46a091285fe7b9ded4
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\bin\Debug\BLL.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\bin\Debug\BLL.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\bin\Debug\DAL.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\bin\Debug\DTO.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\bin\Debug\DAL.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\bin\Debug\DTO.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\BLL\obj\Debug\BLL.pdb
