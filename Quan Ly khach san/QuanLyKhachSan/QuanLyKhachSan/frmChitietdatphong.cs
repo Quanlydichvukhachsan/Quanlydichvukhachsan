@@ -22,20 +22,59 @@ namespace QuanLyKhachSan
         private List<string> gioiTinh = new List<string>() { "Nam", "Nữ" };
         private List<string> Quoctich = new List<string>() { "Lào", "Mỹ", "Châu phi", "Ấn Độ", "Hoa kỳ", "Mỹ Đen", "Việt Nam", "Trung Quốc", "Nhật Bản", "Singapore" };
         private List<CustomerTypeDTO> ListcustomerTypes = new List<CustomerTypeDTO>();
-        public frmChitietdatphong(BookRoomDTO bookRoom)
+        public frmChitietdatphong(int idRoom ,int idCustomer,DateTime dateIn ,DateTime dateOut)
         {
 
             InitializeComponent();
-            ListcustomerTypes = (List<CustomerTypeDTO>)BookRoomBLL.Instance.readAll();
+            IdRoom = idRoom;
+            IdCustomer = idCustomer;
+            DateIn = dateIn;
+            DateOut = dateOut;
+            ListcustomerTypes = (List<CustomerTypeDTO>)CustomerBLL.Instance.LoadCustomerType();
             listBookRoom = (List<BookRoomDTO>)BookRoomBLL.Instance.readAll();
             roomTypes = (List<RoomType>)RoomBLL.Instance.LoadRoomType();
-            BookRoom = bookRoom;
             listCustomer =(List<CustomerDTO>)CustomerBLL.Instance.readAll();
         }
+        public delegate void UpdateHandler(object sender, UpdateEventArgs args);
+        public event UpdateHandler EventUpdateHandler;
+        public class UpdateEventArgs : EventArgs
+        {
+            
+        }
+
+        public void Update()
+        {
+            UpdateEventArgs args = new UpdateEventArgs();
+           
+            EventUpdateHandler.Invoke(this, args);
+        }
+        public int IdRoom { get; set; }
+        public int IdCustomer { get; set; }
+        public DateTime DateIn { get; set; }
+        public DateTime DateOut { get; set; }
+
+
         public BookRoomDTO BookRoom { get; set; }
 
         private void btnLuuthaydoi_Click(object sender, EventArgs e)
         {
+            if(txtMadatphong.Text == ""||cbTenloaiphong.Text =="")
+            {
+
+                MessageBox.Show("Điền đủ thông tin!");
+            }
+            else
+            {
+                var filter = listBookRoom.Find(p => p.ID_ == Convert.ToInt32(txtMadatphong.Text));
+                var filterIdRoomType = roomTypes.Find(p => p.NameRoomType.CompareTo(cbTenloaiphong.Text) == 0);
+                filter.IDRoomType_ = filterIdRoomType.IdRoomType;
+                filter.DateCheckIn_ = dtpNgaynhan.Value;
+                filter.DateCheckOut_ = dtpNgaytra.Value;
+                BookRoomBLL.Instance.UpdateById(Convert.ToInt32(txtMadatphong.Text), filter);
+                listBookRoom = (List<BookRoomDTO>)BookRoomBLL.Instance.readAll();
+                MessageBox.Show("Update thành công!");
+            }
+         
 
         }
 
@@ -53,9 +92,10 @@ namespace QuanLyKhachSan
         private void frmChitietdatphong_Load(object sender, EventArgs e)
         {
             cbTenloaiphong.DataSource = roomTypes;
-            txtMadatphong.Text = BookRoom.ID_.ToString();
-            dtpNgaynhan.Value = BookRoom.DateCheckIn_;
-            dtpNgaytra.Value = BookRoom.DateCheckOut_;
+            cbTenloaiphong.DisplayMember = "NameRoomType";
+            txtMadatphong.Text = IdRoom.ToString();
+            dtpNgaynhan.Value = DateIn;
+            dtpNgaytra.Value = DateOut;
             DateDefault();
             cbGioitinh.DataSource = gioiTinh;
             cbQuoctich.DataSource = Quoctich;
@@ -65,14 +105,37 @@ namespace QuanLyKhachSan
         }
         private void LoadCustomer()
         {
-            var filter = listCustomer.Find(c => c.ID_ == BookRoom.IDCustomer_);
+            var filter = listCustomer.Find(c => c.ID_ == IdCustomer);
             txtHovaten.Text = filter.Name_;
             txtCMND.Text = filter.IDCard_;
+            txtDiachi.Text = filter.Address_;
             cbLoaiKH.Text = filter.NameCustomerType;
-            txtSDT.Text = filter.PhoneNumber_;
+            txtSDT.Text = filter.PhoneNumber_.ToString();
             dtpNgaysinh.Value = filter.DateOfBirth_;
             cbGioitinh.Text = filter.Sex1;
             cbQuoctich.Text = filter.Nationality_;
         }
+
+        private void btnCapnhatthongtinKH_Click(object sender, EventArgs e)
+        {
+            if(txtCMND.Text =="" ||txtDiachi.Text ==""||txtHovaten.Text =="" ||txtSDT.Text == "")
+            {
+                MessageBox.Show("Điền đủ thông tin khách hàng!");
+            }
+            else
+            {
+                var filter = listCustomer.Find(p => p.ID_ == IdCustomer);
+                int idCustomerType = ListcustomerTypes.Find(p => p.Name_.CompareTo(cbLoaiKH.Text) == 0).ID_;
+
+                CustomerDTO customer = new CustomerDTO(IdCustomer, txtCMND.Text, idCustomerType, txtHovaten.Text, dtpNgaysinh.Value,
+                     txtDiachi.Text, Convert.ToInt32(txtSDT.Text), cbGioitinh.Text, cbQuoctich.Text);
+                CustomerBLL.Instance.Update(customer);
+                MessageBox.Show("Update thành công!");
+                listCustomer = (List<CustomerDTO>)CustomerBLL.Instance.readAll();
+                Update();
+            }
+        }
+        
+        }
     }
-}
+

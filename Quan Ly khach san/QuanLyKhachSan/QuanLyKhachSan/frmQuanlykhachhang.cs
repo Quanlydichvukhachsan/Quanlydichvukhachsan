@@ -55,7 +55,7 @@ namespace QuanLyKhachSan
                     var fillterName = listCustomerType.Find(p => p.Name_.CompareTo(nameCustomer) == 0);
                     int idCustomer = fillterName.ID_;
                     CustomerDTO customer = new CustomerDTO(mtbInsertIdCard.Text, idCustomer, txtHovaten.Text, dtpNgaysinh.Value, txtDiachi.Text,
-                        mtbSDT.Text, cbGioitinh.Text, cbQuoctich.Text);
+                        int.Parse(mtbSDT.Text), cbGioitinh.Text, cbQuoctich.Text);
                   
                     CustomerBLL.Instance.Insert(customer);
                     MessageBox.Show("Thêm khách hàng thành công");
@@ -115,7 +115,7 @@ namespace QuanLyKhachSan
                     var filterCustomerType = listCustomerType.Find(p => p.Name_.CompareTo(nameCustomerType) ==0);
                     int idCusType = filterCustomerType.ID_;
                     CustomerDTO customer = new CustomerDTO( id, mtbInsertIdCard.Text, idCusType, txtHovaten.Text, dtpNgaysinh.Value, txtDiachi.Text,
-                      mtbSDT.Text, cbGioitinh.Text, cbQuoctich.Text);
+                      int.Parse(mtbSDT.Text), cbGioitinh.Text, cbQuoctich.Text);
                     CustomerBLL.Instance.Update(customer);
                     MessageBox.Show("Cập nhật khách hàng thành công");
                     listCustomer = (List<CustomerDTO>)CustomerBLL.Instance.readAll();

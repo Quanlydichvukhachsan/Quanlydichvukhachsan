@@ -23,17 +23,21 @@ namespace DAL
             listRoomType = new List<RoomType>();
         }
 
-       
-        public bool Insert(BookRoomDTO obj)
+        public bool CancelBookRoom(int idRoom)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataProvider.Instance.ExcuteNonQuery("USP_DeleteBookRoom @id",
+                                             new object[] { idRoom });
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-<<<<<<< HEAD
 
         public IEnumerable<BookRoomDTO> readAll()
-=======
-        public bool Insert(BookRoomDTO obj)
->>>>>>> developInsertCustomerAndBookRoom
         {
             DataTable dataTable = DataProvider.Instance.ExcuteDataReader("select * from BookRoom");
             foreach (DataRow row in dataTable.Rows)
@@ -42,6 +46,11 @@ namespace DAL
                 listBookRoom.Add(bookRoom);
             }
             return listBookRoom;
+        }
+
+        public bool Insert(BookRoomDTO obj)
+        {
+            throw new NotImplementedException();
         }
         public bool InsertBookRoom(BookRoomDTO obj, DateTime time)
         {
@@ -59,13 +68,17 @@ namespace DAL
 
         public bool UpdateById(BookRoomDTO obj)
         {
-            DataTable dataTable = DataProvider.Instance.ExcuteDataReader("USP_LoadFullCustomer");
-            foreach (DataRow row in dataTable.Rows)
+            try
             {
-                BookRoomDTO Room = new BookRoomDTO(row, dataTable);
-                bookRoom.Add(Room);
+                DataProvider.Instance.ExcuteNonQuery(" USP_UpdateBookRoom @id , @idRoomType , @dateCheckIn , @datecheckOut",
+                                             new object[] { obj.ID_,  obj.IDRoomType_, obj.DateCheckIn_, obj.DateCheckOut_,});
+                return true;
             }
-            return bookRoom;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+           
         }
 
         public bool DeleteById(string id)

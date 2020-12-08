@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+
 namespace QuanLyKhachSan
 {
     public partial class frmNhanphong : Form
@@ -18,15 +19,15 @@ namespace QuanLyKhachSan
         private List<CustomerDTO> ListCustomer = new List<CustomerDTO>();
         private List<RoomType> ListRoomType = new List<RoomType>();
         private ReceiveDTO receiveRoom = null;
-        private string idReceive = "",nameCustomer="",Cmnd ="",nameRoom="",dateIn="",dateOut="";
+        private string idReceive = "", nameCustomer = "", Cmnd = "", nameRoom = "", dateIn = "", dateOut = "";
         private int n;
         private int idRoom = 0;
+
         public frmNhanphong()
         {
             InitializeComponent();
         }
 
-     
         private void frmNhanphong_Load(object sender, EventArgs e)
         {
             SetCombobox();
@@ -39,8 +40,8 @@ namespace QuanLyKhachSan
             LoadBookRoom();
             LoadRoom();
             LoadCustomer();
-          
         }
+
         private void SetCombobox()
         {
             cbLoaiPhong.DataSource = null;
@@ -51,7 +52,8 @@ namespace QuanLyKhachSan
         {
             listRoom = (List<RoomDTO>)RoomBLL.Instance.readAll();
         }
-       private void LoadRoomType()
+
+        private void LoadRoomType()
         {
             cbLoaiPhong.DataSource = ListRoomType;
             cbLoaiPhong.DisplayMember = "NameRoomType";
@@ -60,47 +62,43 @@ namespace QuanLyKhachSan
 
         private void LoadCustomer()
         {
-            ListCustomer = (List<CustomerDTO>)CustomersBLL.Instance.readAll();
+            ListCustomer = (List<CustomerDTO>)CustomerBLL.Instance.readAll();
         }
+
         private void LoadReceiveByDate()
         {
-         
             dataSource.DataSource = ListReceive;
         }
 
         private void findIdBookRoom()
         {
-            if(txtMadatphong.Text == "")
+            if (txtMadatphong.Text == "")
             {
                 MessageBox.Show("Không được để trống!");
             }
             else
             {
-                
                 bool checkIdRoom = int.TryParse(txtMadatphong.Text, out n);
                 if (checkIdRoom)
                 {
-                   var bookRoom = listBookRoom.Where(p => p.ID_ == n).ToList();
-                       if(bookRoom.Count > 0)
+                    var bookRoom = listBookRoom.Where(p => p.ID_ == n).ToList();
+                    if (bookRoom.Count > 0)
                     {
                         var customer = ListCustomer.Find(p => p.ID_ == bookRoom[0].IDCustomer_);
-                        if(customer != null)
+                        if (customer != null)
                         {
-                           
                             txtCMND.Text = customer.IDCard_;
                             txtHovaten.Text = customer.Name_;
                             LoadRoomType();
-                           var filter =  ListRoomType.Where(p=>p.IdRoomType ==bookRoom[0].IDRoomType_).ToList();
+                            var filter = ListRoomType.Where(p => p.IdRoomType == bookRoom[0].IDRoomType_).ToList();
                             if (filter.Count() > 0) cbLoaiPhong.Text = filter[0].NameRoomType;
                             dtpNgaynhan.Value = bookRoom[0].DateCheckIn_;
                             dtpNgaytra.Value = bookRoom[0].DateCheckOut_;
-                           
                         }
                         else
                         {
                             MessageBox.Show("Không tìm thấy khách hàng!");
                         }
-
                     }
                     else
                     {
@@ -113,17 +111,15 @@ namespace QuanLyKhachSan
                 }
             }
         }
+
         private void LoadBookRoom()
         {
             listBookRoom = (List<BookRoomDTO>)BookRoomBLL.Instance.readAll();
         }
 
-   
-    
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             findIdBookRoom();
-            
         }
 
         private void cbLoaiPhong_Click(object sender, EventArgs e)
@@ -137,7 +133,7 @@ namespace QuanLyKhachSan
             string nameRoomType = cbLoaiPhong.Text;
 
             var filter = from RoomDTO room in listRoom
-                         where room.IdStatusRoom == 1 && room.NameRoomType.CompareTo(nameRoomType)==0
+                         where room.IdStatusRoom == 1 && room.NameRoomType.CompareTo(nameRoomType) == 0
                          select room;
             txtTenloaiphong.Text = nameRoomType;
             foreach (RoomDTO items in filter)
@@ -166,6 +162,7 @@ namespace QuanLyKhachSan
         {
             Reset();
         }
+
         private void Reset()
         {
             SetCombobox();
@@ -182,8 +179,6 @@ namespace QuanLyKhachSan
             this.Hide();
         }
 
-      
-
         private void btnNhanphong_Click(object sender, EventArgs e)
         {
             if (txtMadatphong.Text == "")
@@ -192,32 +187,36 @@ namespace QuanLyKhachSan
             }
             else
             {
-                if(idRoom == 0)
+                if (idRoom == 0)
                 {
                     MessageBox.Show("Nhập tên phòng cần nhận");
                 }
                 else
                 {
-                    ReceiveRoomDTO receiveRoom = new ReceiveRoomDTO { IdBookRoom = n, IdRoom = idRoom };
-                    ReceiveBLL.Instance.Insert(receiveRoom);
-                    var getRoom = listRoom.Find(p => p.Id == idRoom);
+                    var IsExistBookRoom = ListReceive.Where(p => p.IdBookRoom == n).ToList();
+                    if (IsExistBookRoom.Count >= 0)
+                    {
+                        MessageBox.Show("Phòng nãy đã nhận rôi!");
+                    }
+                    else
+                    {
+                        ReceiveRoomDTO receiveRoom = new ReceiveRoomDTO { IdBookRoom = n, IdRoom = idRoom };
+                        ReceiveBLL.Instance.Insert(receiveRoom);
+                        var getRoom = listRoom.Find(p => p.Id == idRoom);
 
-                    RoomDTO room = new RoomDTO(getRoom.NameRoom, 2, getRoom.IdRoomType, getRoom.Id);
-                    RoomBLL.Instance.UpdateById(idRoom, room);
-                    LoadRoom();
-                    Reset();
-                    MessageBox.Show("Nhập Phòng thành công");
-
-                    
+                        RoomDTO room = new RoomDTO(getRoom.NameRoom, 2, getRoom.IdRoomType, getRoom.Id);
+                        RoomBLL.Instance.UpdateById(idRoom, room);
+                        LoadRoom();
+                        Reset();
+                        MessageBox.Show("Nhập Phòng thành công");
+                    }
                 }
-                
             }
-          
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            if(idReceive == "")
+            if (idReceive == "")
             {
                 MessageBox.Show("Chọn lại  phòng cần hủy!");
             }
@@ -230,22 +229,19 @@ namespace QuanLyKhachSan
             }
         }
 
-      
-
         private void dtgvNhanPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idReceive = dtgvNhanPhong[0, e.RowIndex].FormattedValue.ToString();
             nameCustomer = dtgvNhanPhong[1, e.RowIndex].FormattedValue.ToString();
-             Cmnd = dtgvNhanPhong[2, e.RowIndex].FormattedValue.ToString();
-             nameRoom = dtgvNhanPhong[3, e.RowIndex].FormattedValue.ToString();
-             dateIn = dtgvNhanPhong[4, e.RowIndex].FormattedValue.ToString();
-             dateOut = dtgvNhanPhong[5, e.RowIndex].FormattedValue.ToString();
-           
+            Cmnd = dtgvNhanPhong[2, e.RowIndex].FormattedValue.ToString();
+            nameRoom = dtgvNhanPhong[3, e.RowIndex].FormattedValue.ToString();
+            dateIn = dtgvNhanPhong[4, e.RowIndex].FormattedValue.ToString();
+            dateOut = dtgvNhanPhong[5, e.RowIndex].FormattedValue.ToString();
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            if(idReceive=="" ||nameCustomer ==""|| Cmnd ==""|| nameRoom =="" || dateIn =="" || dateOut == "")
+            if (idReceive == "" || nameCustomer == "" || Cmnd == "" || nameRoom == "" || dateIn == "" || dateOut == "")
             {
                 MessageBox.Show("Chọn lại phòng cần xem!");
             }
@@ -256,6 +252,7 @@ namespace QuanLyKhachSan
                 {
                     frmChitietnhanhphong frm = new frmChitietnhanhphong(receiveRoom);
                     frm.EventUpdateHandler += Frm_EventUpdateHandler;
+                    frm.EventUpdateHandlerCus += Frm_EventUpdateHandlerCus;
                     frm.Show();
                 }
                 else
@@ -263,8 +260,11 @@ namespace QuanLyKhachSan
                     MessageBox.Show("Không có phòng cần xem!");
                 }
             }
-          
-         
+        }
+
+        private void Frm_EventUpdateHandlerCus(object sender, frmChitietnhanhphong.UpdateEventArgsCus args)
+        {
+            LoadCustomer();
         }
 
         private void Frm_EventUpdateHandler(object sender, frmChitietnhanhphong.UpdateEventArgs args)

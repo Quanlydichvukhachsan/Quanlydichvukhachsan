@@ -9,11 +9,11 @@ using DAL;
 
 namespace BLL
 {
-<<<<<<< HEAD
-   public class BookRoomBLL : IReposityBLL<BookRoomDTO>
-=======
+
+  
+
     public class BookRoomBLL : IReposityBLL<BookRoomDTO>
->>>>>>> developInsertCustomerAndBookRoom
+
     {
         private static readonly BookRoomBLL instance;
       private  List<BookRoomDTO> bookRoom = new List<BookRoomDTO>();
@@ -33,25 +33,24 @@ namespace BLL
         {
             throw new NotImplementedException();
         }
-<<<<<<< HEAD
+
 
         public IEnumerable<BookRoomDTO> readAll()
         {
             return (List<BookRoomDTO>)BookRoomDAL.Instance.readAll();
-=======
+        }
         public bool InsertBookRoom(BookRoomDTO obj, DateTime dateTime)
         {
             return BookRoomDAL.Instance.InsertBookRoom(obj, dateTime);
         }
-        public IEnumerable<BookRoomDTO> readAll()
-        {
-            return BookRoomDAL.Instance.readAll();
->>>>>>> developInsertCustomerAndBookRoom
-        }
 
-        public bool UpdateById(int id, BookRoomDTO obj)
+        public bool CancelBookRoom(int idRoom)
         {
-            throw new NotImplementedException();
+            return BookRoomDAL.Instance.CancelBookRoom(idRoom);
+        }
+            public bool UpdateById(int id, BookRoomDTO obj)
+        {
+             return BookRoomDAL.Instance.UpdateById(obj);
         }
         public List<BookRoomByDateDTO> ReadBookRoomByDate(DateTime date)
         {

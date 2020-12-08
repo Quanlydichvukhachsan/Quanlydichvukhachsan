@@ -5,18 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DTO;
-<<<<<<< HEAD:Quan Ly khach san/QuanLyKhachSan/DAL/CustomerDAL.cs
-using System.Data;
-namespace DAL
-{
-   public class CustomerDAL : IReposityDAL<CustomerDTO>
-=======
-using DAL;
+
+
 
 namespace DAL
 {
     public class CustomerDAL : IReposityDAL<CustomerDTO>
->>>>>>> developInsertCustomerAndBookRoom:Quan Ly khach san/QuanLyKhachSan/DAL/CustomerDAL .cs
+
     {
         private readonly static CustomerDAL instance;
         List<CustomerDTO> listCustomer = null;
@@ -52,20 +47,20 @@ namespace DAL
             }
             return listCustomerType;
         }
-       // public IEnumerable<CustomerDTO> LoadFullRoom()
+      
 
         public IEnumerable<CustomerDTO> readAll()
         {
             DataTable dataTable = DataProvider.Instance.ExcuteDataReader("USP_LoadFullCustomer");
             foreach (DataRow row in dataTable.Rows)
             {
-<<<<<<< HEAD:Quan Ly khach san/QuanLyKhachSan/DAL/CustomerDAL.cs
+
                 CustomerDTO room = new CustomerDTO(row, dataTable);
                 listCustomer.Add(room);
-=======
+
                 CustomerDTO customer = new CustomerDTO(row, dataTable);
                 listCustomer.Add(customer);
->>>>>>> developInsertCustomerAndBookRoom:Quan Ly khach san/QuanLyKhachSan/DAL/CustomerDAL .cs
+
             }
             return listCustomer;
         }
@@ -75,9 +70,8 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-<<<<<<< HEAD:Quan Ly khach san/QuanLyKhachSan/DAL/CustomerDAL.cs
-        
-=======
+
+       
         public bool Update(CustomerDTO obj)
         {
             try
@@ -91,6 +85,6 @@ namespace DAL
                 throw err;
             }
         }
->>>>>>> developInsertCustomerAndBookRoom:Quan Ly khach san/QuanLyKhachSan/DAL/CustomerDAL .cs
+
     }
 }

@@ -167,6 +167,12 @@
     <Compile Include="RoomControls.Designer.cs">
       <DependentUpon>RoomControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowBookRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBookRoom.Designer.cs">
+      <DependentUpon>ShowBookRoom.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDatphong.resx">
       <DependentUpon>frmDatphong.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +236,9 @@
     </Compile>
     <EmbeddedResource Include="RoomControls.resx">
       <DependentUpon>RoomControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowBookRoom.resx">
+      <DependentUpon>ShowBookRoom.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
