@@ -37,13 +37,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GroupBox7 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dtgvBookRoom = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameStatusRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDBookRom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cmnd_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomType_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateCheckIn_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateChockOut_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpNgayDat = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2GroupBox6 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgvDanhsachdatphong = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -70,35 +72,36 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.mtbSDT = new System.Windows.Forms.MaskedTextBox();
+            this.mtbInsertIdCard = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.cbQuoctich = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbLoaikhachhang = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbGioitinh = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtHovaten = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtQuocTich = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtGioiTinh = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLoaiKhachHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiachi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCMND2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dtpNgaysinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.mtbSearchIdCard = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnTimkiem = new Guna.UI2.WinForms.Guna2Button();
-            this.txtCMND1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtsodem = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbLoaiphong = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpNgayNhan = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpNgaytra = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpNgaynhan = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.guna2GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBookRoom)).BeginInit();
@@ -122,12 +125,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 538);
+            this.panel1.Size = new System.Drawing.Size(1202, 538);
             this.panel1.TabIndex = 0;
             // 
             // guna2GroupBox7
             // 
+            this.guna2GroupBox7.Controls.Add(this.button1);
+            this.guna2GroupBox7.Controls.Add(this.label6);
             this.guna2GroupBox7.Controls.Add(this.dtgvBookRoom);
+            this.guna2GroupBox7.Controls.Add(this.dtpNgayDat);
             this.guna2GroupBox7.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -135,9 +141,20 @@
             this.guna2GroupBox7.Location = new System.Drawing.Point(661, 0);
             this.guna2GroupBox7.Name = "guna2GroupBox7";
             this.guna2GroupBox7.ShadowDecoration.Parent = this.guna2GroupBox7;
-            this.guna2GroupBox7.Size = new System.Drawing.Size(355, 538);
+            this.guna2GroupBox7.Size = new System.Drawing.Size(541, 538);
             this.guna2GroupBox7.TabIndex = 9;
             this.guna2GroupBox7.Text = "Danh sách đặt phòng trong ngày";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label6.Location = new System.Drawing.Point(6, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 15);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Tìm đặt phòng theo ngày";
             // 
             // dtgvBookRoom
             // 
@@ -157,12 +174,12 @@
             this.dtgvBookRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvBookRoom.ColumnHeadersHeight = 22;
             this.dtgvBookRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NameRoom,
-            this.NameRoomType,
-            this.Price,
-            this.LimitPerson,
-            this.nameStatusRoom});
+            this.IDBookRom,
+            this.Name_,
+            this.Cmnd_,
+            this.RoomType_,
+            this.DateCheckIn_,
+            this.DateChockOut_});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -184,7 +201,7 @@
             this.dtgvBookRoom.RowTemplate.DividerHeight = 5;
             this.dtgvBookRoom.RowTemplate.Height = 60;
             this.dtgvBookRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvBookRoom.Size = new System.Drawing.Size(355, 449);
+            this.dtgvBookRoom.Size = new System.Drawing.Size(541, 449);
             this.dtgvBookRoom.TabIndex = 5;
             this.dtgvBookRoom.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgvBookRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -208,57 +225,62 @@
             this.dtgvBookRoom.ThemeStyle.RowsStyle.Height = 60;
             this.dtgvBookRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvBookRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvBookRoom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvBookRoom_CellClick);
             // 
-            // ID
+            // IDBookRom
             // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 1.573463F;
-            this.ID.HeaderText = "Mã";
-            this.ID.Name = "ID";
-            this.ID.Width = 47;
+            this.IDBookRom.DataPropertyName = "IDBookRom_";
+            this.IDBookRom.HeaderText = "Mã đặt phòng";
+            this.IDBookRom.Name = "IDBookRom";
             // 
-            // NameRoom
+            // Name_
             // 
-            this.NameRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameRoom.DataPropertyName = "NameRoom";
-            this.NameRoom.FillWeight = 16.8327F;
-            this.NameRoom.HeaderText = "Tên Phòng";
-            this.NameRoom.Name = "NameRoom";
-            this.NameRoom.Width = 150;
+            this.Name_.DataPropertyName = "Name_";
+            this.Name_.HeaderText = "Tên phòng";
+            this.Name_.Name = "Name_";
             // 
-            // NameRoomType
+            // Cmnd_
             // 
-            this.NameRoomType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameRoomType.DataPropertyName = "NameRoomType";
-            this.NameRoomType.FillWeight = 67.60133F;
-            this.NameRoomType.HeaderText = "Loại Phòng ";
-            this.NameRoomType.Name = "NameRoomType";
-            this.NameRoomType.Width = 150;
+            this.Cmnd_.DataPropertyName = "Cmnd_";
+            this.Cmnd_.HeaderText = "CMND";
+            this.Cmnd_.Name = "Cmnd_";
             // 
-            // Price
+            // RoomType_
             // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Price.DataPropertyName = "Price";
-            this.Price.FillWeight = 90.57513F;
-            this.Price.HeaderText = "Giá";
-            this.Price.Name = "Price";
+            this.RoomType_.DataPropertyName = "RoomType_";
+            this.RoomType_.HeaderText = "Loại Phòng";
+            this.RoomType_.Name = "RoomType_";
             // 
-            // LimitPerson
+            // DateCheckIn_
             // 
-            this.LimitPerson.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.LimitPerson.FillWeight = 149.3056F;
-            this.LimitPerson.HeaderText = "Số người tối đa";
-            this.LimitPerson.Name = "LimitPerson";
-            this.LimitPerson.Width = 40;
+            this.DateCheckIn_.DataPropertyName = "DateCheckIn_";
+            this.DateCheckIn_.HeaderText = "Ngày Nhận";
+            this.DateCheckIn_.Name = "DateCheckIn_";
             // 
-            // nameStatusRoom
+            // DateChockOut_
             // 
-            this.nameStatusRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameStatusRoom.FillWeight = 274.1117F;
-            this.nameStatusRoom.HeaderText = "Trạng thái";
-            this.nameStatusRoom.Name = "nameStatusRoom";
-            this.nameStatusRoom.Width = 90;
+            this.DateChockOut_.DataPropertyName = "DateChockOut_";
+            this.DateChockOut_.HeaderText = "Ngày Trả";
+            this.DateChockOut_.Name = "DateChockOut_";
+            // 
+            // dtpNgayDat
+            // 
+            this.dtpNgayDat.CheckedState.Parent = this.dtpNgayDat;
+            this.dtpNgayDat.FillColor = System.Drawing.Color.DarkGreen;
+            this.dtpNgayDat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgayDat.ForeColor = System.Drawing.Color.White;
+            this.dtpNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayDat.HoverState.Parent = this.dtpNgayDat;
+            this.dtpNgayDat.Location = new System.Drawing.Point(157, 46);
+            this.dtpNgayDat.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNgayDat.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayDat.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayDat.Name = "dtpNgayDat";
+            this.dtpNgayDat.ShadowDecoration.Parent = this.dtpNgayDat;
+            this.dtpNgayDat.Size = new System.Drawing.Size(177, 29);
+            this.dtpNgayDat.TabIndex = 4;
+            this.dtpNgayDat.Value = new System.DateTime(2020, 11, 26, 13, 32, 40, 661);
+            this.dtpNgayDat.ValueChanged += new System.EventHandler(this.dtpNgaynhan_ValueChanged);
             // 
             // panel3
             // 
@@ -460,6 +482,7 @@
             this.btnNhanphong.Size = new System.Drawing.Size(213, 29);
             this.btnNhanphong.TabIndex = 2;
             this.btnNhanphong.Text = "Đặt Phòng";
+            this.btnNhanphong.Click += new System.EventHandler(this.btnNhanphong_Click);
             // 
             // btnChuyendennhanphong
             // 
@@ -661,18 +684,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GroupBox3.BorderColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox3.Controls.Add(this.mtbSDT);
+            this.guna2GroupBox3.Controls.Add(this.mtbInsertIdCard);
             this.guna2GroupBox3.Controls.Add(this.label15);
-            this.guna2GroupBox3.Controls.Add(this.cbQuoctich);
-            this.guna2GroupBox3.Controls.Add(this.cbLoaikhachhang);
-            this.guna2GroupBox3.Controls.Add(this.cbGioitinh);
             this.guna2GroupBox3.Controls.Add(this.label16);
             this.guna2GroupBox3.Controls.Add(this.label18);
             this.guna2GroupBox3.Controls.Add(this.label17);
             this.guna2GroupBox3.Controls.Add(this.label11);
             this.guna2GroupBox3.Controls.Add(this.txtHovaten);
+            this.guna2GroupBox3.Controls.Add(this.txtQuocTich);
+            this.guna2GroupBox3.Controls.Add(this.txtGioiTinh);
+            this.guna2GroupBox3.Controls.Add(this.txtLoaiKhachHang);
             this.guna2GroupBox3.Controls.Add(this.txtDiachi);
-            this.guna2GroupBox3.Controls.Add(this.txtSDT);
-            this.guna2GroupBox3.Controls.Add(this.txtCMND2);
             this.guna2GroupBox3.Controls.Add(this.label14);
             this.guna2GroupBox3.Controls.Add(this.label13);
             this.guna2GroupBox3.Controls.Add(this.dtpNgaysinh);
@@ -687,6 +710,24 @@
             this.guna2GroupBox3.TabIndex = 6;
             this.guna2GroupBox3.Text = "Thông Tin Khách Hàng";
             // 
+            // mtbSDT
+            // 
+            this.mtbSDT.Location = new System.Drawing.Point(8, 219);
+            this.mtbSDT.Mask = "0000000000";
+            this.mtbSDT.Name = "mtbSDT";
+            this.mtbSDT.ReadOnly = true;
+            this.mtbSDT.Size = new System.Drawing.Size(177, 23);
+            this.mtbSDT.TabIndex = 7;
+            // 
+            // mtbInsertIdCard
+            // 
+            this.mtbInsertIdCard.Location = new System.Drawing.Point(7, 109);
+            this.mtbInsertIdCard.Mask = "000000000";
+            this.mtbInsertIdCard.Name = "mtbInsertIdCard";
+            this.mtbInsertIdCard.ReadOnly = true;
+            this.mtbInsertIdCard.Size = new System.Drawing.Size(177, 23);
+            this.mtbInsertIdCard.TabIndex = 6;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -697,66 +738,6 @@
             this.label15.Size = new System.Drawing.Size(118, 15);
             this.label15.TabIndex = 0;
             this.label15.Text = "Thể căn cước/CMND";
-            // 
-            // cbQuoctich
-            // 
-            this.cbQuoctich.BackColor = System.Drawing.Color.Transparent;
-            this.cbQuoctich.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbQuoctich.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuoctich.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuoctich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuoctich.FocusedState.Parent = this.cbQuoctich;
-            this.cbQuoctich.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbQuoctich.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cbQuoctich.HoverState.Parent = this.cbQuoctich;
-            this.cbQuoctich.ItemHeight = 30;
-            this.cbQuoctich.ItemsAppearance.Parent = this.cbQuoctich;
-            this.cbQuoctich.Location = new System.Drawing.Point(200, 210);
-            this.cbQuoctich.Margin = new System.Windows.Forms.Padding(2);
-            this.cbQuoctich.Name = "cbQuoctich";
-            this.cbQuoctich.ShadowDecoration.Parent = this.cbQuoctich;
-            this.cbQuoctich.Size = new System.Drawing.Size(178, 36);
-            this.cbQuoctich.TabIndex = 5;
-            // 
-            // cbLoaikhachhang
-            // 
-            this.cbLoaikhachhang.BackColor = System.Drawing.Color.Transparent;
-            this.cbLoaikhachhang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbLoaikhachhang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLoaikhachhang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbLoaikhachhang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbLoaikhachhang.FocusedState.Parent = this.cbLoaikhachhang;
-            this.cbLoaikhachhang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbLoaikhachhang.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cbLoaikhachhang.HoverState.Parent = this.cbLoaikhachhang;
-            this.cbLoaikhachhang.ItemHeight = 30;
-            this.cbLoaikhachhang.ItemsAppearance.Parent = this.cbLoaikhachhang;
-            this.cbLoaikhachhang.Location = new System.Drawing.Point(7, 159);
-            this.cbLoaikhachhang.Margin = new System.Windows.Forms.Padding(2);
-            this.cbLoaikhachhang.Name = "cbLoaikhachhang";
-            this.cbLoaikhachhang.ShadowDecoration.Parent = this.cbLoaikhachhang;
-            this.cbLoaikhachhang.Size = new System.Drawing.Size(178, 36);
-            this.cbLoaikhachhang.TabIndex = 5;
-            // 
-            // cbGioitinh
-            // 
-            this.cbGioitinh.BackColor = System.Drawing.Color.Transparent;
-            this.cbGioitinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbGioitinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGioitinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGioitinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGioitinh.FocusedState.Parent = this.cbGioitinh;
-            this.cbGioitinh.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGioitinh.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cbGioitinh.HoverState.Parent = this.cbGioitinh;
-            this.cbGioitinh.ItemHeight = 30;
-            this.cbGioitinh.ItemsAppearance.Parent = this.cbGioitinh;
-            this.cbGioitinh.Location = new System.Drawing.Point(200, 159);
-            this.cbGioitinh.Margin = new System.Windows.Forms.Padding(2);
-            this.cbGioitinh.Name = "cbGioitinh";
-            this.cbGioitinh.ShadowDecoration.Parent = this.cbGioitinh;
-            this.cbGioitinh.Size = new System.Drawing.Size(178, 36);
-            this.cbGioitinh.TabIndex = 5;
             // 
             // label16
             // 
@@ -822,10 +803,89 @@
             this.txtHovaten.Name = "txtHovaten";
             this.txtHovaten.PasswordChar = '\0';
             this.txtHovaten.PlaceholderText = "";
+            this.txtHovaten.ReadOnly = true;
             this.txtHovaten.SelectedText = "";
             this.txtHovaten.ShadowDecoration.Parent = this.txtHovaten;
             this.txtHovaten.Size = new System.Drawing.Size(177, 29);
             this.txtHovaten.TabIndex = 1;
+            // 
+            // txtQuocTich
+            // 
+            this.txtQuocTich.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuocTich.DefaultText = "";
+            this.txtQuocTich.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuocTich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuocTich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuocTich.DisabledState.Parent = this.txtQuocTich;
+            this.txtQuocTich.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuocTich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuocTich.FocusedState.Parent = this.txtQuocTich;
+            this.txtQuocTich.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtQuocTich.ForeColor = System.Drawing.Color.DarkGreen;
+            this.txtQuocTich.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuocTich.HoverState.Parent = this.txtQuocTich;
+            this.txtQuocTich.Location = new System.Drawing.Point(201, 219);
+            this.txtQuocTich.Margin = new System.Windows.Forms.Padding(2);
+            this.txtQuocTich.Name = "txtQuocTich";
+            this.txtQuocTich.PasswordChar = '\0';
+            this.txtQuocTich.PlaceholderText = "";
+            this.txtQuocTich.ReadOnly = true;
+            this.txtQuocTich.SelectedText = "";
+            this.txtQuocTich.ShadowDecoration.Parent = this.txtQuocTich;
+            this.txtQuocTich.Size = new System.Drawing.Size(177, 23);
+            this.txtQuocTich.TabIndex = 1;
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGioiTinh.DefaultText = "";
+            this.txtGioiTinh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGioiTinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGioiTinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGioiTinh.DisabledState.Parent = this.txtGioiTinh;
+            this.txtGioiTinh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGioiTinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGioiTinh.FocusedState.Parent = this.txtGioiTinh;
+            this.txtGioiTinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGioiTinh.ForeColor = System.Drawing.Color.DarkGreen;
+            this.txtGioiTinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGioiTinh.HoverState.Parent = this.txtGioiTinh;
+            this.txtGioiTinh.Location = new System.Drawing.Point(200, 160);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.PasswordChar = '\0';
+            this.txtGioiTinh.PlaceholderText = "";
+            this.txtGioiTinh.ReadOnly = true;
+            this.txtGioiTinh.SelectedText = "";
+            this.txtGioiTinh.ShadowDecoration.Parent = this.txtGioiTinh;
+            this.txtGioiTinh.Size = new System.Drawing.Size(177, 29);
+            this.txtGioiTinh.TabIndex = 1;
+            // 
+            // txtLoaiKhachHang
+            // 
+            this.txtLoaiKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLoaiKhachHang.DefaultText = "";
+            this.txtLoaiKhachHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLoaiKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLoaiKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLoaiKhachHang.DisabledState.Parent = this.txtLoaiKhachHang;
+            this.txtLoaiKhachHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLoaiKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLoaiKhachHang.FocusedState.Parent = this.txtLoaiKhachHang;
+            this.txtLoaiKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLoaiKhachHang.ForeColor = System.Drawing.Color.DarkGreen;
+            this.txtLoaiKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLoaiKhachHang.HoverState.Parent = this.txtLoaiKhachHang;
+            this.txtLoaiKhachHang.Location = new System.Drawing.Point(8, 160);
+            this.txtLoaiKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLoaiKhachHang.Name = "txtLoaiKhachHang";
+            this.txtLoaiKhachHang.PasswordChar = '\0';
+            this.txtLoaiKhachHang.PlaceholderText = "";
+            this.txtLoaiKhachHang.ReadOnly = true;
+            this.txtLoaiKhachHang.SelectedText = "";
+            this.txtLoaiKhachHang.ShadowDecoration.Parent = this.txtLoaiKhachHang;
+            this.txtLoaiKhachHang.Size = new System.Drawing.Size(177, 27);
+            this.txtLoaiKhachHang.TabIndex = 1;
             // 
             // txtDiachi
             // 
@@ -847,60 +907,11 @@
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "";
+            this.txtDiachi.ReadOnly = true;
             this.txtDiachi.SelectedText = "";
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
             this.txtDiachi.Size = new System.Drawing.Size(177, 29);
             this.txtDiachi.TabIndex = 1;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSDT.DefaultText = "";
-            this.txtSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSDT.DisabledState.Parent = this.txtSDT;
-            this.txtSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.FocusedState.Parent = this.txtSDT;
-            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSDT.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSDT.HoverState.Parent = this.txtSDT;
-            this.txtSDT.Location = new System.Drawing.Point(7, 210);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.PasswordChar = '\0';
-            this.txtSDT.PlaceholderText = "";
-            this.txtSDT.SelectedText = "";
-            this.txtSDT.ShadowDecoration.Parent = this.txtSDT;
-            this.txtSDT.Size = new System.Drawing.Size(177, 29);
-            this.txtSDT.TabIndex = 1;
-            // 
-            // txtCMND2
-            // 
-            this.txtCMND2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCMND2.DefaultText = "";
-            this.txtCMND2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCMND2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCMND2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCMND2.DisabledState.Parent = this.txtCMND2;
-            this.txtCMND2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCMND2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCMND2.FocusedState.Parent = this.txtCMND2;
-            this.txtCMND2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCMND2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtCMND2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCMND2.HoverState.Parent = this.txtCMND2;
-            this.txtCMND2.Location = new System.Drawing.Point(7, 109);
-            this.txtCMND2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCMND2.Name = "txtCMND2";
-            this.txtCMND2.PasswordChar = '\0';
-            this.txtCMND2.PlaceholderText = "";
-            this.txtCMND2.SelectedText = "";
-            this.txtCMND2.ShadowDecoration.Parent = this.txtCMND2;
-            this.txtCMND2.Size = new System.Drawing.Size(177, 29);
-            this.txtCMND2.TabIndex = 1;
             // 
             // label14
             // 
@@ -959,9 +970,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GroupBox2.BorderColor = System.Drawing.Color.DarkGreen;
+            this.guna2GroupBox2.Controls.Add(this.mtbSearchIdCard);
             this.guna2GroupBox2.Controls.Add(this.label5);
             this.guna2GroupBox2.Controls.Add(this.btnTimkiem);
-            this.guna2GroupBox2.Controls.Add(this.txtCMND1);
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
@@ -971,6 +982,14 @@
             this.guna2GroupBox2.Size = new System.Drawing.Size(387, 102);
             this.guna2GroupBox2.TabIndex = 5;
             this.guna2GroupBox2.Text = "Tìm kiếm Khách Hàng";
+            // 
+            // mtbSearchIdCard
+            // 
+            this.mtbSearchIdCard.Location = new System.Drawing.Point(8, 64);
+            this.mtbSearchIdCard.Mask = "000000000";
+            this.mtbSearchIdCard.Name = "mtbSearchIdCard";
+            this.mtbSearchIdCard.Size = new System.Drawing.Size(177, 23);
+            this.mtbSearchIdCard.TabIndex = 7;
             // 
             // label5
             // 
@@ -998,31 +1017,7 @@
             this.btnTimkiem.Size = new System.Drawing.Size(98, 29);
             this.btnTimkiem.TabIndex = 2;
             this.btnTimkiem.Text = "Tìm Kiếm";
-            // 
-            // txtCMND1
-            // 
-            this.txtCMND1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCMND1.DefaultText = "";
-            this.txtCMND1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCMND1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCMND1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCMND1.DisabledState.Parent = this.txtCMND1;
-            this.txtCMND1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCMND1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCMND1.FocusedState.Parent = this.txtCMND1;
-            this.txtCMND1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCMND1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.txtCMND1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCMND1.HoverState.Parent = this.txtCMND1;
-            this.txtCMND1.Location = new System.Drawing.Point(7, 58);
-            this.txtCMND1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCMND1.Name = "txtCMND1";
-            this.txtCMND1.PasswordChar = '\0';
-            this.txtCMND1.PlaceholderText = "";
-            this.txtCMND1.SelectedText = "";
-            this.txtCMND1.ShadowDecoration.Parent = this.txtCMND1;
-            this.txtCMND1.Size = new System.Drawing.Size(250, 29);
-            this.txtCMND1.TabIndex = 1;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // guna2GroupBox1
             // 
@@ -1032,8 +1027,8 @@
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.DarkGreen;
             this.guna2GroupBox1.Controls.Add(this.txtsodem);
             this.guna2GroupBox1.Controls.Add(this.cbLoaiphong);
+            this.guna2GroupBox1.Controls.Add(this.dtpNgayNhan);
             this.guna2GroupBox1.Controls.Add(this.dtpNgaytra);
-            this.guna2GroupBox1.Controls.Add(this.dtpNgaynhan);
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.label10);
             this.guna2GroupBox1.Controls.Add(this.label9);
@@ -1063,11 +1058,12 @@
             this.txtsodem.ForeColor = System.Drawing.Color.DarkGreen;
             this.txtsodem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodem.HoverState.Parent = this.txtsodem;
-            this.txtsodem.Location = new System.Drawing.Point(7, 104);
+            this.txtsodem.Location = new System.Drawing.Point(2, 104);
             this.txtsodem.Margin = new System.Windows.Forms.Padding(2);
             this.txtsodem.Name = "txtsodem";
             this.txtsodem.PasswordChar = '\0';
             this.txtsodem.PlaceholderText = "";
+            this.txtsodem.ReadOnly = true;
             this.txtsodem.SelectedText = "";
             this.txtsodem.ShadowDecoration.Parent = this.txtsodem;
             this.txtsodem.Size = new System.Drawing.Size(189, 29);
@@ -1093,6 +1089,25 @@
             this.cbLoaiphong.Size = new System.Drawing.Size(190, 36);
             this.cbLoaiphong.TabIndex = 5;
             // 
+            // dtpNgayNhan
+            // 
+            this.dtpNgayNhan.CheckedState.Parent = this.dtpNgayNhan;
+            this.dtpNgayNhan.FillColor = System.Drawing.Color.DarkGreen;
+            this.dtpNgayNhan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgayNhan.ForeColor = System.Drawing.Color.White;
+            this.dtpNgayNhan.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayNhan.HoverState.Parent = this.dtpNgayNhan;
+            this.dtpNgayNhan.Location = new System.Drawing.Point(201, 54);
+            this.dtpNgayNhan.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNgayNhan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayNhan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayNhan.Name = "dtpNgayNhan";
+            this.dtpNgayNhan.ShadowDecoration.Parent = this.dtpNgayNhan;
+            this.dtpNgayNhan.Size = new System.Drawing.Size(177, 29);
+            this.dtpNgayNhan.TabIndex = 4;
+            this.dtpNgayNhan.Value = new System.DateTime(2020, 11, 26, 13, 32, 40, 661);
+            this.dtpNgayNhan.ValueChanged += new System.EventHandler(this.dtpNgayNhan_ValueChanged_1);
+            // 
             // dtpNgaytra
             // 
             this.dtpNgaytra.CheckedState.Parent = this.dtpNgaytra;
@@ -1101,7 +1116,7 @@
             this.dtpNgaytra.ForeColor = System.Drawing.Color.White;
             this.dtpNgaytra.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpNgaytra.HoverState.Parent = this.dtpNgaytra;
-            this.dtpNgaytra.Location = new System.Drawing.Point(200, 104);
+            this.dtpNgaytra.Location = new System.Drawing.Point(201, 104);
             this.dtpNgaytra.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgaytra.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgaytra.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -1110,32 +1125,14 @@
             this.dtpNgaytra.Size = new System.Drawing.Size(177, 29);
             this.dtpNgaytra.TabIndex = 4;
             this.dtpNgaytra.Value = new System.DateTime(2020, 11, 26, 13, 32, 40, 661);
-            // 
-            // dtpNgaynhan
-            // 
-            this.dtpNgaynhan.CheckedState.Parent = this.dtpNgaynhan;
-            this.dtpNgaynhan.FillColor = System.Drawing.Color.DarkGreen;
-            this.dtpNgaynhan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpNgaynhan.ForeColor = System.Drawing.Color.White;
-            this.dtpNgaynhan.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgaynhan.HoverState.Parent = this.dtpNgaynhan;
-            this.dtpNgaynhan.Location = new System.Drawing.Point(200, 54);
-            this.dtpNgaynhan.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpNgaynhan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpNgaynhan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpNgaynhan.Name = "dtpNgaynhan";
-            this.dtpNgaynhan.ShadowDecoration.Parent = this.dtpNgaynhan;
-            this.dtpNgaynhan.Size = new System.Drawing.Size(177, 29);
-            this.dtpNgaynhan.TabIndex = 4;
-            this.dtpNgaynhan.Value = new System.DateTime(2020, 11, 26, 13, 32, 40, 661);
-            this.dtpNgaynhan.ValueChanged += new System.EventHandler(this.dtpNgaynhan_ValueChanged);
+            this.dtpNgaytra.ValueChanged += new System.EventHandler(this.dtpNgaytra_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(4, 85);
+            this.label2.Location = new System.Drawing.Point(5, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 1;
@@ -1174,17 +1171,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại phòng";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(386, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Xem Chi Tiết";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmDatphong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 538);
+            this.ClientSize = new System.Drawing.Size(1202, 538);
             this.Controls.Add(this.panel1);
             this.Name = "frmDatphong";
             this.Text = "Đặt phòng";
             this.Load += new System.EventHandler(this.frmDatphong_Load);
             this.panel1.ResumeLayout(false);
             this.guna2GroupBox7.ResumeLayout(false);
+            this.guna2GroupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBookRoom)).EndInit();
             this.panel3.ResumeLayout(false);
             this.guna2GroupBox6.ResumeLayout(false);
@@ -1220,24 +1228,20 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2ComboBox cbLoaikhachhang;
-        private Guna.UI2.WinForms.Guna2ComboBox cbGioitinh;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txtHovaten;
         private Guna.UI2.WinForms.Guna2TextBox txtDiachi;
-        private Guna.UI2.WinForms.Guna2TextBox txtCMND2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaysinh;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2Button btnTimkiem;
-        private Guna.UI2.WinForms.Guna2TextBox txtCMND1;
         private Guna.UI2.WinForms.Guna2TextBox txtsodem;
         private Guna.UI2.WinForms.Guna2ComboBox cbLoaiphong;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaytra;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaynhan;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayDat;
         private Guna.UI2.WinForms.Guna2Button btnDong;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private Guna.UI2.WinForms.Guna2Button btnNhanphong;
@@ -1250,9 +1254,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox cbQuoctich;
         private System.Windows.Forms.Label label18;
-        private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox7;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox6;
@@ -1264,12 +1266,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvBookRoom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameRoom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameRoomType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LimitPerson;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameStatusRoom;
+        private System.Windows.Forms.MaskedTextBox mtbInsertIdCard;
+        private System.Windows.Forms.MaskedTextBox mtbSearchIdCard;
+        private System.Windows.Forms.MaskedTextBox mtbSDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDBookRom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cmnd_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomType_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateCheckIn_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateChockOut_;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuocTich;
+        private Guna.UI2.WinForms.Guna2TextBox txtGioiTinh;
+        private Guna.UI2.WinForms.Guna2TextBox txtLoaiKhachHang;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayNhan;
+        private System.Windows.Forms.Button button1;
     }
 }
 

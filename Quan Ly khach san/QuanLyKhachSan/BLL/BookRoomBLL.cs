@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using DTO;
 using DAL;
 
 namespace BLL
 {
-   public class BookRoomBLL : IReposityBLL<BookRoomBLL>
+    public class BookRoomBLL : IReposityBLL<BookRoomDTO>
     {
         private static readonly BookRoomBLL instance;
+      private  List<BookRoomDTO> bookRoom = new List<BookRoomDTO>();
 
         public static BookRoomBLL Instance
 
@@ -23,17 +25,20 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public bool Insert(BookRoomBLL obj)
+        public bool Insert(BookRoomDTO obj)
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerable<BookRoomBLL> readAll()
+        public bool InsertBookRoom(BookRoomDTO obj, DateTime dateTime)
         {
-            throw new NotImplementedException();
+            return BookRoomDAL.Instance.InsertBookRoom(obj, dateTime);
+        }
+        public IEnumerable<BookRoomDTO> readAll()
+        {
+            return BookRoomDAL.Instance.readAll();
         }
 
-        public bool UpdateById(int id, BookRoomBLL obj)
+        public bool UpdateById(int id, BookRoomDTO obj)
         {
             throw new NotImplementedException();
         }
@@ -41,6 +46,7 @@ namespace BLL
         {
             return BookRoomByDateDAL.Instance.ReadBookRoomByDate(date);
         }
-
     }
+
+
 }

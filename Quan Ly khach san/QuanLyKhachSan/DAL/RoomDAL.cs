@@ -15,6 +15,7 @@ namespace DAL
         public  List<RoomDTO> ListRoom =null;
         public List<StatusRoom> ListStatusRoom = null;
         public List<RoomType> ListRoomType = null;
+      
         public static RoomDAL Instance { get { if (instance == null) return new RoomDAL(); return instance; } } 
 
         public RoomDAL() {

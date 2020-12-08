@@ -33,10 +33,7 @@ namespace DAL
 
                 i++;
             }
-
-
         }
-
 
         public DataTable ExcuteDataReader(string query, object[] para = null)
         {
@@ -102,7 +99,6 @@ namespace DAL
                     SqlCommand cmd = new SqlCommand(query, conn);
                     if (para != null)
                     {
-
                         hasParameter(cmd, query, para);
                     }
                     count = (int)cmd.ExecuteScalar();
