@@ -45,13 +45,9 @@
     <Compile Include="Bill\BillRoomPriceBLL.cs" />
     <Compile Include="Bill\BillServiceBLL.cs" />
     <Compile Include="BookRoomBLL.cs" />
-<<<<<<< HEAD
-    <Compile Include="CustomersBLL.cs" />
     <Compile Include="Receive\ReceiveBLL.cs" />
-=======
     <Compile Include="CustomerBLL.cs" />
     <Compile Include="HandlerError.cs" />
->>>>>>> developInsertCustomerAndBookRoom
     <Compile Include="RoomBLL.cs" />
     <Compile Include="IReposityBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

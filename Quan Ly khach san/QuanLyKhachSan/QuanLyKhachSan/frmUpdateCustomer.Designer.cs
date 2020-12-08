@@ -30,6 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDong = new Guna.UI2.WinForms.Guna2Button();
+            this.btnluuthaydoi = new Guna.UI2.WinForms.Guna2Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbQuocTich = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbLoaiKhachHang = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbGioiTinh = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,13 +49,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbGioiTinh = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbQuocTich = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnluuthaydoi = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDong = new Guna.UI2.WinForms.Guna2Button();
-            this.cbLoaiKhachHang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GroupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,124 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(529, 445);
             this.guna2GroupBox1.TabIndex = 3;
             this.guna2GroupBox1.Text = "Thông Tin khách hàng";
+            // 
+            // btnDong
+            // 
+            this.btnDong.CheckedState.Parent = this.btnDong;
+            this.btnDong.CustomImages.Parent = this.btnDong;
+            this.btnDong.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnDong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDong.ForeColor = System.Drawing.Color.White;
+            this.btnDong.HoverState.Parent = this.btnDong;
+            this.btnDong.Location = new System.Drawing.Point(272, 366);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.ShadowDecoration.Parent = this.btnDong;
+            this.btnDong.Size = new System.Drawing.Size(232, 32);
+            this.btnDong.TabIndex = 30;
+            this.btnDong.Text = "Đóng";
+            // 
+            // btnluuthaydoi
+            // 
+            this.btnluuthaydoi.CheckedState.Parent = this.btnluuthaydoi;
+            this.btnluuthaydoi.CustomImages.Parent = this.btnluuthaydoi;
+            this.btnluuthaydoi.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnluuthaydoi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnluuthaydoi.ForeColor = System.Drawing.Color.White;
+            this.btnluuthaydoi.HoverState.Parent = this.btnluuthaydoi;
+            this.btnluuthaydoi.Location = new System.Drawing.Point(8, 366);
+            this.btnluuthaydoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnluuthaydoi.Name = "btnluuthaydoi";
+            this.btnluuthaydoi.ShadowDecoration.Parent = this.btnluuthaydoi;
+            this.btnluuthaydoi.Size = new System.Drawing.Size(232, 32);
+            this.btnluuthaydoi.TabIndex = 30;
+            this.btnluuthaydoi.Text = "Lưu Thay Đổi";
+            this.btnluuthaydoi.Click += new System.EventHandler(this.btnluuthaydoi_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label5.Location = new System.Drawing.Point(271, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 15);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Giới tính";
+            // 
+            // cbQuocTich
+            // 
+            this.cbQuocTich.BackColor = System.Drawing.Color.Transparent;
+            this.cbQuocTich.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbQuocTich.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuocTich.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbQuocTich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbQuocTich.FocusedState.Parent = this.cbQuocTich;
+            this.cbQuocTich.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbQuocTich.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cbQuocTich.HoverState.Parent = this.cbQuocTich;
+            this.cbQuocTich.ItemHeight = 30;
+            this.cbQuocTich.ItemsAppearance.Parent = this.cbQuocTich;
+            this.cbQuocTich.Location = new System.Drawing.Point(272, 311);
+            this.cbQuocTich.Margin = new System.Windows.Forms.Padding(2);
+            this.cbQuocTich.Name = "cbQuocTich";
+            this.cbQuocTich.ShadowDecoration.Parent = this.cbQuocTich;
+            this.cbQuocTich.Size = new System.Drawing.Size(232, 36);
+            this.cbQuocTich.TabIndex = 28;
+            // 
+            // cbLoaiKhachHang
+            // 
+            this.cbLoaiKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.cbLoaiKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoaiKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiKhachHang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbLoaiKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbLoaiKhachHang.FocusedState.Parent = this.cbLoaiKhachHang;
+            this.cbLoaiKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbLoaiKhachHang.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cbLoaiKhachHang.HoverState.Parent = this.cbLoaiKhachHang;
+            this.cbLoaiKhachHang.ItemHeight = 30;
+            this.cbLoaiKhachHang.ItemsAppearance.Parent = this.cbLoaiKhachHang;
+            this.cbLoaiKhachHang.Location = new System.Drawing.Point(8, 231);
+            this.cbLoaiKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.cbLoaiKhachHang.Name = "cbLoaiKhachHang";
+            this.cbLoaiKhachHang.ShadowDecoration.Parent = this.cbLoaiKhachHang;
+            this.cbLoaiKhachHang.Size = new System.Drawing.Size(232, 36);
+            this.cbLoaiKhachHang.TabIndex = 28;
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.BackColor = System.Drawing.Color.Transparent;
+            this.cbGioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGioiTinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbGioiTinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbGioiTinh.FocusedState.Parent = this.cbGioiTinh;
+            this.cbGioiTinh.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbGioiTinh.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cbGioiTinh.HoverState.Parent = this.cbGioiTinh;
+            this.cbGioiTinh.ItemHeight = 30;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbGioiTinh.ItemsAppearance.Parent = this.cbGioiTinh;
+            this.cbGioiTinh.Location = new System.Drawing.Point(273, 231);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.ShadowDecoration.Parent = this.cbGioiTinh;
+            this.cbGioiTinh.Size = new System.Drawing.Size(232, 36);
+            this.cbGioiTinh.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label4.Location = new System.Drawing.Point(271, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 15);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Ngày sinh";
             // 
             // dtpNgaySinh
             // 
@@ -295,124 +413,6 @@
             this.panel1.Size = new System.Drawing.Size(529, 53);
             this.panel1.TabIndex = 4;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label4.Location = new System.Drawing.Point(271, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Ngày sinh";
-            // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.BackColor = System.Drawing.Color.Transparent;
-            this.cbGioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGioiTinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGioiTinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbGioiTinh.FocusedState.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbGioiTinh.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cbGioiTinh.HoverState.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.ItemHeight = 30;
-            this.cbGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbGioiTinh.ItemsAppearance.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.Location = new System.Drawing.Point(273, 231);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.ShadowDecoration.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.Size = new System.Drawing.Size(232, 36);
-            this.cbGioiTinh.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label5.Location = new System.Drawing.Point(271, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 15);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Giới tính";
-            // 
-            // cbQuocTich
-            // 
-            this.cbQuocTich.BackColor = System.Drawing.Color.Transparent;
-            this.cbQuocTich.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbQuocTich.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuocTich.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuocTich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbQuocTich.FocusedState.Parent = this.cbQuocTich;
-            this.cbQuocTich.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbQuocTich.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cbQuocTich.HoverState.Parent = this.cbQuocTich;
-            this.cbQuocTich.ItemHeight = 30;
-            this.cbQuocTich.ItemsAppearance.Parent = this.cbQuocTich;
-            this.cbQuocTich.Location = new System.Drawing.Point(272, 311);
-            this.cbQuocTich.Margin = new System.Windows.Forms.Padding(2);
-            this.cbQuocTich.Name = "cbQuocTich";
-            this.cbQuocTich.ShadowDecoration.Parent = this.cbQuocTich;
-            this.cbQuocTich.Size = new System.Drawing.Size(232, 36);
-            this.cbQuocTich.TabIndex = 28;
-            // 
-            // btnluuthaydoi
-            // 
-            this.btnluuthaydoi.CheckedState.Parent = this.btnluuthaydoi;
-            this.btnluuthaydoi.CustomImages.Parent = this.btnluuthaydoi;
-            this.btnluuthaydoi.FillColor = System.Drawing.Color.DarkGreen;
-            this.btnluuthaydoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnluuthaydoi.ForeColor = System.Drawing.Color.White;
-            this.btnluuthaydoi.HoverState.Parent = this.btnluuthaydoi;
-            this.btnluuthaydoi.Location = new System.Drawing.Point(8, 366);
-            this.btnluuthaydoi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnluuthaydoi.Name = "btnluuthaydoi";
-            this.btnluuthaydoi.ShadowDecoration.Parent = this.btnluuthaydoi;
-            this.btnluuthaydoi.Size = new System.Drawing.Size(232, 32);
-            this.btnluuthaydoi.TabIndex = 30;
-            this.btnluuthaydoi.Text = "Lưu Thay Đổi";
-            this.btnluuthaydoi.Click += new System.EventHandler(this.btnluuthaydoi_Click);
-            // 
-            // btnDong
-            // 
-            this.btnDong.CheckedState.Parent = this.btnDong;
-            this.btnDong.CustomImages.Parent = this.btnDong;
-            this.btnDong.FillColor = System.Drawing.Color.DarkGreen;
-            this.btnDong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDong.ForeColor = System.Drawing.Color.White;
-            this.btnDong.HoverState.Parent = this.btnDong;
-            this.btnDong.Location = new System.Drawing.Point(272, 366);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.ShadowDecoration.Parent = this.btnDong;
-            this.btnDong.Size = new System.Drawing.Size(232, 32);
-            this.btnDong.TabIndex = 30;
-            this.btnDong.Text = "Đóng";
-            // 
-            // cbLoaiKhachHang
-            // 
-            this.cbLoaiKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.cbLoaiKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbLoaiKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLoaiKhachHang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbLoaiKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbLoaiKhachHang.FocusedState.Parent = this.cbLoaiKhachHang;
-            this.cbLoaiKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbLoaiKhachHang.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cbLoaiKhachHang.HoverState.Parent = this.cbLoaiKhachHang;
-            this.cbLoaiKhachHang.ItemHeight = 30;
-            this.cbLoaiKhachHang.ItemsAppearance.Parent = this.cbLoaiKhachHang;
-            this.cbLoaiKhachHang.Location = new System.Drawing.Point(8, 231);
-            this.cbLoaiKhachHang.Margin = new System.Windows.Forms.Padding(2);
-            this.cbLoaiKhachHang.Name = "cbLoaiKhachHang";
-            this.cbLoaiKhachHang.ShadowDecoration.Parent = this.cbLoaiKhachHang;
-            this.cbLoaiKhachHang.Size = new System.Drawing.Size(232, 36);
-            this.cbLoaiKhachHang.TabIndex = 28;
-            // 
             // frmUpdateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,7 +422,7 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "frmUpdateCustomer";
             this.Text = "frmUpdateCustomer";
-            this.Load += new System.EventHandler(this.frmUpdateCustomer_Load);
+            this.Load += new System.EventHandler(this.frmUpdateCustomer_Load_1);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
