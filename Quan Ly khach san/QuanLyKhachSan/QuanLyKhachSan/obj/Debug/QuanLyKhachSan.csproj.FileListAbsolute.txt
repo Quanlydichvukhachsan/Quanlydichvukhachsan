@@ -209,8 +209,39 @@ D:\CSDL\Quanlykhachsan\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\Qua
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmThemDV.resources
 D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmThemDV.resources
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmUpdateCustomer.resources
-<<<<<<< HEAD
 >>>>>>> 1b6d0ceae27c0b7e79f33d46a091285fe7b9ded4
-=======
 D:\Dev\QLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmUpdateCustomer.resources
 >>>>>>> developRoomUseService
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojAssemblyReference.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmDatphong.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmChitietdatphong.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmChitietnhanhphong.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmDoanhthu.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmdoiphong.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmQLNV.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmQuanlykhachhang.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmSudungvathanhtoandichvu.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmQuanlyDV.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmNhanphong.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmQLPhong.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmQLKS.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmHoadon.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmThemDV.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmUpdateCustomer.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frmUpdateRoom.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.RoomReceive.resources
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\BLL.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DTO.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DAL.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\BLL.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DTO.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DAL.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
