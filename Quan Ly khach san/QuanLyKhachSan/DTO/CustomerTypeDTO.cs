@@ -16,7 +16,8 @@ namespace DTO
 
         public CustomerTypeDTO(DataRow row, DataTable data)
         {
-            this.iD_ = int.Parse(row[listName[1]].ToString());
+            listName = InitNameColumn.init(data);
+            this.iD_ = int.Parse(row[listName[0]].ToString());
             this.name_ = row[listName[1]].ToString();
         }
 
