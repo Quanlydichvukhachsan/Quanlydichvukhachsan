@@ -16,9 +16,6 @@ namespace QuanLyKhachSan
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmDatphong());
 
-
-   
-
         }
     }
 }

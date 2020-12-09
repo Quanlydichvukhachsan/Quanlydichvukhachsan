@@ -84,5 +84,7 @@ namespace QuanLyKhachSan
             InsertNV frm = new InsertNV();
             frm.Show();
         }
+
+        
     }
 }

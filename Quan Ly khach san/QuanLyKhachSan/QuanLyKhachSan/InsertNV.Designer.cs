@@ -72,7 +72,7 @@ namespace QuanLyKhachSan
             this.groupBox4.Controls.Add(this.txtNameNV);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox4.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.groupBox4.Location = new System.Drawing.Point(351, 24);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
@@ -86,7 +86,7 @@ namespace QuanLyKhachSan
             // 
             this.txtDiachi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiachi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiachi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDiachi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.txtDiachi.Location = new System.Drawing.Point(25, 396);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(0);
             this.txtDiachi.Name = "txtDiachi";
@@ -97,7 +97,7 @@ namespace QuanLyKhachSan
             // 
             this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.txtSDT.Location = new System.Drawing.Point(25, 327);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(0);
             this.txtSDT.Name = "txtSDT";
@@ -121,7 +121,7 @@ namespace QuanLyKhachSan
             // 
             this.cbGioiTinh.BackColor = System.Drawing.Color.White;
             this.cbGioiTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbGioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbGioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.ItemHeight = 28;
             this.cbGioiTinh.Items.AddRange(new object[] {
@@ -138,7 +138,7 @@ namespace QuanLyKhachSan
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label13.Location = new System.Drawing.Point(8, 368);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
@@ -151,7 +151,7 @@ namespace QuanLyKhachSan
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label12.Location = new System.Drawing.Point(8, 299);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
@@ -175,7 +175,7 @@ namespace QuanLyKhachSan
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label10.Location = new System.Drawing.Point(8, 161);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
@@ -187,7 +187,7 @@ namespace QuanLyKhachSan
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label9.Location = new System.Drawing.Point(8, 92);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -199,7 +199,7 @@ namespace QuanLyKhachSan
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label8.Location = new System.Drawing.Point(8, 23);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -211,7 +211,7 @@ namespace QuanLyKhachSan
             // 
             this.txtCMND.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCMND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.txtCMND.Location = new System.Drawing.Point(25, 121);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(0);
             this.txtCMND.Name = "txtCMND";
@@ -222,7 +222,7 @@ namespace QuanLyKhachSan
             // 
             this.txtNameNV.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNameNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNameNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.txtNameNV.Location = new System.Drawing.Point(25, 52);
             this.txtNameNV.Margin = new System.Windows.Forms.Padding(0);
             this.txtNameNV.Name = "txtNameNV";
@@ -239,7 +239,7 @@ namespace QuanLyKhachSan
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.groupBox3.Location = new System.Drawing.Point(13, 24);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
@@ -266,7 +266,7 @@ namespace QuanLyKhachSan
             // 
             this.cbLoaiNV.BackColor = System.Drawing.Color.White;
             this.cbLoaiNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLoaiNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbLoaiNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.cbLoaiNV.FormattingEnabled = true;
             this.cbLoaiNV.ItemHeight = 28;
             this.cbLoaiNV.Location = new System.Drawing.Point(31, 128);
@@ -281,7 +281,7 @@ namespace QuanLyKhachSan
             this.txtbLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbLogin.Enabled = false;
             this.txtbLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.txtbLogin.Location = new System.Drawing.Point(20, 71);
             this.txtbLogin.Margin = new System.Windows.Forms.Padding(0);
             this.txtbLogin.Name = "txtbLogin";
@@ -293,8 +293,8 @@ namespace QuanLyKhachSan
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(5, 169);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
+            this.label7.Location = new System.Drawing.Point(5, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 25);
@@ -305,7 +305,7 @@ namespace QuanLyKhachSan
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label6.Location = new System.Drawing.Point(5, 100);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -317,7 +317,7 @@ namespace QuanLyKhachSan
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label5.Location = new System.Drawing.Point(5, 30);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -327,10 +327,10 @@ namespace QuanLyKhachSan
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(397, 530);
             this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
@@ -353,6 +353,7 @@ namespace QuanLyKhachSan
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.FocusedState.Parent = this.txtPass;
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.HoverState.Parent = this.txtPass;
             this.txtPass.Location = new System.Drawing.Point(23, 351);
@@ -368,7 +369,7 @@ namespace QuanLyKhachSan
             // 
             this.lbpass.AutoSize = true;
             this.lbpass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbpass.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lbpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.lbpass.Location = new System.Drawing.Point(28, 300);
             this.lbpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbpass.Name = "lbpass";
@@ -386,6 +387,7 @@ namespace QuanLyKhachSan
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.lbpass);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.Name = "InsertNV";
             this.Text = "InsertNV";
             this.Load += new System.EventHandler(this.InsertNV_Load);

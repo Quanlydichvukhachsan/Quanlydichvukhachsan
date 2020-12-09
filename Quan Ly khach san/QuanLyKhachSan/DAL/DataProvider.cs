@@ -25,13 +25,13 @@ namespace DAL
 
 
      //   private readonly string strCon = @"SERVER=Rin;Database =HotelManagement;Integrated security =true";
-    private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password=nguyenmautuan123";
+    //private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password=nguyenmautuan123";
 
       //  private readonly string strCon = @"SERVER=Rin;Database =HotelManagement;Integrated security =true";
     //   private readonly string strCon = @"SERVER=DESKTOP-4ICDD5V\SQLEXPRESS;Database =HotelManagement;User Id=test;password=nguyenmautuan123";
 
 
-      // private readonly string strCon = @"SERVER=DESKTOP-VVRMOD7\HQHSQLSERVER;Database = HotelManagement ; integrated security =true ";
+       private readonly string strCon = @"SERVER=DESKTOP-VVRMOD7\HQHSQLSERVER;Database = HotelManagement ; integrated security =true ";
         private void hasParameter(SqlCommand cmd, string query, object[] para = null)
         {
             int i = 0;

@@ -135,7 +135,16 @@ namespace QuanLyKhachSan
                 Update();
             }
         }
-        
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 

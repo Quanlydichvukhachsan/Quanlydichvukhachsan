@@ -64,15 +64,15 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(184)))), ((int)(((byte)(216)))));
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(311, 674);
@@ -80,141 +80,152 @@
             // 
             // guna2Button4
             // 
-            this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(64)))), ((int)(((byte)(148)))));
             this.guna2Button4.CheckedState.Parent = this.guna2Button4;
             this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.DarkGreen;
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(4, 375);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button4.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button4.Location = new System.Drawing.Point(4, 184);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(307, 82);
             this.guna2Button4.TabIndex = 1;
             this.guna2Button4.Text = "Thông tin cá nhân";
+         //   this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel2.Controls.Add(this.guna2Panel3);
             this.guna2Panel2.Location = new System.Drawing.Point(724, 271);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(304, 108);
             this.guna2Panel2.TabIndex = 2;
+          //  this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2Panel3
             // 
+            this.guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel3.Location = new System.Drawing.Point(29, 134);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.Size = new System.Drawing.Size(744, 251);
             this.guna2Panel3.TabIndex = 3;
+        //    this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
             // guna2Button3
             // 
-            this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.DarkGreen;
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 450);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button3.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button3.Location = new System.Drawing.Point(5, 274);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(311, 82);
             this.guna2Button3.TabIndex = 1;
             this.guna2Button3.Text = "Giới thiệu";
+          //  this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.DarkGreen;
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 576);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button2.Location = new System.Drawing.Point(4, 469);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(307, 82);
             this.guna2Button2.TabIndex = 1;
             this.guna2Button2.Text = "Trợ giúp";
+           // this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkGreen;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(4, 513);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button1.Location = new System.Drawing.Point(5, 368);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(307, 82);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Đăng xuất";
+          //  this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(311, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 106);
             this.panel1.TabIndex = 1;
+          //  this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.DarkGray;
             this.panel3.Location = new System.Drawing.Point(9, 69);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(932, 1);
             this.panel3.TabIndex = 1;
+           // this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(8, 11);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
+            this.label1.Location = new System.Drawing.Point(215, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(321, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lý Khách Sạn";
+          //  this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnsudungvathanhtoanDV);
             this.panel2.Controls.Add(this.label8);
@@ -231,17 +242,18 @@
             this.panel2.Controls.Add(this.btnthongkedoanhthu);
             this.panel2.Controls.Add(this.btnnhanphong);
             this.panel2.Controls.Add(this.btndatphong);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(311, 106);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 568);
             this.panel2.TabIndex = 2;
+          //  this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.DarkGreen;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(45, 416);
@@ -250,29 +262,33 @@
             this.label9.Size = new System.Drawing.Size(204, 18);
             this.label9.TabIndex = 10;
             this.label9.Text = "Sử dụng và thanh toán dịch vụ";
+           // this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // btnsudungvathanhtoanDV
             // 
+            this.btnsudungvathanhtoanDV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnsudungvathanhtoanDV.CheckedState.Parent = this.btnsudungvathanhtoanDV;
             this.btnsudungvathanhtoanDV.CustomImages.Parent = this.btnsudungvathanhtoanDV;
-            this.btnsudungvathanhtoanDV.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnsudungvathanhtoanDV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnsudungvathanhtoanDV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnsudungvathanhtoanDV.ForeColor = System.Drawing.Color.White;
             this.btnsudungvathanhtoanDV.HoverState.Parent = this.btnsudungvathanhtoanDV;
             this.btnsudungvathanhtoanDV.Image = ((System.Drawing.Image)(resources.GetObject("btnsudungvathanhtoanDV.Image")));
             this.btnsudungvathanhtoanDV.ImageSize = new System.Drawing.Size(80, 80);
             this.btnsudungvathanhtoanDV.Location = new System.Drawing.Point(9, 271);
-            this.btnsudungvathanhtoanDV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsudungvathanhtoanDV.Margin = new System.Windows.Forms.Padding(4);
             this.btnsudungvathanhtoanDV.Name = "btnsudungvathanhtoanDV";
             this.btnsudungvathanhtoanDV.ShadowDecoration.Parent = this.btnsudungvathanhtoanDV;
             this.btnsudungvathanhtoanDV.Size = new System.Drawing.Size(305, 177);
             this.btnsudungvathanhtoanDV.TabIndex = 9;
             this.btnsudungvathanhtoanDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+          //  this.btnsudungvathanhtoanDV.Click += new System.EventHandler(this.btnsudungvathanhtoanDV_Click);
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DarkGreen;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(821, 416);
@@ -281,11 +297,13 @@
             this.label8.Size = new System.Drawing.Size(81, 18);
             this.label8.TabIndex = 8;
             this.label8.Text = "QL Dịch vụ";
+            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkGreen;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(664, 416);
@@ -294,11 +312,13 @@
             this.label7.Size = new System.Drawing.Size(92, 18);
             this.label7.TabIndex = 8;
             this.label7.Text = "QL Hoá Đơn";
+           // this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.DarkGreen;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(500, 416);
@@ -307,11 +327,13 @@
             this.label6.Size = new System.Drawing.Size(86, 18);
             this.label6.TabIndex = 8;
             this.label6.Text = "Khách hàng";
+           // this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkGreen;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(373, 416);
@@ -320,11 +342,13 @@
             this.label5.Size = new System.Drawing.Size(75, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "QL Phòng";
+           // this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkGreen;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(411, 225);
@@ -333,11 +357,13 @@
             this.label4.Size = new System.Drawing.Size(139, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Thống kê doanh thu";
+          //  this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkGreen;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(192, 225);
@@ -346,11 +372,13 @@
             this.label3.Size = new System.Drawing.Size(88, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nhận phòng";
+           // this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkGreen;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(31, 225);
@@ -359,143 +387,159 @@
             this.label2.Size = new System.Drawing.Size(76, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Đặt phòng";
+           // this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnquanlydichvu
             // 
+            this.btnquanlydichvu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnquanlydichvu.CheckedState.Parent = this.btnquanlydichvu;
             this.btnquanlydichvu.CustomImages.Parent = this.btnquanlydichvu;
-            this.btnquanlydichvu.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnquanlydichvu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnquanlydichvu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnquanlydichvu.ForeColor = System.Drawing.Color.White;
             this.btnquanlydichvu.HoverState.Parent = this.btnquanlydichvu;
             this.btnquanlydichvu.Image = ((System.Drawing.Image)(resources.GetObject("btnquanlydichvu.Image")));
             this.btnquanlydichvu.ImageSize = new System.Drawing.Size(80, 80);
             this.btnquanlydichvu.Location = new System.Drawing.Point(809, 78);
-            this.btnquanlydichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnquanlydichvu.Margin = new System.Windows.Forms.Padding(4);
             this.btnquanlydichvu.Name = "btnquanlydichvu";
             this.btnquanlydichvu.ShadowDecoration.Parent = this.btnquanlydichvu;
             this.btnquanlydichvu.Size = new System.Drawing.Size(143, 368);
             this.btnquanlydichvu.TabIndex = 6;
             this.btnquanlydichvu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+           // this.btnquanlydichvu.Click += new System.EventHandler(this.btnquanlydichvu_Click);
             // 
             // btnquanlyhoadon
             // 
+            this.btnquanlyhoadon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnquanlyhoadon.CheckedState.Parent = this.btnquanlyhoadon;
             this.btnquanlyhoadon.CustomImages.Parent = this.btnquanlyhoadon;
-            this.btnquanlyhoadon.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnquanlyhoadon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnquanlyhoadon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnquanlyhoadon.ForeColor = System.Drawing.Color.White;
             this.btnquanlyhoadon.HoverState.Parent = this.btnquanlyhoadon;
             this.btnquanlyhoadon.Image = ((System.Drawing.Image)(resources.GetObject("btnquanlyhoadon.Image")));
             this.btnquanlyhoadon.ImageSize = new System.Drawing.Size(80, 80);
             this.btnquanlyhoadon.Location = new System.Drawing.Point(651, 78);
-            this.btnquanlyhoadon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnquanlyhoadon.Margin = new System.Windows.Forms.Padding(4);
             this.btnquanlyhoadon.Name = "btnquanlyhoadon";
             this.btnquanlyhoadon.ShadowDecoration.Parent = this.btnquanlyhoadon;
             this.btnquanlyhoadon.Size = new System.Drawing.Size(143, 368);
             this.btnquanlyhoadon.TabIndex = 5;
             this.btnquanlyhoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+           // this.btnquanlyhoadon.Click += new System.EventHandler(this.btnquanlyhoadon_Click);
             // 
             // btnkhachhang
             // 
+            this.btnkhachhang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnkhachhang.CheckedState.Parent = this.btnkhachhang;
             this.btnkhachhang.CustomImages.Parent = this.btnkhachhang;
-            this.btnkhachhang.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnkhachhang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnkhachhang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnkhachhang.ForeColor = System.Drawing.Color.White;
             this.btnkhachhang.HoverState.Parent = this.btnkhachhang;
             this.btnkhachhang.Image = ((System.Drawing.Image)(resources.GetObject("btnkhachhang.Image")));
             this.btnkhachhang.ImageSize = new System.Drawing.Size(80, 80);
             this.btnkhachhang.Location = new System.Drawing.Point(491, 262);
-            this.btnkhachhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnkhachhang.Margin = new System.Windows.Forms.Padding(4);
             this.btnkhachhang.Name = "btnkhachhang";
             this.btnkhachhang.ShadowDecoration.Parent = this.btnkhachhang;
             this.btnkhachhang.Size = new System.Drawing.Size(128, 183);
             this.btnkhachhang.TabIndex = 4;
             this.btnkhachhang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            //this.btnkhachhang.Click += new System.EventHandler(this.btnkhachhang_Click);
             // 
             // btnquanlyphong
             // 
+            this.btnquanlyphong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnquanlyphong.CheckedState.Parent = this.btnquanlyphong;
             this.btnquanlyphong.CustomImages.Parent = this.btnquanlyphong;
-            this.btnquanlyphong.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnquanlyphong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnquanlyphong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnquanlyphong.ForeColor = System.Drawing.Color.White;
             this.btnquanlyphong.HoverState.Parent = this.btnquanlyphong;
             this.btnquanlyphong.Image = ((System.Drawing.Image)(resources.GetObject("btnquanlyphong.Image")));
             this.btnquanlyphong.ImageSize = new System.Drawing.Size(80, 80);
             this.btnquanlyphong.Location = new System.Drawing.Point(347, 262);
-            this.btnquanlyphong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnquanlyphong.Margin = new System.Windows.Forms.Padding(4);
             this.btnquanlyphong.Name = "btnquanlyphong";
             this.btnquanlyphong.ShadowDecoration.Parent = this.btnquanlyphong;
             this.btnquanlyphong.Size = new System.Drawing.Size(128, 183);
             this.btnquanlyphong.TabIndex = 3;
             this.btnquanlyphong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+           // this.btnquanlyphong.Click += new System.EventHandler(this.btnquanlyphong_Click);
             // 
             // btnthongkedoanhthu
             // 
+            this.btnthongkedoanhthu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnthongkedoanhthu.CheckedState.Parent = this.btnthongkedoanhthu;
             this.btnthongkedoanhthu.CustomImages.Parent = this.btnthongkedoanhthu;
-            this.btnthongkedoanhthu.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnthongkedoanhthu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnthongkedoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnthongkedoanhthu.ForeColor = System.Drawing.Color.White;
             this.btnthongkedoanhthu.HoverState.Parent = this.btnthongkedoanhthu;
             this.btnthongkedoanhthu.Image = ((System.Drawing.Image)(resources.GetObject("btnthongkedoanhthu.Image")));
             this.btnthongkedoanhthu.ImageSize = new System.Drawing.Size(80, 80);
             this.btnthongkedoanhthu.Location = new System.Drawing.Point(347, 78);
-            this.btnthongkedoanhthu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnthongkedoanhthu.Margin = new System.Windows.Forms.Padding(4);
             this.btnthongkedoanhthu.Name = "btnthongkedoanhthu";
             this.btnthongkedoanhthu.ShadowDecoration.Parent = this.btnthongkedoanhthu;
             this.btnthongkedoanhthu.Size = new System.Drawing.Size(272, 177);
             this.btnthongkedoanhthu.TabIndex = 2;
             this.btnthongkedoanhthu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            //this.btnthongkedoanhthu.Click += new System.EventHandler(this.btnthongkedoanhthu_Click);
             // 
             // btnnhanphong
             // 
+            this.btnnhanphong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnnhanphong.CheckedState.Parent = this.btnnhanphong;
             this.btnnhanphong.CustomImages.Parent = this.btnnhanphong;
-            this.btnnhanphong.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnnhanphong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btnnhanphong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnnhanphong.ForeColor = System.Drawing.Color.White;
             this.btnnhanphong.HoverState.Parent = this.btnnhanphong;
             this.btnnhanphong.Image = ((System.Drawing.Image)(resources.GetObject("btnnhanphong.Image")));
             this.btnnhanphong.ImageSize = new System.Drawing.Size(80, 80);
             this.btnnhanphong.Location = new System.Drawing.Point(172, 78);
-            this.btnnhanphong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnnhanphong.Margin = new System.Windows.Forms.Padding(4);
             this.btnnhanphong.Name = "btnnhanphong";
             this.btnnhanphong.ShadowDecoration.Parent = this.btnnhanphong;
             this.btnnhanphong.Size = new System.Drawing.Size(143, 177);
             this.btnnhanphong.TabIndex = 1;
             this.btnnhanphong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+           // this.btnnhanphong.Click += new System.EventHandler(this.btnnhanphong_Click);
             // 
             // btndatphong
             // 
+            this.btndatphong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btndatphong.CheckedState.Parent = this.btndatphong;
             this.btndatphong.CustomImages.Parent = this.btndatphong;
-            this.btndatphong.FillColor = System.Drawing.Color.DarkGreen;
+            this.btndatphong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(57)))), ((int)(((byte)(140)))));
             this.btndatphong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btndatphong.ForeColor = System.Drawing.Color.White;
             this.btndatphong.HoverState.Parent = this.btndatphong;
             this.btndatphong.Image = ((System.Drawing.Image)(resources.GetObject("btndatphong.Image")));
             this.btndatphong.ImageSize = new System.Drawing.Size(80, 80);
-            this.btndatphong.Location = new System.Drawing.Point(9, 78);
-            this.btndatphong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btndatphong.Location = new System.Drawing.Point(13, 78);
+            this.btndatphong.Margin = new System.Windows.Forms.Padding(4);
             this.btndatphong.Name = "btndatphong";
             this.btndatphong.ShadowDecoration.Parent = this.btndatphong;
             this.btndatphong.Size = new System.Drawing.Size(143, 177);
             this.btndatphong.TabIndex = 0;
             this.btndatphong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+           // this.btndatphong.Click += new System.EventHandler(this.btndatphong_Click);
             // 
             // frmQLKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(184)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1271, 674);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQLKS";
             this.Text = "frmQLKS";
             this.guna2Panel1.ResumeLayout(false);

@@ -3,3 +3,9 @@ D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
 D:\Dev\ProjectQLKS\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\bin\Debug\DTO.pdb
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.dll
+D:\Quanlydichvukhachsan\Quan Ly khach san\QuanLyKhachSan\DTO\obj\Debug\DTO.pdb

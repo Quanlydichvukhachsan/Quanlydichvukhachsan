@@ -180,6 +180,6 @@ namespace QuanLyKhachSan
             Reset();
         }
 
-    
+        
     }
 }

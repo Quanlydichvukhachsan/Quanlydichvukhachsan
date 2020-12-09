@@ -113,6 +113,8 @@ namespace QuanLyKhachSan
             
         }
 
+    
+
         private void Frm_EventUpdateHandler(object sender, frmdoiphong.UpdateEventArgs args)
         {
             txtTenphong.Text = args.name;

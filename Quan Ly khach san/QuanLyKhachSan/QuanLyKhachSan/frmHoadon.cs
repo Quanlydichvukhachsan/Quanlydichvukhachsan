@@ -17,7 +17,10 @@ namespace QuanLyKhachSan
             InitializeComponent();
         }
 
-      
+        private void frmHoadon_Load(object sender, EventArgs e)
+        {
+
+        }
 
      
     }
